@@ -1,5 +1,4 @@
 body {
-  font-family: "Montserrat", sans-serif;
   min-height: 100vh;
   max-height: 100vh;
   margin: 0;
@@ -15,23 +14,16 @@ body a {
 body a:not(:hover) {
   text-decoration: none;
 }
-body #link-a-me {
-  position: absolute;
-  bottom: 80px;
-  right: 20px;
-  height: 60px;
-  width: 60px;
-  background: url(https://i.imgur.com/xoxkq1r.png);
-  background-size: cover;
-  z-index: 1;
-  animation: pop-in 120s ease-out;
+body .recipe {
+  display: grid;
+  grid-template-columns: 60% 40%;
 }
-body .content {
+body .recipe .content {
   overflow: hidden;
-  flex-grow: 1;
   height: calc(100% - 80px);
+  grid-column: 2/2;
 }
-body .content .lyrics {
+body .recipe .content .lyrics {
   padding: 50vh 0;
   min-height: calc(100vh - 80px);
   width: calc(100% - 40px);
@@ -40,14 +32,14 @@ body .content .lyrics {
   transition: all 0.25s;
   position: relative;
 }
-body .content .lyrics > div {
+body .recipe .content .lyrics > div {
   position: relative;
   font-size: 40px;
   line-height: 80px;
   color: #666;
   transition: all 0.25s;
 }
-body .content .lyrics > div:before {
+body .recipe .content .lyrics > div:before {
   content: attr(note);
   position: absolute;
   top: 0px;
@@ -55,42 +47,19 @@ body .content .lyrics > div:before {
   transform: translate(-50%, -50%);
   font-size: 18px;
 }
-body .content .lyrics > div.highlighted {
+body .recipe .content .lyrics > div.highlighted {
   color: #fff;
   font-size: 48px;
 }
-body .player {
-  z-index: 10;
+body .recipe .player {
+  grid-row: 1;
+  grid-column: 1/2;
   background: #F9F9F9;
   color: #000;
-  min-height: 80px;
-  max-height: 80px;
   display: flex;
-  flex-direction: row;
-}
-body .player .left {
-  width: 80px;
-  background-image: url(https://i.scdn.co/image/9ca53beeb365f468b023a8360634f309325b5487);
-  background-size: cover;
-}
-body .player .right {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-}
-body .player .right .top {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+  flex-flow: column nowrap;
   justify-content: center;
-  padding-left: 10px;
-}
-body .player .right .top .song {
-  font-size: 1.2em;
-  font-weight: 600;
-}
-body .player .right .bottom {
-  display: flex;
+  align-self: center;
 }
 
 @keyframes pop-in {
