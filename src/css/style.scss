@@ -4,7 +4,7 @@ body {
    // font-family: 'Montserrat', sans-serif;
    min-height: 100vh;
    max-height: 100vh;
-   margin: 0;
+   margin: 2vh;
    color: white;
    
    display: flex;
@@ -26,7 +26,6 @@ body {
          height: calc(100% - 80px);
          grid-column: 2 / 2;
          .lyrics {
-            padding: 50vh 0;
             min-height: calc(100vh - 80px);
             width: calc(100% - 40px);
             margin: 0 20px;
@@ -57,12 +56,12 @@ body {
       .player {
          grid-row: 1;
          grid-column: 1 / 2;
-         background: #F9F9F9;
+         background: #666;
          color: #000;
          display: flex;
          flex-flow: column nowrap;
          justify-content: center;
-         align-self: center;
+         align-self: flex-start;
       }
    }
    
