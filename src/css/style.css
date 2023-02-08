@@ -1,107 +1,3 @@
-/* body {
-   font-family: sans-serif;
-   min-height: 100vh;
-   max-width: 100vh;
-   margin: 0;
-   color: #ffdfff;
-
-   display: flex;
-   flex-direction: column;
-}
-#link-a-me {
-   position: absolute;
-   bottom: 80px;
-   right: 20px;
-   height: 60px;
-   width: 60px;
-
-   z-index: 1;
-   animation: pop-in 120s ease-out;
-}
-
-body a {
-   color: inherit;
-}
-body a:not(:hover) {
-   text-decoration: none;
-}
-
-.content {
-   overflow: hidden;
-   flex-grow: 1;
-   height: calc(100% - 80px);
-}
-
-.lyrics {
-   padding: 50vh 0;
-   min-height: calc(100vh - 80px);
-   width: calc(100% - 40px);
-   margin: 0 20px;
-   text-align: center;
-   transition: all .25s;
-   position: relative;
-}
-.lyrics > div {
-   font-size: 40px;
-   line-height: 80px;
-   position: relative;
-   transition: all .25s;
-}
-.lyrics > div:before {
-   content:attr(note);
-   position: absolute;
-   top: 0px;
-
-   transform:translate(-50%, -50%);
-   font-size: 18px;
-}
-.lyrics > div .highlighted {
-   color: black;
-   font-size: 48px;
-}
-
-.player {
-   z-index: 10;
-   min-height: 80px;
-   max-height: 80px;
-   display: flex;
-   flex-direction: row;
-}
-.left {
-   width: 80px;
-}
-.right {
-   flex-grow: 1;
-   display: grow;
-   flex-direction: column;
-}
-.right .top {
-   flex-grow: 1;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   padding-left: 10px;
-}
-.song {
-   font-size: 1.2em;
-   font-weight: 600;
-}
-.bottom {
-   display: flex;
-}
-.bottom video {
-   flex-grow: 1;
-   height: 32px;
-}
-
-@keyframes pop-in {
-   0%, 95% {
-      transform:translateY(100%);
-   }
-   100% {
-      transform:translateY(0%);
-   }
-} */
 body {
   font-family: "Montserrat", sans-serif;
   min-height: 100vh;
@@ -128,8 +24,7 @@ body #link-a-me {
   background: url(https://i.imgur.com/xoxkq1r.png);
   background-size: cover;
   z-index: 1;
-  -webkit-animation: pop-in 120s ease-out;
-          animation: pop-in 120s ease-out;
+  animation: pop-in 120s ease-out;
 }
 body .content {
   overflow: hidden;
@@ -196,19 +91,6 @@ body .player .right .top .song {
 }
 body .player .right .bottom {
   display: flex;
-}
-body .player .right .bottom video {
-  flex-grow: 1;
-  height: 32px;
-}
-
-@-webkit-keyframes pop-in {
-  0%, 95% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0%);
-  }
 }
 
 @keyframes pop-in {
