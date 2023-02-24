@@ -1,0 +1,75 @@
+body {
+    // font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    max-height: 100vh;
+    margin: 2vh;
+    color: white;
+    
+    display: flex;
+    flex-direction: column;
+    a {
+        color: inherit;
+        &:not(:hover) {
+            text-decoration: none;
+        }
+    }
+
+    background: #222222;
+    background: -webkit-linear-gradient(to top, #232526, #414345);
+    .recipe {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        .content {
+            overflow: hidden;
+            height: calc(100% - 80px);
+            grid-column: 2 / 2;
+            .lyrics {
+            min-height: calc(100vh - 80px);
+            width: calc(100% - 40px);
+            margin: 0 20px;
+            text-align: center;
+            transition: all .25s;
+            position: relative;
+            >div {
+                position: relative;
+                font-size: 40px;
+                line-height: 80px;
+                color: #666;
+                transition: all .25s;
+                &:before {
+                    content: attr(note);
+                    position: absolute;
+                    top: 0px;
+                    left: 50%;
+                    transform: translate(-50%,-50%);
+                    font-size: 18px;
+                }
+                &.highlighted {
+                    color: #fff;
+                    font-size: 48px;
+                }
+            }
+            }
+        }
+        .player {
+            grid-row: 1;
+            grid-column: 1 / 2;
+            background: #666;
+            color: #000;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-self: flex-start;
+        }
+    }
+    
+}
+    
+@keyframes pop-in {
+    0%, 95%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
