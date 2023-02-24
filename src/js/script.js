@@ -4,7 +4,7 @@
 
 console.clear();
 // Put recipes and steps into a text file and parse in
-var _data = JSON.parse(`{"lyrics":[{"line":"","time":-1},{"line":"Test test test","time":0},{"line":"Test TEst TEst","time":10000},{"line":"Test test test test","time":20000}]}`);
+var _data = JSON.parse(recipe);
 // Parse from text file
 
 var currentLine = "";
