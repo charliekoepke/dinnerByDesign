@@ -62,3 +62,7 @@ function generate() {
    $(".recipe").html(html);
    align();
 }
+
+function changeVid(buttonLink) {
+   document.getElementById("change").src = buttonLink;
+}
