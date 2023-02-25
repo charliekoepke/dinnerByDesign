@@ -19,10 +19,10 @@ function align() {
    );
 }
 
-var lyricHeight = $(".lyrics").height();
+var lyricHeight = $(".recipe").height();
 $(window).on("resize", function() {
-   if ($(".lyrics").height() != lyricHeight) { //Either width changes so that a line may take up or use less vertical space or the window height changes, 2 in 1
-      lyricHeight = $(".lyrics").height();
+   if ($(".recipe").height() != lyricHeight) { //Either width changes so that a line may take up or use less vertical space or the window height changes, 2 in 1
+      lyricHeight = $(".recipe").height();
       align();
    }
 });
@@ -33,10 +33,10 @@ $(document).ready(function() {
       var past = _data["lyrics"].filter(function (item) {
          return item.time < time;
       });
-      if (_data["lyrics"][past.length] != currentLine) {
-         currentLine = _data["lyrics"][past.length];
-         $(".lyrics div").removeClass("highlighted");
-         $(`.lyrics div:nth-child(${past.length})`).addClass("highlighted"); //Text might take up more lines, do before realigning
+      if (_data["recipe"][past.length] != currentLine) {
+         currentLine = _data["recipe"][past.length];
+         $(".recipe div").removeClass("highlighted");
+         $(`.recipe div:nth-child(${past.length})`).addClass("highlighted"); //Text might take up more lines, do before realigning
          align();
       }
    });
@@ -46,19 +46,19 @@ generate();
 
 function generate() {
    var html = "";
-   for(var i = 0; i < _data["lyrics"].length; i++) {
+   for(var i = 0; i < _data["recipe"].length; i++) {
       html += "<div";
       if(i == 0) {
          html+=` class="highlighted"`;
          currentLine = 0;
       }
-      if(_data["lyrics"][i]["note"]) {
-         html += ` note="${_data["lyrics"][i]["note"]}"`;
+      if(_data["recipe"][i]["note"]) {
+         html += ` note="${_data["recipe"][i]["note"]}"`;
       }
       html += ">";
-      html += _data["lyrics"][i]["line"] == "" ? "•" : _data["lyrics"][i]["line"];
+      html += _data["recipe"][i]["step"] == "" ? "•" : _data["recipe"][i]["line"];
       html += "</div>"
    }
-   $(".lyrics").html(html);
+   $(".recipe").html(html);
    align();
 }
