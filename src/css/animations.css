@@ -23,7 +23,7 @@ body .recipe .content {
   height: calc(100% - 80px);
   grid-column: 2/2;
 }
-body .recipe .content .lyrics {
+body .recipe .content .recipe {
   min-height: calc(100vh - 80px);
   width: calc(100% - 40px);
   margin: 0 20px;
@@ -31,14 +31,14 @@ body .recipe .content .lyrics {
   transition: all 0.25s;
   position: relative;
 }
-body .recipe .content .lyrics > div {
+body .recipe .content .recipe > div {
   position: relative;
   font-size: 40px;
   line-height: 80px;
   color: #666;
   transition: all 0.25s;
 }
-body .recipe .content .lyrics > div:before {
+body .recipe .content .recipe > div:before {
   content: attr(note);
   position: absolute;
   top: 0px;
@@ -46,7 +46,7 @@ body .recipe .content .lyrics > div:before {
   transform: translate(-50%, -50%);
   font-size: 18px;
 }
-body .recipe .content .lyrics > div.highlighted {
+body .recipe .content .recipe > div.highlighted {
   color: #fff;
   font-size: 48px;
 }

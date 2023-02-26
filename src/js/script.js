@@ -5,8 +5,17 @@ console.clear();
 var _data;
 
 function parseVid(file) {
-   _data = JSON.parse(file);
+   fetch(file)
+      .then((response) => response.json())
+      .then((json) => console.log(json))
+      .then((json) => _data = json)
+      .catch(err => {
+         console.error(err);
+      });
+   // _data = JSON.parse(file);
 }
+
+console.log(_data);
 
 // Parsing from text file
 // var _data = JSON.parse();
@@ -33,7 +42,6 @@ $(window).on("resize", function() {
 
 $(document).ready(function() {
    $("video").on('timeupdate', function(e) {
-      // $("video").pause();
       var time = this.currentTime*1000;
       var past = _data["recipe"].filter(function (item) {
          return item.time < time;
