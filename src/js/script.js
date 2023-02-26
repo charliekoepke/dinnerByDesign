@@ -7,7 +7,7 @@ var _data;
 function parseVid(file) {
    fetch(file)
       .then((response) => response.json())
-      .then((json) => console.log(json))
+      // .then((json) => console.log(json))
       .then((json) => _data = json)
       .catch(err => {
          console.error(err);
