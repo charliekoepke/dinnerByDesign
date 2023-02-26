@@ -1,11 +1,15 @@
 // Source: https://codepen.io/z-/pen/MQRGOe
 
-// Change variable names
-
 console.clear();
-// Put recipes and steps into a text file and parse in
-var _data = JSON.parse(recipe);
-// Parse from text file
+
+var _data;
+
+function parseVid(file) {
+   _data = JSON.parse(file);
+}
+
+// Parsing from text file
+// var _data = JSON.parse();
 
 var currentLine = "";
 
@@ -19,18 +23,19 @@ function align() {
    );
 }
 
-var lyricHeight = $(".recipe").height();
+var recipeHeight = $(".recipe").height();
 $(window).on("resize", function() {
-   if ($(".recipe").height() != lyricHeight) { //Either width changes so that a line may take up or use less vertical space or the window height changes, 2 in 1
-      lyricHeight = $(".recipe").height();
+   if ($(".recipe").height() != recipeHeight) { //Either width changes so that a line may take up or use less vertical space or the window height changes, 2 in 1
+      recipeHeight = $(".recipe").height();
       align();
    }
 });
 
 $(document).ready(function() {
    $("video").on('timeupdate', function(e) {
+      // $("video").pause();
       var time = this.currentTime*1000;
-      var past = _data["lyrics"].filter(function (item) {
+      var past = _data["recipe"].filter(function (item) {
          return item.time < time;
       });
       if (_data["recipe"][past.length] != currentLine) {
