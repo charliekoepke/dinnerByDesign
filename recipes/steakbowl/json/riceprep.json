@@ -1,9 +1,9 @@
 {
     "recipe": [
-        {"step": "", "time": -1},
-        {"step": "Measure out 1 1/2 cups of medium grain rice and add to a rice cooker.", "time": 0},
-        {"step": "Rinse the rice thoroughly until the water is clear.", "time": 3170},
-        {"step": "Add 2 cups of water to the rice cooker.", "time": 102090},
-        {"step": "Allow the rice to soak for 15 minutes, then press 'Cook' on the rice cooker.", "time": 114080}
+        {"line": "", "time": -1},
+        {"line": "Measure out 1 1/2 cups of medium grain rice and add to a rice cooker.", "time": 0},
+        {"line": "Rinse the rice thoroughly until the water is clear.", "time": 3170},
+        {"line": "Add 2 cups of water to the rice cooker.", "time": 102090},
+        {"line": "Allow the rice to soak for 15 minutes, then press 'Cook' on the rice cooker.", "time": 114080}
     ]
 }

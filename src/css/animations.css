@@ -14,16 +14,16 @@ body a {
 body a:not(:hover) {
   text-decoration: none;
 }
-body .recipe {
+body .recipevideo {
   display: grid;
   grid-template-columns: 60% 40%;
 }
-body .recipe .content {
+body .recipevideo .content {
   overflow: hidden;
   height: calc(100% - 80px);
   grid-column: 2/2;
 }
-body .recipe .content .recipe {
+body .recipevideo .content .recipe {
   min-height: calc(100vh - 80px);
   width: calc(100% - 40px);
   margin: 0 20px;
@@ -31,14 +31,14 @@ body .recipe .content .recipe {
   transition: all 0.25s;
   position: relative;
 }
-body .recipe .content .recipe > div {
+body .recipevideo .content .recipe > div {
   position: relative;
   font-size: 40px;
   line-height: 80px;
   color: #666;
   transition: all 0.25s;
 }
-body .recipe .content .recipe > div:before {
+body .recipevideo .content .recipe > div:before {
   content: attr(note);
   position: absolute;
   top: 0px;
@@ -46,11 +46,11 @@ body .recipe .content .recipe > div:before {
   transform: translate(-50%, -50%);
   font-size: 18px;
 }
-body .recipe .content .recipe > div.highlighted {
+body .recipevideo .content .recipe > div.highlighted {
   color: #fff;
   font-size: 48px;
 }
-body .recipe .player {
+body .recipevideo .player {
   grid-row: 1;
   grid-column: 1/2;
   background: #666;

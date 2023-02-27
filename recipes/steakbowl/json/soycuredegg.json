@@ -1,0 +1,17 @@
+{
+    "recipe": [
+        {"line": "", "time": -1},
+        {"line": "Gather your ingredients.", "time": 0},
+        {"line": "Peel ginger with a small spoon.", "time": 4150},
+        {"line": "Grate ginger into a small bowl with a microplane.", "time": 19060},
+        {"line": "Add 6 tbsp of soy sauce to the bowl.", "time": 40160},
+        {"line": "Gently roll your limeto release the juices, and cut in half.", "time": 60220},
+        {"line": "Thinly slice the thai chili and add to the bowl.", "time": 73200},
+        {"line": "Squeeze lime into the bowl.", "time": 113210},
+        {"line": "Stir to combine.", "time": 144160},
+        {"line": "Separate egg yolk from white and place gently into a small bowl.", "time": 148130},
+        {"line": "Gently pour sauce over egg yolks.", "time": 188240},
+        {"line": "Cover yolks with a paper towel and fold the edges over the top. This will pull liquid over the top of the yolks since they float.", "time": 197140},
+        {"line": "Refrigerate for at least 1 hour.", "time": 205150}
+    ]
+}
