@@ -14,14 +14,9 @@ body a {
 body a:not(:hover) {
   text-decoration: none;
 }
-body .recipevideo {
-  display: grid;
-  grid-template-columns: 60% 40%;
-}
 body .recipevideo .content {
   overflow: hidden;
   height: calc(100% - 80px);
-  grid-column: 2/2;
 }
 body .recipevideo .content .recipe {
   min-height: calc(100vh - 80px);
@@ -51,8 +46,6 @@ body .recipevideo .content .recipe > div.highlighted {
   font-size: 48px;
 }
 body .recipevideo .player {
-  grid-row: 1;
-  grid-column: 1/2;
   background: #666;
   color: #000;
   display: flex;

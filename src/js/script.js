@@ -1,4 +1,5 @@
 // Source: https://codepen.io/z-/pen/MQRGOe
+// Source: https://codepen.io/tuannvbg/pen/ZBrrjr
 
 console.clear();
 
@@ -119,25 +120,29 @@ document.getElementById("steakcook").addEventListener("click", function changeVi
 
 var currentLine = "";
 
-function align() {
-   var a = $(".highlighted").height();
-   var c = $(".content").height();
-   var d = $(".highlighted").offset().top - $(".highlighted").parent().offset().top;
-   var e = d + (a/2) - (c/2);
-   $(".content").animate(
-       {scrollTop: e + "px"}, {easing: "swing", duration: 250}
-   );
-}
+// function align() {
+//    var a = $(".highlighted").height();
+//    var c = $(".content").height();
+//    var d = $(".highlighted").offset().top - $(".highlighted").parent().offset().top;
+//    var e = d + (a/2) - (c/2);
+//    $(".content").animate(
+//        {scrollTop: e + "px"}, {easing: "swing", duration: 250}
+//    );
+// }
 
-var recipeHeight = $(".recipevideo").height();
-$(window).on("resize", function() {
-   if ($(".recipevideo").height() != recipeHeight) { //Either width changes so that a line may take up or use less vertical space or the window height changes, 2 in 1
-      recipeHeight = $(".recipevideo").height();
-      align();
-   }
-});
+// var recipeHeight = $(".recipevideo").height();
+// $(window).on("resize", function() {
+//    if ($(".recipevideo").height() != recipeHeight) { //Either width changes so that a line may take up or use less vertical space or the window height changes, 2 in 1
+//       recipeHeight = $(".recipevideo").height();
+//       align();
+//    }
+// });
 
+
+// loop , time reset at each video, if press button, reset, if not, then reset time and then go to next video
 $(document).ready(function() {
+   // Make an if for the window that the recipe is on to determine the i
+   // for (var i = 0; i < )
    $("video").on('timeupdate', function(e) {
       var time = this.currentTime*1000;
       var past = _data["recipe"].filter(function (item) {
@@ -147,7 +152,7 @@ $(document).ready(function() {
          currentLine = _data["recipe"][past.length];
          $(".recipevideo div").removeClass("highlighted");
          $(`.recipevideo div:nth-child(${past.length})`).addClass("highlighted"); //Text might take up more lines, do before realigning
-         align();
+         // align();
       }
    });
 });
@@ -159,17 +164,16 @@ function generate() {
    for(var i = 0; i < _data["recipe"].length; i++) {
       html += "<div";
       if(i == 0) {
-         html+=` class="highlighted"`;
+         // html+=` class="highlighted"`;
          currentLine = 0;
       }
       if(_data["recipe"][i]["note"]) {
          html += ` note="${_data["recipe"][i]["note"]}"`;
       }
       html += ">";
-      html += _data["recipe"][i]["step"] == "" ? "•" : _data["recipe"][i]["line"];
+      // html += _data["recipe"][i]["step"] == "" ? "•" : _data["recipe"][i]["line"];
       html += "</div>"
    }
    $(".recipe").html(html);
-   align();
+   // align();
 }
-
