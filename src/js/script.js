@@ -80,7 +80,7 @@ const steakcook = JSON.parse(`{
 
 var _data;
 
-// Demo, no parsing from file
+// Parsing from file?
 
 document.getElementById("soycuredegg").addEventListener("click", function changeVid() {
    document.getElementById("change").src = "video/SoyCuredEgg.mp4";
