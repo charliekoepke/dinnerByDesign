@@ -25,6 +25,14 @@ h2 {
    font-size: 40pt;
 }
 
+a {
+   text-decoration: none;
+   color: black;
+}
+a:hover {
+   text-decoration: underline;
+}
+
 p {
    font-size: 24pt;
 }
@@ -90,8 +98,8 @@ nav {
 
 // Recipe Tiles
 .recipetile {
-   font-family: 'Roboto', sans-serif;
-   font-size: 24pt;
+   font-family: 'Roboto', sans-serif !important;
+   font-size: 24pt !important;
    background-color: black;
    color: white;
    padding: 1em;
@@ -99,7 +107,6 @@ nav {
    a {
       font-size: 20pt;
       color: white;
-      text-decoration: underline;
    }
 }
 
@@ -109,6 +116,26 @@ nav {
    padding: 1em;
    background-color: black;
    color: white;
+}
+
+// Guided Recipes Page
+#guidedrecipes-recipes {
+   grid-template-columns: repeat(2, 50%);
+   grid-template-rows: auto;
+
+   .recipetile {
+      font-family: 'Roboto', sans-serif !important;
+      font-size: 24pt !important;
+      background-color: black;
+      color: white;
+      padding: 1em;
+   
+      a {
+         font-size: 20pt;
+         color: white;
+         text-decoration: underline;
+      }
+   }
 }
 
 footer {

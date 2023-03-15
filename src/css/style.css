@@ -23,6 +23,15 @@ h2 {
   font-size: 40pt;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 p {
   font-size: 24pt;
 }
@@ -81,8 +90,8 @@ nav .flex {
 }
 
 .recipetile {
-  font-family: "Roboto", sans-serif;
-  font-size: 24pt;
+  font-family: "Roboto", sans-serif !important;
+  font-size: 24pt !important;
   background-color: black;
   color: white;
   padding: 1em;
@@ -90,7 +99,6 @@ nav .flex {
 .recipetile a {
   font-size: 20pt;
   color: white;
-  text-decoration: underline;
 }
 
 #about-header {
@@ -98,6 +106,23 @@ nav .flex {
   padding: 1em;
   background-color: black;
   color: white;
+}
+
+#guidedrecipes-recipes {
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: auto;
+}
+#guidedrecipes-recipes .recipetile {
+  font-family: "Roboto", sans-serif !important;
+  font-size: 24pt !important;
+  background-color: black;
+  color: white;
+  padding: 1em;
+}
+#guidedrecipes-recipes .recipetile a {
+  font-size: 20pt;
+  color: white;
+  text-decoration: underline;
 }
 
 footer {
