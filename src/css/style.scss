@@ -122,6 +122,7 @@ nav {
 #guidedrecipes-recipes {
    grid-template-columns: repeat(2, 50%);
    grid-template-rows: auto;
+   margin: 1em;
 
    .recipetile {
       font-family: 'Roboto', sans-serif !important;
@@ -136,6 +137,11 @@ nav {
          text-decoration: underline;
       }
    }
+}
+
+// Invidiual Recipe
+#recipe-header {
+   
 }
 
 footer {

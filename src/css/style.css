@@ -111,6 +111,7 @@ nav .flex {
 #guidedrecipes-recipes {
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: auto;
+  margin: 1em;
 }
 #guidedrecipes-recipes .recipetile {
   font-family: "Roboto", sans-serif !important;
