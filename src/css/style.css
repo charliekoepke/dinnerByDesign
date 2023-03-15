@@ -4,6 +4,7 @@ body {
   font-size: 14px;
   font-family: "Rajdhani", sans-serif;
   font-weight: "regular";
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -28,6 +29,7 @@ p {
 
 .flex {
   display: flex;
+  flex-direction: column;
 }
 
 .grid {
@@ -48,6 +50,7 @@ nav {
 }
 nav .flex {
   justify-content: space-around;
+  flex-direction: row;
 }
 
 #index h2 {
@@ -60,9 +63,6 @@ nav .flex {
   padding: 1em;
   grid-template-columns: repeat(2, 50%);
   text-align: justify;
-}
-#home-banner .flex {
-  flex-direction: column;
 }
 #home-banner h2 {
   margin: 0;
@@ -79,9 +79,6 @@ nav .flex {
   margin: 1em;
   grid-template-columns: repeat(3, auto);
 }
-#home-suggested-meals .flex {
-  flex-direction: column;
-}
 
 .recipetile {
   font-family: "Roboto", sans-serif;
@@ -92,7 +89,15 @@ nav .flex {
 }
 .recipetile a {
   font-size: 20pt;
-  text-decoration: none;
+  color: white;
+  text-decoration: underline;
+}
+
+#about-header {
+  grid-template-columns: repeat(2, 50%);
+  padding: 1em;
+  background-color: black;
+  color: white;
 }
 
 footer {
