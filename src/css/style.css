@@ -1,10 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
   font-size: 14px;
   font-family: "Rajdhani", sans-serif;
   font-weight: "regular";
   margin: 0;
   padding: 0;
+}
+
+button {
+  text-align: center;
+  background-color: black;
+  color: white;
+  font-size: 24pt;
+  border: none;
+  padding: 0.5em;
+  font-family: "Roboto", sans-serif;
 }
 
 h2 {
@@ -15,26 +26,18 @@ p {
   font-size: 24pt;
 }
 
-#index h2 {
-  color: #FF561B;
-}
-
-#home-banner {
-  margin: 1em;
-  padding: 1em;
-  grid-template-columns: repeat(2, 50%);
-  text-align: justify;
-}
-#home-banner .flex {
-  flex-direction: column;
-}
-
 .flex {
   display: flex;
 }
 
 .grid {
   display: grid;
+  grid-gap: 1em;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 30% 70%;
 }
 
 nav {
@@ -47,11 +50,57 @@ nav .flex {
   justify-content: space-around;
 }
 
+#index h2 {
+  margin: 1em;
+  color: #FF561B;
+}
+
+#home-banner {
+  margin: 1em;
+  padding: 1em;
+  grid-template-columns: repeat(2, 50%);
+  text-align: justify;
+}
+#home-banner .flex {
+  flex-direction: column;
+}
+#home-banner h2 {
+  margin: 0;
+}
+
+#home-getting-started {
+  padding: 1em;
+  margin: 1em;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 300px);
+}
+
+#home-suggested-meals {
+  margin: 1em;
+  grid-template-columns: repeat(3, auto);
+}
+#home-suggested-meals .flex {
+  flex-direction: column;
+}
+
+.recipetile {
+  font-family: "Roboto", sans-serif;
+  font-size: 24pt;
+  background-color: black;
+  color: white;
+  padding: 1em;
+}
+.recipetile a {
+  font-size: 20pt;
+  text-decoration: none;
+}
+
 footer {
   background-color: grey;
   width: 100%;
   vertical-align: middle;
   text-align: center;
+  padding: 1em;
 }
 footer .flex {
   justify-content: center;
