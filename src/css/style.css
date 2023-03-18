@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 body {
-  font-size: 14px;
   font-family: "Rajdhani", sans-serif;
   font-weight: "regular";
   width: 100%;
@@ -113,17 +112,51 @@ nav .flex {
   grid-template-rows: auto;
   margin: 1em;
 }
-#guidedrecipes-recipes .recipetile {
-  font-family: "Roboto", sans-serif !important;
-  font-size: 24pt !important;
-  background-color: black;
-  color: white;
+
+#recipe-header {
+  grid-template-columns: repeat(2, 50%);
   padding: 1em;
 }
-#guidedrecipes-recipes .recipetile a {
-  font-size: 20pt;
-  color: white;
-  text-decoration: underline;
+#recipe-header h2 {
+  margin: 1em;
+  color: #FF561B;
+}
+#recipe-header p {
+  margin: 1em;
+}
+
+.tab {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow: hidden;
+  color: black;
+  background-color: white;
+  width: 100%;
+}
+.tab button {
+  background-color: white;
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 1em;
+}
+
+.tabcontent {
+  display: none;
+  padding: 1em;
+  border-top: none;
+  margin: 1em;
+}
+
+#ingredients {
+  text-align: left;
+}
+
+#equipment {
+  text-align: right;
 }
 
 footer {
