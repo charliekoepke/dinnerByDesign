@@ -18,3 +18,10 @@ function changetab(toggletab) {
    }
 }
 
+function changevideo(newsrc) {
+   document.getElementById("video-switch").src = newsrc;
+}
+
+function changecaption() {
+   
+}

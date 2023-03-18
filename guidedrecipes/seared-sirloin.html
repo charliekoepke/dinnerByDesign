@@ -94,14 +94,20 @@
             </div>
             <!-- Steak Prep -->
             <h2>Interactive Video</h2>
-            <div class="recipe-video" id="prep">
-                <video loop src="https://www.youtube.com/watch?v=xlnvkOemQI4&ab_channel=EllieLeonidas&html5=true">
-                    <track src="steak-prep.vtt" kind="captions" srclang="en-us" default>
-                </video>
+            <div class="recipe-video">
+                <iframe src="https://www.youtube.com/embed/xlnvkOemQI4?rel=0?version=3&&showinfo=0&loop=1" frameborder="0" id="video-switch"></iframe>
             </div>
-            <!-- Button to get to next step -->
-            <a href="cook">Next Step</a>
-            <!-- Directions written out -->
+            <!-- Auto captions? -->
+            <div class="flex" id="video-captions">
+                <caption id="caption"></caption>
+            </div>
+            <div class="grid" id="video-buttons">
+                <!-- Button to get to previous step -->
+                <button onclick="changevideo('https://www.youtube.com/embed/xlnvkOemQI4?rel=0?version=3&&showinfo=0&loop=1')">Previous Step</button>
+                <!-- Button to get to next step -->
+                <button onclick="changevideo('https://www.youtube.com/embed/QODfMFgtCjQ?rel=0?version=3&&showinfo=0&loop=1')">Next Step</button>
+                <!-- Directions written out -->
+            </div>
             <h3>Directions</h3>
             <p>Prep</p>
             <ol>
@@ -112,7 +118,7 @@
             </ol>
             <p>Cook</p>
             <ol>
-                
+
             </ol>
             <div class="recipe-video" id="cook">
                 <video loop src="https://www.youtube.com/watch?v=QODfMFgtCjQ&ab_channel=EllieLeonidas&html5=true">

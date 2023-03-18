@@ -181,6 +181,38 @@ nav .flex {
   margin: 1em;
 }
 
+#video-buttons {
+  grid-template-columns: repeat(2, 50%);
+}
+#video-buttons button {
+  margin: 1em;
+  font-size: 20pt;
+  background-color: white;
+  color: black;
+}
+#video-buttons button:hover {
+  cursor: pointer;
+  color: #FF561B;
+}
+
+#video-captions {
+  flex-direction: row;
+  justify-content: center;
+  color: #FF561B;
+}
+
+.recipe-video {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+iframe {
+  width: 980px;
+  margin: 1em;
+  height: 500px;
+}
+
 footer {
   background-color: grey;
   width: 100%;
