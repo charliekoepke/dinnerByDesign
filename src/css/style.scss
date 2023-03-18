@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 body {
+   font-size: 24pt;
    font-family: 'Rajdhani', sans-serif;
    font-weight: 'regular';
    width: 100%;
@@ -132,6 +133,7 @@ nav {
    h2 {
       margin: 1em;
       color: #FF561B;
+      font-size: 100pt;
    }
    p {
       margin: 1em;
@@ -163,6 +165,8 @@ nav {
    padding: 1em;
    border-top: none;
    margin: 1em;
+
+   font-size: 24pt;
 }
 
 #ingredients {
@@ -173,6 +177,26 @@ nav {
    text-align: right;
 }
 
+#seared-sirloin {
+   h2 {
+      color: #FF561B;
+      font-size: 32pt;
+      margin: 1em;
+   }
+   h3 {
+      margin: 1em;
+      font-size: 32pt;
+   }
+   a {
+      margin: 1em;
+   }
+   ol {
+      margin: 1em;
+   }
+   p {
+      margin: 1em;
+   }
+}
 
 footer {
    background-color: grey;
