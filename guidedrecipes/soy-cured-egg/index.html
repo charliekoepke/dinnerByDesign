@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Soy Cured Egg - Dinner by Design</title>
+
+        <meta charset="utf-8">
+        <link href="../../src/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <div class="flex">
+                <!-- Place logo here -->
+                    <a href="../index.html"><strong>Guided Recipes</strong></a>
+                    <a href="../../comingsoon.html">Shop</a>
+                    <a href="../../about.html">About</a>
+                    <a href="../../comingsoon.html">Sign Up</a>
+            </div>
+        </nav>
+        <main id="seared-sirloin">
+            <p><a href="index.html">Guided Recipes</a>/ Seared Sirloin</p>
+            <div class="grid" id="recipe-header">
+            <div class="flex">
+                <h2>Soy Cured Egg</h2>
+                <p>A soy cured egg.</p>
+            </div>
+            <div class="flex">
+                <img>
+            </div>
+            </div>
+            <!-- Toggle between ingredients and equipment -->
+            <div class="tab">
+                <button onclick="changetab('Ingredients')" id="tab-ingredients">Ingredients</button>
+                <button onclick="changetab('Equipment')" id="tab-equipment">Equipment</button>
+            </div>
+            <div class="tabcontent" id="ingredients">
+                <!-- Checkboxes of ingredients -->
+                <div class="flex">
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        8 cherries
+                    </label>
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        1 tsp black vinegar
+                    </label>
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        2 tsps balsamic vinegar
+                    </label>
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        1 medium shallot
+                    </label>
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        2 Tbsp brown sugar
+                    </label>
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        1/4 cup of water
+                    </label>
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        salt and pepper to taste
+                    </label>
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        1 tsp duck fat (optional)
+                    </label>
+                </div>
+            </div>
+            <div class="tabcontent" id="equipment">
+                <!-- Checkboxes of equipment -->
+                <div class="flex">
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Metal straw
+                    </label>
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Saucepan
+                    </label>
+                </div>
+            </div>
+            <!-- Recipe Video -->
+            <h2>Interactive Video</h2>
+            <div class="recipe-video">
+                <div id="ytplayer"></div>
+            </div>
+            <!-- Captions -->
+            <div class="flex" id="video-captions">
+                <p id="captions"></p>
+            </div>
+            <h3>Directions</h3>
+            <ol>
+                <li>Gather your ingredients.</li>
+                <li>Peel ginger with a small spoon.</li>
+                <li>Grate ginger into a small bowl with a microplane.</li>
+                <li>Add 6 tbsp of soy sauce to the bowl.</li>
+                <li>Gently roll your limeto release the juices, and cut in half.</li>
+                <li>Thinly slice the thai chili and add to the bowl.</li>
+                <li>Squeeze lime into the bowl.</li>
+                <li>Stir to combine.</li>
+                <li>Separate egg yolk from white and place gently into a small bowl.</li>
+                <li>Gently pour sauce over egg yolks.</li>
+                <li>Cover yolks with a paper towel and fold the edges over the top. This will pull liquid over the top of the yolks since they float.</li>
+                <li>Refrigerate for at least 1 hour.</li>
+            </ol>
+        </main>
+        <script src="../../src/js/script.js"></script>
+    </body>
+</html>
