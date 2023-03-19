@@ -1,0 +1,9 @@
+{
+    "recipe": [
+        {"line": "", "time": -1},
+        {"line": "Gather your ingredients.", "time": 0},
+        {"line": "Remove the stems from your mushrooms.", "time": 6100},
+        {"line": "Slice your mushrooms into ¼ inch slices.", "time": 29030},
+        {"line": "Finely chop your garlic.", "time": 55210}
+    ]
+}

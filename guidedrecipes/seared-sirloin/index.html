@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Braised Cherries - Dinner by Design</title>
+        <title>Seared Sirloin - Dinner by Design</title>
 
         <meta charset="utf-8">
-        <link href="../src/css/style.css" rel="stylesheet">
+        <link href="../../src/css/style.css" rel="stylesheet">
     </head>
     <body>
         <nav>
             <div class="flex">
                 <!-- Place logo here -->
-                    <a href="index.html"><strong>Guided Recipes</strong></a>
-                    <a href="../comingsoon.html">Shop</a>
-                    <a href="../about.html">About</a>
-                    <a href="../comingsoon.html">Sign Up</a>
+                    <a href="../index.html"><strong>Guided Recipes</strong></a>
+                    <a href="../../comingsoon.html">Shop</a>
+                    <a href="../../about.html">About</a>
+                    <a href="../../comingsoon.html">Sign Up</a>
             </div>
         </nav>
-        <main id="braised-cherries">
+        <main id="seared-sirloin">
+            <p><a href="index.html">Guided Recipes</a>/ Seared Sirloin</p>
             <div class="grid" id="recipe-header">
             <div class="flex">
-                <h2>Braised Cherries</h2>
-                <p>These cherries are braised with black & balsamic vinegar and brown sugar to create a sweet sour and sticky sauce that elevates any poultry dish. Think elevated cranberry sauce.</p>
+                <h2>Seared Sirloin</h2>
+                <p>Pan seared sirloin steak.</p>
             </div>
             <div class="flex">
                 <img>
@@ -35,42 +36,42 @@
                 <!-- Checkboxes of ingredients -->
                 <div class="flex">
                     <label class="container">
-                        <input type="checkbox" checked="unchecked">
+                        <input type="checkbox">
                         <span class="checkmark"></span>
                         8 cherries
                     </label>
                     <label class="container">
-                        <input type="checkbox" checked="unchecked">
+                        <input type="checkbox">
                         <span class="checkmark"></span>
                         1 tsp black vinegar
                     </label>
                     <label class="container">
-                        <input type="checkbox" checked="unchecked">
+                        <input type="checkbox">
                         <span class="checkmark"></span>
                         2 tsps balsamic vinegar
                     </label>
                     <label class="container">
-                        <input type="checkbox" checked="unchecked">
+                        <input type="checkbox">
                         <span class="checkmark"></span>
                         1 medium shallot
                     </label>
                     <label class="container">
-                        <input type="checkbox" checked="unchecked">
+                        <input type="checkbox">
                         <span class="checkmark"></span>
                         2 Tbsp brown sugar
                     </label>
                     <label class="container">
-                        <input type="checkbox" checked="unchecked">
+                        <input type="checkbox">
                         <span class="checkmark"></span>
                         1/4 cup of water
                     </label>
                     <label class="container">
-                        <input type="checkbox" checked="unchecked">
+                        <input type="checkbox">
                         <span class="checkmark"></span>
                         salt and pepper to taste
                     </label>
                     <label class="container">
-                        <input type="checkbox" checked="unchecked">
+                        <input type="checkbox">
                         <span class="checkmark"></span>
                         1 tsp duck fat (optional)
                     </label>
@@ -80,21 +81,46 @@
                 <!-- Checkboxes of equipment -->
                 <div class="flex">
                     <label class="container">
-                        <input type="checkbox" checked="unchecked">
+                        <input type="checkbox">
                         <span class="checkmark"></span>
                         Metal straw
                     </label>
                     <label class="container">
-                        <input type="checkbox" checked="unchecked">
+                        <input type="checkbox">
                         <span class="checkmark"></span>
                         Saucepan
                     </label>
                 </div>
             </div>
+            <!-- Steak Prep -->
+            <h2>Interactive Video</h2>
             <div class="recipe-video">
-
+                <div id="ytplayer"></div>
             </div>
+            <!-- Captions -->
+            <div class="flex" id="video-captions">
+                <p id="captions"></p>
+            </div>
+            <div class="grid" id="video-buttons">
+                <!-- Button to get to previous step -->
+                <button onclick="changevideo('xlnvkOemQI4')">Previous Step</button>
+                <!-- Button to get to next step -->
+                <button onclick="changevideo('QODfMFgtCjQ')">Next Step</button>
+                <!-- Directions written out -->
+            </div>
+            <h3>Directions</h3>
+            <p>Prep</p>
+            <ol>
+                <li>Gather your ingredients - your steak should be at room temperature.</li>
+                <li>Prep your shallot by cutting off both ends, cutting in half, removing the peels, then cutting each half in half.</li>
+                <li>Generously season both sides of your steak with salt and pepper from about 10 inches away.</li>
+                <li>Prepare your garnish - pick cilantro off of stems & thinly slice your scallion.</li>
+            </ol>
+            <p>Cook</p>
+            <ol>
+
+            </ol>
         </main>
-        <script src="../src/js/script.js"></script>
+        <script src="../../src/js/script.js"></script>
     </body>
 </html>
