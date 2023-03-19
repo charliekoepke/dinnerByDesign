@@ -58,24 +58,23 @@ function onYouTubePlayerAPIReady() {
       'loop': 1
    },
    events: {
-      'onReady': onPlayerReady,
       'onStateChange': onStateChange
    }
    });
 }
 
-function onPlayerReady(event) {
-   event.target.playVideo();
-   // changecaptions();
-}
 // Keep loop
 function onStateChange(event) {
    if (event.data == YT.PlayerState.ENDED) {
       player.playVideo();
    }
    while (event.data == YT.PlayerState.PLAYING) {
-      if (player.getVideoUrl() == 'xlnvkOemQI4') {
-         console.log(steakprep);
+      var i = 0;
+      if (player.getVideoUrl() == 'https://www.youtube.com/watch?v=xlnvkOemQI4') {
+         if (player.getCurrentTime() == steakcook["recipe"][i]["time"]) {
+            document.getElementById("captions").innerHTML = steakcook["recipe"][i]["line"];
+            i++;
+         }
       }
    }
 }
