@@ -1,3 +1,4 @@
+// VIDEO ID: xlnvkOemQI4
 const steakprep = JSON.parse(`{
    "recipe": [
        {"line": "", "time": -1},
@@ -8,6 +9,7 @@ const steakprep = JSON.parse(`{
    ]
 }`);
 
+// VIDEO ID: R_QLdbfLGZ0
 const steakcook = JSON.parse(`{
    "recipe": [
        {"line": "", "time": -1},
@@ -23,6 +25,7 @@ const steakcook = JSON.parse(`{
    ]
 }`);
 
+// VIDEO ID: Gqay2XoYqcY
 const soycuredegg = JSON.parse(`{
    "recipe": [
        {"line": "", "time": -1},
@@ -38,6 +41,28 @@ const soycuredegg = JSON.parse(`{
        {"line": "Gently pour sauce over egg yolks.", "time": 188240},
        {"line": "Cover yolks with a paper towel and fold the edges over the top. This will pull liquid over the top of the yolks since they float.", "time": 197140},
        {"line": "Refrigerate for at least 1 hour.", "time": 205150}
+   ]
+}`);
+
+// VIDEO ID: XeRD00WTsQ8
+const mushroomprep = JSON.parse(`{
+   "recipe": [
+       {"line": "", "time": -1},
+       {"line": "Gather your ingredients.", "time": 0},
+       {"line": "Remove the stems from your mushrooms.", "time": 6100},
+       {"line": "Slice your mushrooms into ¼ inch slices.", "time": 29030},
+       {"line": "Finely chop your garlic.", "time": 55210}
+   ]
+}`);
+
+// VIDEO ID: bNdiE0umUZc
+const mushroomcook = JSON.parse(`{
+   "recipe": [
+       {"line": "", "time": -1},
+       {"line": "Put a nonstick pan on high heat and allow it to get hot. Once it is hot, add your mushrooms to the dry pan.", "time": 0},
+       {"line": "Stir and move the mushrooms semi frequently. You should hear them squeaking against the pan. Allow them to shrink down about 10% and the edges will turn golden brown. ", "time": 3240},
+       {"line": "Once the edges are browned, add in your butter and garlic.", "time": 43050},
+       {"line": "Cook the mushrooms, butter and garlic until the garlic is golden brown.", "time": 50030}
    ]
 }`);
 
@@ -64,21 +89,56 @@ var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+var videoId = document.getElementsByTagName("main")[0].id;
 var player;
 function onYouTubePlayerAPIReady() {
-   player = new YT.Player('ytplayer', {
-   height: '500',
-   width: '980',
-   videoId: 'xlnvkOemQI4',
-   playerVars: {
-      'showinfo': 0,
-      'rel': 0,
-      'loop': 1
-   },
-   events: {
-      'onStateChange': onStateChange
+   // Soy Cured Egg
+   if (videoId == "soy-cured-egg") {
+      player = new YT.Player('ytplayer', {
+         height: '500',
+         width: '980',
+         videoId: 'Gqay2XoYqcY',
+         playerVars: {
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+         },
+         events: {
+            'onStateChange': onStateChange
+         }
+      });
    }
-   });
+   // Seared Sirloin
+   else if (videoId == "seared-sirloin") {
+      player = new YT.Player('ytplayer', {
+         height: '500',
+         width: '980',
+         videoId: 'xlnvkOemQI4',
+         playerVars: {
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+         },
+         events: {
+            'onStateChange': onStateChange
+         }
+      });
+   }
+   else if (videoId == "shiitake-mushrooms") {
+      player = new YT.Player('ytplayer', {
+         height: '500',
+         width: '980',
+         videoId: 'XeRD00WTsQ8',
+         playerVars: {
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+         },
+         events: {
+            'onStateChange': onStateChange
+         }
+      });
+   }
 }
 
 // Keep loop
@@ -88,18 +148,25 @@ function onStateChange(event) {
    }
 }
 
-function changevideo(newsrc) {
-   player = new YT.Player('ytplayer', {
-      height: '500',
-      width: '980',
-      videoId: newsrc,
-      playerVars: {
-         'showinfo': 0,
-         'rel': 0,
-         'loop': 1
-      },
-      events: {
-         'onStateChange': onStateChange
+function changeVideo() {
+   if (videoId == "seared-sirloin") {
+      if (player.getVideoUrl() == "https://youtu.be/xlnvkOemQI4") {
+         player.loadVideoById("R_QLdbfLGZ0");
+         player.playVideo();
       }
-      });
+      else if (player.getVideoUrl() == "https://youtu.be/R_QLdbfLGZ0"){
+         player.loadVideoById("xlnvkOemQI4");
+         player.playVideo();
+      }
+   }
+   else if (videoId == "shiitake-mushrooms") {
+      if (player.getVideoUrl() =="https://youtu.be/XeRD00WTsQ8") {
+         player.loadVideoById("bNdiE0umUZc");
+         player.playVideo();
+      }
+      else {
+         player.loadVideoById("XeRD00WTsQ8");
+         player.playVideo();
+      }
+   }
 }
