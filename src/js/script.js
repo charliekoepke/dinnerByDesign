@@ -28,19 +28,18 @@ const steakcook = JSON.parse(`{
 // VIDEO ID: Gqay2XoYqcY
 const soycuredegg = JSON.parse(`{
    "recipe": [
-       {"line": "", "time": -1},
-       {"line": "Gather your ingredients.", "time": 0},
-       {"line": "Peel ginger with a small spoon.", "time": 4150},
-       {"line": "Grate ginger into a small bowl with a microplane.", "time": 19060},
-       {"line": "Add 6 tbsp of soy sauce to the bowl.", "time": 40160},
-       {"line": "Gently roll your limeto release the juices, and cut in half.", "time": 60220},
-       {"line": "Thinly slice the thai chili and add to the bowl.", "time": 73200},
-       {"line": "Squeeze lime into the bowl.", "time": 113210},
-       {"line": "Stir to combine.", "time": 144160},
-       {"line": "Separate egg yolk from white and place gently into a small bowl.", "time": 148130},
-       {"line": "Gently pour sauce over egg yolks.", "time": 188240},
-       {"line": "Cover yolks with a paper towel and fold the edges over the top. This will pull liquid over the top of the yolks since they float.", "time": 197140},
-       {"line": "Refrigerate for at least 1 hour.", "time": 205150}
+      {"line": "Gather your ingredients.", "time": 0},
+      {"line": "Peel ginger with a small spoon.", "time": 4150},
+      {"line": "Grate ginger into a small bowl with a microplane.", "time": 19060},
+      {"line": "Add 6 tbsp of soy sauce to the bowl.", "time": 40160},
+      {"line": "Gently roll your limeto release the juices, and cut in half.", "time": 60220},
+      {"line": "Thinly slice the thai chili and add to the bowl.", "time": 73200},
+      {"line": "Squeeze lime into the bowl.", "time": 113210},
+      {"line": "Stir to combine.", "time": 144160},
+      {"line": "Separate egg yolk from white and place gently into a small bowl.", "time": 148130},
+      {"line": "Gently pour sauce over egg yolks.", "time": 188240},
+      {"line": "Cover yolks with a paper towel and fold the edges over the top. This will pull liquid over the top of the yolks since they float.", "time": 197140},
+      {"line": "Refrigerate for at least 1 hour.", "time": 205150}
    ]
 }`);
 
@@ -85,12 +84,12 @@ function changetab(toggletab) {
 }
 
 // ytplayer code: https://developers.google.com/youtube/player_parameters#IFrame_Player_API
-var tag = document.createElement('script');
+let tag = document.createElement('script');
 tag.src = "https://www.youtube.com/player_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
+let firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-var videoId = document.getElementsByTagName("main")[0].id;
-var player;
+let videoId = document.getElementsByTagName("main")[0].id;
+let player;
 function onYouTubePlayerAPIReady() {
    // Soy Cured Egg
    if (videoId == "soy-cured-egg") {
@@ -135,38 +134,70 @@ function onYouTubePlayerAPIReady() {
             'loop': 1
          },
          events: {
+            'onReady': onPlayerReady,
             'onStateChange': onStateChange
          }
       });
    }
 }
 
+let i = 0;
+function interactiveCaptions() {
+   if (videoId == "soy-cured-egg") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(soycuredegg["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = soycuredegg["recipe"][i]["line"];
+         i++;
+      }
+   }
+   if (videoId == "seared-sirloin") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=xlnvkOemQI4") {
+         if ((player.getCurrentTime() * 1000) >= parseInt(steakprep["recipe"][i]["time"])) {
+            document.getElementById("captions").innerHTML = steakprep["recipe"][i]["line"];
+            i++;
+         }
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=R_QLdbfLGZ0") {
+         if ((player.getCurrentTime() * 1000) >= parseInt(steakcook["recipe"][i]["time"])) {
+            document.getElementById("captions").innerHTML = steakcook["recipe"][i]["line"];
+            i++;
+         }
+      }
+   }
+}
+
 // Keep loop
+// Start the timer when the video plays
+let timer;
 function onStateChange(event) {
+   if (event.data == YT.PlayerState.PLAYING) {
+      timer = window.setInterval(interactiveCaptions, 1000);
+   }
    if (event.data == YT.PlayerState.ENDED) {
       player.playVideo();
+      window.clearInterval(timer);
+      i = 0;
    }
 }
 
 function changeVideo() {
    if (videoId == "seared-sirloin") {
-      if (player.getVideoUrl() == "https://youtu.be/xlnvkOemQI4") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=xlnvkOemQI4") {
          player.loadVideoById("R_QLdbfLGZ0");
-         player.playVideo();
+         i = 0;
       }
-      else if (player.getVideoUrl() == "https://youtu.be/R_QLdbfLGZ0"){
+      else if (player.getVideoUrl() == "https://www.youtube.com/watch?v=R_QLdbfLGZ0"){
          player.loadVideoById("xlnvkOemQI4");
-         player.playVideo();
+         i = 0;
       }
    }
    else if (videoId == "shiitake-mushrooms") {
-      if (player.getVideoUrl() =="https://youtu.be/XeRD00WTsQ8") {
+      if (player.getVideoUrl() =="https://www.youtube.com/watch?v=R_QLdbfLGZ0") {
          player.loadVideoById("bNdiE0umUZc");
-         player.playVideo();
+         i = 0;
       }
-      else {
+      else if (player.getVideoUrl() == "https://www.youtube.com/watch?v=bNdiE0umUZc") {
          player.loadVideoById("XeRD00WTsQ8");
-         player.playVideo();
+         i = 0;
       }
    }
 }
