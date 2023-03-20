@@ -134,7 +134,6 @@ function onYouTubePlayerAPIReady() {
             'loop': 1
          },
          events: {
-            'onReady': onPlayerReady,
             'onStateChange': onStateChange
          }
       });
@@ -161,6 +160,12 @@ function interactiveCaptions() {
             document.getElementById("captions").innerHTML = steakcook["recipe"][i]["line"];
             i++;
          }
+      }
+   }
+   if (videoId == "braised-cherries") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(braisedcherries["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = braisedcherries["recipe"][i]["line"];
+         i++;
       }
    }
 }
@@ -191,7 +196,7 @@ function changeVideo() {
       }
    }
    else if (videoId == "shiitake-mushrooms") {
-      if (player.getVideoUrl() =="https://www.youtube.com/watch?v=R_QLdbfLGZ0") {
+      if (player.getVideoUrl() =="https://www.youtube.com/watch?v=XeRD00WTsQ8") {
          player.loadVideoById("bNdiE0umUZc");
          i = 0;
       }
