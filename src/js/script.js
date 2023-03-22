@@ -140,6 +140,8 @@ function onYouTubePlayerAPIReady() {
    }
 }
 
+// Autoloop through STEPS not video (use youtube API)
+
 let i = 0;
 function interactiveCaptions() {
    if (videoId == "soy-cured-egg") {
