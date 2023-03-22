@@ -170,6 +170,20 @@ function interactiveCaptions() {
          i++;
       }
    }
+   if (videoId == "shiitake-mushrooms") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=XeRD00WTsQ8") {
+         if ((player.getCurrentTime() * 1000) >= parseInt(mushroomprep["recipe"][i]["time"])) {
+            document.getElementById("captions").innerHTML = mushroomprep["recipe"][i]["line"];
+            i++;
+         }
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=bNdiE0umUZc") {
+         if ((player.getCurrentTime() * 1000) >= parseInt(mushroomcook["recipe"][i]["time"])) {
+            document.getElementById("captions").innerHTML = mushroomcook["recipe"][i]["line"];
+            i++;
+         }
+      }
+   }
 }
 
 // Keep loop
