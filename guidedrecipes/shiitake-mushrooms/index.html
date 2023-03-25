@@ -96,7 +96,9 @@
             <!-- Steak Prep -->
             <h2>Interactive Video</h2>
             <div class="recipe-video">
+                <button onclick="previousStep()"><</button>
                 <div id="ytplayer"></div>
+                <button onclick="nextStep()">></button>
             </div>
             <!-- Captions -->
             <div class="flex" id="video-captions">
@@ -104,9 +106,9 @@
             </div>
             <div class="grid" id="video-buttons">
                 <!-- Button to get to previous step -->
-                <button onclick="changeVideo()">Previous Step</button>
+                <button onclick="changeVideo('Prep')">Prep</button>
                 <!-- Button to get to next step -->
-                <button onclick="changeVideo()">Next Step</button>
+                <button onclick="changeVideo('Cook')">Cook</button>
                 <!-- Directions written out -->
             </div>
             <h3>Directions</h3>

@@ -98,6 +98,7 @@ function onYouTubePlayerAPIReady() {
          width: '980',
          videoId: 'Gqay2XoYqcY',
          playerVars: {
+            'controls': 0,
             'showinfo': 0,
             'rel': 0,
             'loop': 1
@@ -114,6 +115,7 @@ function onYouTubePlayerAPIReady() {
          width: '980',
          videoId: 'xlnvkOemQI4',
          playerVars: {
+            'controls': 0,
             'showinfo': 0,
             'rel': 0,
             'loop': 1
@@ -123,12 +125,14 @@ function onYouTubePlayerAPIReady() {
          }
       });
    }
+   // Shiitake Mushrooms
    else if (videoId == "shiitake-mushrooms") {
       player = new YT.Player('ytplayer', {
          height: '500',
          width: '980',
          videoId: 'XeRD00WTsQ8',
          playerVars: {
+            'controls': 0,
             'showinfo': 0,
             'rel': 0,
             'loop': 1
@@ -140,27 +144,155 @@ function onYouTubePlayerAPIReady() {
    }
 }
 
-// Autoloop through STEPS not video (use youtube API)
-
 let i = 0;
+let next = false;
+let previous = false;
 function interactiveCaptions() {
    if (videoId == "soy-cured-egg") {
       if ((player.getCurrentTime() * 1000) >= parseInt(soycuredegg["recipe"][i]["time"])) {
          document.getElementById("captions").innerHTML = soycuredegg["recipe"][i]["line"];
-         i++;
+         if (i + 1 < soycuredegg["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(soycuredegg["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(soycuredegg["recipe"][i]["time"])/1000);
+            }
+         }
+         if (next) {
+            i++;
+            next = false;
+         }
+         else if (previous) {
+            i--;
+            previous = false;
+         }
       }
    }
    if (videoId == "seared-sirloin") {
       if (player.getVideoUrl() == "https://www.youtube.com/watch?v=xlnvkOemQI4") {
          if ((player.getCurrentTime() * 1000) >= parseInt(steakprep["recipe"][i]["time"])) {
             document.getElementById("captions").innerHTML = steakprep["recipe"][i]["line"];
-            i++;
+            if (i + 1 < steakprep["recipe"].length) {
+               if ((player.getCurrentTime() * 1000) >= parseInt(steakprep["recipe"][i + 1]["time"])) {
+                  player.seekTo(parseInt(steakprep["recipe"][i]["time"])/1000);
+               }
+            }
+            if (next) {
+               i++;
+               next = false;
+            }
+            else if (previous) {
+               i--;
+               previous = false;
+            }
          }
       }
       if (player.getVideoUrl() == "https://www.youtube.com/watch?v=R_QLdbfLGZ0") {
          if ((player.getCurrentTime() * 1000) >= parseInt(steakcook["recipe"][i]["time"])) {
             document.getElementById("captions").innerHTML = steakcook["recipe"][i]["line"];
+            if (i + 1 < steakcook["recipe"].length) {
+               if ((player.getCurrentTime() * 1000) >= parseInt(steakcook["recipe"][i + 1]["time"])) {
+                  player.seekTo(parseInt(steakcook["recipe"][i]["time"])/1000);
+               }
+            }
+            if (next) {
+               i++;
+               next = false;
+            }
+            else if (previous) {
+               i--;
+               previous = false;
+            }
+         }
+      }
+   }
+   if (videoId == "braised-cherries") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(braisedcherries["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = braisedcherries["recipe"][i]["line"];
+         if (i + 1 < braisedcherries["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(braisedcherries["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(braisedcherries["recipe"][i]["time"])/1000);
+            }
+         }
+         if (next) {
             i++;
+            next = false;
+         }
+         else if (previous) {
+            i--;
+            previous = false;
+         }
+      }
+   }
+   if (videoId == "shiitake-mushrooms") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=XeRD00WTsQ8") {
+         if ((player.getCurrentTime() * 1000) >= parseInt(mushroomprep["recipe"][i]["time"])) {
+            document.getElementById("captions").innerHTML = mushroomprep["recipe"][i]["line"];
+            if (i + 1 < mushroomprep["recipe"].length) {
+               if ((player.getCurrentTime() * 1000) >= parseInt(mushroomprep["recipe"][i + 1]["time"])) {
+                  player.seekTo(parseInt(mushroomprep["recipe"][i]["time"])/1000);
+               }
+            }
+            if (next) {
+               i++;
+               next = false;
+            }
+            else if (previous) {
+               i--;
+               previous = false;
+            }
+         }
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=bNdiE0umUZc") {
+         if ((player.getCurrentTime() * 1000) >= parseInt(mushroomcook["recipe"][i]["time"])) {
+            document.getElementById("captions").innerHTML = mushroomcook["recipe"][i]["line"];
+            if (i + 1 < mushroomcook["recipe"].length) {
+               if ((player.getCurrentTime() * 1000) >= parseInt(mushroomcook["recipe"][i + 1]["time"])) {
+                  player.seekTo(parseInt(mushroomcook["recipe"][i]["time"])/1000);
+               }
+            }
+            if (next) {
+               i++;
+               next = false;
+            }
+            else if (previous) {
+               i--;
+               previous = false;
+            }
+         }
+      }
+   }
+}
+
+// Keep loop
+// Start the timer when the video plays
+let timer;
+function onStateChange(event) {
+   if (event.data == YT.PlayerState.PLAYING) {
+      timer = window.setInterval(interactiveCaptions, 100);
+   }
+   if (event.data == YT.PlayerState.ENDED) {
+      player.playVideo();
+      window.clearInterval(timer);
+   }
+}
+
+function nextStep() {
+   if (videoId == "soy-cured-egg") {
+      if (i + 1 < soycuredegg["recipe"].length) {
+         player.seekTo(parseInt(soycuredegg["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+   if (videoId == "seared-sirloin") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=xlnvkOemQI4") {
+         if (i + 1 < steakprep["recipe"].length) {
+            player.seekTo(parseInt(steakprep["recipe"][i + 1]["time"])/1000);
+            next = true;
+         }
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=R_QLdbfLGZ0") {
+         if (i + 1 < steakcook["recipe"].length) {
+            player.seekTo(parseInt(steakcook["recipe"][i + 1]["time"])/1000);
+            next = true;
          }
       }
    }
@@ -185,39 +317,73 @@ function interactiveCaptions() {
       }
    }
 }
-
-// Keep loop
-// Start the timer when the video plays
-let timer;
-function onStateChange(event) {
-   if (event.data == YT.PlayerState.PLAYING) {
-      timer = window.setInterval(interactiveCaptions, 1000);
+function previousStep() {
+   if (videoId == "soy-cured-egg") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(soycuredegg["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = soycuredegg["recipe"][i - 1]["line"];
+         previous = true;
+      }
    }
-   if (event.data == YT.PlayerState.ENDED) {
-      player.playVideo();
-      window.clearInterval(timer);
-      i = 0;
+   if (videoId == "seared-sirloin") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=xlnvkOemQI4") {
+         if (i - 1 > -1) {
+            player.seekTo(parseInt(steakprep["recipe"][i - 1]["time"])/1000);
+            document.getElementById("captions").innerHTML = steakprep["recipe"][i - 1]["line"];
+            previous = true;
+         }
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=R_QLdbfLGZ0") {
+         if (i - 1 > -1) {
+            player.seekTo(parseInt(steakcook["recipe"][i - 1]["time"])/1000);
+            document.getElementById("captions").innerHTML = steakcook["recipe"][i - 1]["line"];
+            previous = true;
+         }
+      }
+   }
+   if (videoId == "braised-cherries") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(braisedcherries["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = braisedcherries["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (videoId == "shiitake-mushrooms") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=XeRD00WTsQ8") {
+         if (i - 1 > -1) {
+            player.seekTo(parseInt(mushroomprep["recipe"][i - 1]["time"])/1000);
+            document.getElementById("captions").innerHTML = mushroomprep["recipe"][i - 1]["line"];
+            previous = true;
+         }
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=bNdiE0umUZc") {
+         if (i - 1 > -1) {
+            player.seekTo(parseInt(mushroomcook["recipe"][i - 1]["time"])/1000);
+            document.getElementById("captions").innerHTML = mushroomcook["recipe"][i - 1]["line"];
+            previous = true;
+         }
+      }
    }
 }
 
-function changeVideo() {
+function changeVideo(prepOrCook) {
    if (videoId == "seared-sirloin") {
-      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=xlnvkOemQI4") {
-         player.loadVideoById("R_QLdbfLGZ0");
+      if (prepOrCook == "Prep") {
+         player.loadVideoById("xlnvkOemQI4");
          i = 0;
       }
-      else if (player.getVideoUrl() == "https://www.youtube.com/watch?v=R_QLdbfLGZ0"){
-         player.loadVideoById("xlnvkOemQI4");
+      else if (prepOrCook == "Cook"){
+         player.loadVideoById("R_QLdbfLGZ0");
          i = 0;
       }
    }
    else if (videoId == "shiitake-mushrooms") {
-      if (player.getVideoUrl() =="https://www.youtube.com/watch?v=XeRD00WTsQ8") {
-         player.loadVideoById("bNdiE0umUZc");
+      if (prepOrCook == "Prep") {
+         player.loadVideoById("XeRD00WTsQ8");
          i = 0;
       }
-      else if (player.getVideoUrl() == "https://www.youtube.com/watch?v=bNdiE0umUZc") {
-         player.loadVideoById("XeRD00WTsQ8");
+      else if (prepOrCook == "Cook") {
+         player.loadVideoById("bNdiE0umUZc");
          i = 0;
       }
    }
