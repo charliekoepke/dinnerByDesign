@@ -1,6 +1,5 @@
 {
     "recipe": [
-        {"line": "", "time": -1},
         {"line": "Gather your ingredients.", "time": 0},
         {"line": "Peel ginger with a small spoon.", "time": 4150},
         {"line": "Grate ginger into a small bowl with a microplane.", "time": 19060},

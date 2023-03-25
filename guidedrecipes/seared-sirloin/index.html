@@ -95,10 +95,10 @@
             </div>
             <!-- Steak Prep -->
             <h2>Interactive Video</h2>
-            <div class="recipe-video">
-                <button onclick="previousStep()"><</button>
+            <div class="recipe-video" id="recipe-video">
+                <button onclick="previousStep(); console.log('press');"><</button>
                 <div id="ytplayer"></div>
-                <button onclick="nextStep()">></button>
+                <button onclick="nextStep(); console.log('press');">></button>
             </div>
             <!-- Captions -->
             <div class="flex" id="video-captions">
