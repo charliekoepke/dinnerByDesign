@@ -91,7 +91,6 @@ nav .flex {
 
 .recipetile {
   font-family: "Roboto", sans-serif !important;
-  font-size: 24pt !important;
   background-color: black;
   color: white;
   padding: 2%;
@@ -100,8 +99,9 @@ nav .flex {
   font-size: 20pt;
   color: white;
 }
-.recipetile h2 {
+.recipetile h3 {
   color: white;
+  font-size: 24pt;
 }
 
 #about-header {
@@ -239,7 +239,6 @@ footer .flex {
   user-select: none;
 }
 
-/* Hide the browser's default checkbox */
 .container input {
   position: absolute;
   opacity: 0;
@@ -248,7 +247,6 @@ footer .flex {
   width: 0;
 }
 
-/* Create a custom checkbox */
 .checkmark {
   position: absolute;
   top: 0;
@@ -258,29 +256,24 @@ footer .flex {
   background-color: #c6c6c6;
 }
 
-/* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
   background-color: rgba(132, 132, 132, 0.6039215686);
 }
 
-/* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
   background-color: #FF561B;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
   display: block;
 }
 
-/* Style the checkmark/indicator */
 .container .checkmark:after {
   left: 9px;
   top: 5px;
@@ -289,4 +282,21 @@ footer .flex {
   border: solid white;
   border-width: 0 3px 3px 0;
   transform: rotate(45deg);
+}
+
+.dropdown {
+  font-family: "Roboto", sans-serif;
+  text-align: right;
+  margin: 1%;
+}
+.dropdown select {
+  border: none;
+  padding: 1%;
+  border-radius: 2%;
+  background-color: black;
+  color: white;
+  font-size: 20pt;
+}
+.dropdown select :focus {
+  outline: none;
 }/*# sourceMappingURL=style.css.map */

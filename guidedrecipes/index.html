@@ -20,33 +20,56 @@
         <main id="guidedrecipes">
             <h2 style="margin: 1em; color: #FF561B;">Guided Recipes</h2>
             <p style="margin: 1em;">The goal of our recipes is to guide you through the cooking process in a way that minimizes mistakes.  Once you start the guided recipe, it will loop through each step until you are ready to go on, and press continue.  The first time through each step, it will only show you the video, so you are prepared for what you will need to do.  On the second loop, written instructions will appear, so you can quickly reference what is required for the step.</p>
+            <div class="flex">
+                <label class="dropdown">
+                    <select onchange="toggleView(this)">
+                        <option value="none">Filter by</option>
+                        <option value="element">Element View</option>
+                        <option value="recipe">Recipe View</option>
+                    </select>
+                </label>
+            </div>
             <div class="grid" id="guidedrecipes-recipes">
-                <div class="recipetile">
+                <div class="recipetile element">
                     <img>
                     <div class="flex">
-                        <h2>Seared Sirloin</h2>
+                        <h3>Seared Sirloin</h3>
                         <a href="seared-sirloin/index.html">Begin</a>
                     </div>
                 </div>
-                <div class="recipetile">
+                <div class="recipetile element">
                     <img>
                     <div class="flex">
-                        <h2>Sauteed Shiitake Mushrooms</h2>
+                        <h3>Sauteed Shiitake Mushrooms</h3>
                         <a href="shiitake-mushrooms/index.html">Begin</a>
                     </div>
                 </div>
-                <!-- <div class="recipetile">
+                <div class="recipetile element">
                     <img>
                     <div class="flex">
-                        <h2>Braised Cherries</h2>
+                        <h3>Braised Cherries</h3>
                         <a href="braised-cherries/index.html">Begin</a>
                     </div>
-                </div> -->
-                <div class="recipetile">
+                </div>
+                <div class="recipetile element">
                     <img>
                     <div class="flex">
-                        <h2>Soy Cured Egg Yolk</h2>
+                        <h3>Soy Cured Egg Yolk</h3>
                         <a href="soy-cured-egg/index.html">Begin</a>
+                    </div>
+                </div>
+                <div class="recipetile recipe">
+                    <img>
+                    <div class="flex">
+                        <h3>Seared Sirloin with Aromatic Rice, Sauteed Shiitake Mushrooms, Soy Cured Egg Yolk</h3>
+                        <a href="">Begin</a>
+                    </div>
+                </div>
+                <div class="recipetile recipe">
+                    <img>
+                    <div class="flex">
+                        <h3>Pan Seared Duck, Braised Cherries, Roasted Acorn Squash</h3>
+                        <a href="">Begin</a>
                     </div>
                 </div>
             </div>
@@ -54,5 +77,6 @@
         <footer>
             <p>Footer</p>
         </footer>
+        <script src="../src/js/guidedrecipes.js"></script>
     </body>
 </html>

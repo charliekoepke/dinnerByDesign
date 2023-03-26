@@ -99,7 +99,6 @@ nav {
 // Recipe Tiles
 .recipetile {
    font-family: 'Roboto', sans-serif !important;
-   font-size: 24pt !important;
    background-color: black;
    color: white;
    padding: 2%;
@@ -108,8 +107,9 @@ nav {
       font-size: 20pt;
       color: white;
    }
-   h2 {
+   h3 {
       color: white;
+      font-size: 24pt;
    }
 }
 
@@ -259,8 +259,6 @@ footer {
    -ms-user-select: none;
    user-select: none;
 }
-
-/* Hide the browser's default checkbox */
 .container input {
    position: absolute;
    opacity: 0;
@@ -269,7 +267,6 @@ footer {
    width: 0;
 }
 
-/* Create a custom checkbox */
 .checkmark {
    position: absolute;
    top: 0;
@@ -279,29 +276,24 @@ footer {
    background-color: #c6c6c6;
 }
 
-/* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
    background-color: #8484849a;
 }
 
-/* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
    background-color: #FF561B;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
    content: "";
    position: absolute;
    display: none;
 }
 
-/* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
    display: block;
 }
 
-/* Style the checkmark/indicator */
 .container .checkmark:after {
    left: 9px;
    top: 5px;
@@ -312,4 +304,24 @@ footer {
    -webkit-transform: rotate(45deg);
    -ms-transform: rotate(45deg);
    transform: rotate(45deg);
+}
+
+// Custom dropdown menu
+.dropdown {
+   font-family: 'Roboto', sans-serif;
+   text-align: right;
+   margin: 1%;
+
+   select {
+      border: none;
+      padding: 1%;
+      border-radius: 2%;
+      background-color: black;
+      color: white;
+      font-size: 20pt;
+
+      :focus {
+         outline: none;
+      }
+   }
 }
