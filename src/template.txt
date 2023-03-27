@@ -1,0 +1,116 @@
+----- GUIDED RECIPE TEMPLATE -----
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title><!-- TITLE --></title>
+
+        <meta charset="utf-8">
+        <link href="../../src/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <div class="flex">
+                <!-- Place logo here -->
+                    <a href="../../index.html"><strong>Guided Recipes</strong></a>
+                    <a href="../../comingsoon.html">Shop</a>
+                    <a href="../../about.html">About</a>
+                    <a href="../../comingsoon.html">Sign Up</a>
+            </div>
+        </nav>
+        <main id="">
+            <p><a href="../index.html">Guided Recipes</a>/ </p>
+            <div class="grid" id="recipe-header">
+            <div class="flex">
+                <h2><!-- RECIPE NAME --></h2>
+                <p><!-- RECIPE DESCRIPTION --></p>
+            </div>
+            <div class="flex">
+                <img>
+            </div>
+            </div>
+            <!-- Toggle between ingredients and equipment -->
+            <div class="tab">
+                <button onclick="changetab('Ingredients')" id="tab-ingredients">Ingredients</button>
+                <button onclick="changetab('Equipment')" id="tab-equipment">Equipment</button>
+            </div>
+            <div class="tabcontent" id="ingredients">
+                <!-- Checkboxes of ingredients -->
+                <div class="flex">
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <!-- INGREDIENT -->
+                    </label>
+                </div>
+            </div>
+            <div class="tabcontent" id="equipment">
+                <!-- Checkboxes of equipment -->
+                <div class="flex">
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        <!-- EQUIPMENT -->
+                    </label>
+                </div>
+            </div>
+            <!-- Recipe Video -->
+            <h2>Interactive Video</h2>
+            <div class="recipe-video">
+                <button onclick="previousStep()"><</button>
+                <div id="ytplayer"></div>
+                <button onclick="nextStep()">></button>
+            </div>
+            <!-- Captions -->
+            <div class="flex" id="video-captions">
+                <p id="captions"></p>
+            </div>
+            <h3>Directions</h3>
+            <ol>
+                <li><!-- DIRECTIONS --></li>
+            </ol>
+        </main>
+        <script src="../../src/js/script.js"></script>
+    </body>
+</html>
+
+--------------------
+
+----- VIDEO LINK TEMPLATE -----
+
+player = new YT.Player('ytplayer', {
+    height: '500',
+    width: '980',
+    videoId: '',
+    playerVars: {
+    'controls': 0,
+    'showinfo': 0,
+    'rel': 0,
+    'loop': 1
+    },
+    events: {
+    'onStateChange': onStateChange
+    }
+});
+
+--------------------
+
+----- RECIPE TILE TEMPLATE -----
+
+<div class="recipetile <!-- Add either element or recipe -->">
+    <img>
+    <div class="flex">
+        <h3>Sauteed Shiitake Mushrooms</h3>
+        <a href="shiitake-mushrooms/index.html">Begin</a>
+    </div>
+</div>
+
+--------------------
+
+----- JSON TEMPLATE -----
+
+{
+    "recipe": [
+        {"line": "", "time": }
+    ]
+}

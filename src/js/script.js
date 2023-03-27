@@ -61,6 +61,35 @@ const mushroomcook = JSON.parse(`{
    ]
 }`);
 
+// VIDEO ID:
+const aromaticrice = JSON.parse(`{
+   "recipe":
+   [
+       {"line": "Measure out 1 and 1/2 cups of medium grain rice and add to a rice cooker.", "time": 0},
+       {"line": "Rinse the rice thouroughly until the water is clear.", "time": 31700},
+       {"line": "Add 2 cups of water to the rice cooker.", "time": 102090},
+       {"line": "Allow the rice to soak for 15 minutes then press cook on the rice cooker.", "time": 114080}
+   ]
+}`);
+
+// VIDEO ID:
+const cherriesprep = JSON.parse(``);
+
+// VIDEO ID:
+const cherriescook = JSON.parse(``);
+
+// VIDEO ID:
+const duckprep = JSON.parse(``);
+
+// VIDEO ID:
+const duckcook = JSON.parse(``);
+
+// VIDEO ID:
+const squashprep = JSON.parse(``);
+
+// VIDEO ID:
+const squashcook = JSON.parse(``);
+
 document.getElementById("ingredients").style.display = "block";
 document.getElementById("tab-ingredients").style.color = "#FF561B";
 
@@ -127,6 +156,23 @@ function onYouTubePlayerAPIReady() {
          height: '500',
          width: '980',
          videoId: 'XeRD00WTsQ8',
+         playerVars: {
+            'controls': 0,
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+         },
+         events: {
+            'onStateChange': onStateChange
+         }
+      });
+   }
+   // Aromatic Rice
+   else if (videoId == "aromatic-rice") {
+      player = new YT.Player('ytplayer', {
+         height: '500',
+         width: '980',
+         videoId: '',
          playerVars: {
             'controls': 0,
             'showinfo': 0,

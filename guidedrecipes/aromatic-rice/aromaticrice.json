@@ -1,0 +1,9 @@
+{
+    "recipe":
+    [
+        {"line": "Measure out 1 and 1/2 cups of medium grain rice and add to a rice cooker.", "time": 0},
+        {"line": "Rinse the rice thouroughly until the water is clear.", "time": 31700},
+        {"line": "Add 2 cups of water to the rice cooker.", "time": 102090},
+        {"line": "Allow the rice to soak for 15 minutes then press cook on the rice cooker.", "time": 114080}
+    ]
+}
