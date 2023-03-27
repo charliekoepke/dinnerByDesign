@@ -111,6 +111,6 @@ player = new YT.Player('ytplayer', {
 
 {
     "recipe": [
-        {"line": "", "time": }
+        {"line": "", "time": 0}
     ]
 }
