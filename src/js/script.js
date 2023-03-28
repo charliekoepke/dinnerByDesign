@@ -65,30 +65,78 @@ const mushroomcook = JSON.parse(`{
 const aromaticrice = JSON.parse(`{
    "recipe":
    [
-       {"line": "Measure out 1 and 1/2 cups of medium grain rice and add to a rice cooker.", "time": 0},
-       {"line": "Rinse the rice thouroughly until the water is clear.", "time": 31700},
-       {"line": "Add 2 cups of water to the rice cooker.", "time": 102090},
-       {"line": "Allow the rice to soak for 15 minutes then press cook on the rice cooker.", "time": 114080}
+      {"line": "Measure out 1 and 1/2 cups of medium grain rice and add to a rice cooker.", "time": 0},
+      {"line": "Rinse the rice thouroughly until the water is clear.", "time": 31700},
+      {"line": "Add 2 cups of water to the rice cooker.", "time": 102090},
+      {"line": "Allow the rice to soak for 15 minutes then press cook on the rice cooker.", "time": 114080}
    ]
 }`);
 
 // VIDEO ID:
-const cherriesprep = JSON.parse(``);
+const cherriesprep = JSON.parse(`{
+   "recipe": [
+      {"line": "Gather your tools and ingredients.", "time": 0},
+      {"line": "Wash your cherries.", "time": 8000},
+      {"line": "Use a metal straw to remove the pit from the cherries.", "time": 12200},
+      {"line": "Julienne and shallot.", "time": 37110},
+      {"line": "Add shallots, cherries, vinegars, water, and brown sugar to a sauce pan.", "time": 99090}
+   ]
+}`);
 
 // VIDEO ID:
-const cherriescook = JSON.parse(``);
+const cherriescook = JSON.parse(`{
+   "recipe": [
+      {"line": "Put sauce pan on medium high heat.", "time": 0},
+      {"line": "Bring to a simmer and stir to incorporate and gently break up the cherries.", "time": 8170},
+      {"line": "Reduce heat to medium-low and allow to reduce until thickened to a syrup and cherries are broken down.", "time": 18090},
+      {"line": "Add a pinch of salt and pepper and stir in about a tablespoon of duck fat.", "time": 34110}
+   ]
+}`);
 
 // VIDEO ID:
-const duckprep = JSON.parse(``);
+const duckprep = JSON.parse(`{
+   "recipe": [
+      {"line": "Gather tools and ingredients.", "time": 0},
+      {"line": "Pat duck breast dry.", "time": 8080},
+      {"line": "Score skin with chef's knife.", "time": 25040},
+      {"line": "Season with salt on both sides, and pepper on the meat side.", "time": 137130}
+   ]
+}`);
 
 // VIDEO ID:
-const duckcook = JSON.parse(``);
+const duckcook = JSON.parse(`{
+   "recipe": [
+      {"line": "Place skin side down in a cold pan on low-medium heat.", "time": 0},
+      {"line": "Allow skin to render until the fat has rendered and is crispy.", "time": 3110},
+      {"line": "Flip over and baste with duck fat - allow to cook on meat side on medium heat for 90 seconds - adjust time for thicker duck breast.", "time": 14210},
+      {"line": "Allow duck to rest for 8 minutes.", "time": 48190},
+      {"line": "Cut duck into inch thick pieces.", "time": 63130}
+   ]
+}`);
 
 // VIDEO ID:
-const squashprep = JSON.parse(``);
+const squashprep = JSON.parse(`{
+   "recipe": [
+      {"line": "Gather tools and ingredients, and preheat oven to 450 degrees Fahrenheit.", "time": 0},
+      {"line": "Prep your squash - cut off top, cut in half, and scoop out seeds into a small bowl.", "time": 8080},
+      {"line": "Remove skin with a very sharp knife - paring knife will help get smaller hard to reach places.", "time": 48150},
+      {"line": "Cut into 1/4 inch thick pieces.", "time": 109080},
+      {"line": "Drizzle with olive oil and season with 1/2 tsp paprika, cumin, salt, white pepper, a clove of minced garlic, and 1/2 inch minced ginger.", "time": 142120},
+      {"line": "Stir until squash is evenly coated in seasoning.", "time": 237170},
+      {"line": "Spread squash pieces out on a baking sheet.", "time": 257050},
+      {"line": "Toss the seeds in olive oil in a small bowl.", "time": 281090},
+      {"line": "Spread out on a baking sheet and sprinkle with salt and pepper from a foot away.", "time": 297190}
+   ]
+}`);
 
 // VIDEO ID:
-const squashcook = JSON.parse(``);
+const squashcook = JSON.parse(`{
+   "recipe": [
+      {"line": "Put acorn squash in the oven and roast for 10 minutes at 450 degrees Fahrenheit.", "time": 0},
+      {"line": "Add squash seeds to the oven, and roast both the squash and seeds for an additional 5 minutes.", "time": 8100},
+      {"line": "Remove from oven and allow seed to cool completely so they become crisp.", "time": 24130}
+   ]
+}`);
 
 document.getElementById("ingredients").style.display = "block";
 document.getElementById("tab-ingredients").style.color = "#FF561B";

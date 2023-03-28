@@ -1,5 +1,7 @@
 {
     "recipe": [
-        {"line": "", "time": }
+        {"line": "Put acorn squash in the oven and roast for 10 minutes at 450 degrees Fahrenheit.", "time": 0},
+        {"line": "Add squash seeds to the oven, and roast both the squash and seeds for an additional 5 minutes.", "time": 8100},
+        {"line": "Remove from oven and allow seed to cool completely so they become crisp.", "time": 24130}
     ]
 }

@@ -1,5 +1,13 @@
 {
     "recipe": [
-        {"line": "", "time": 0}
+        {"line": "Gather tools and ingredients, and preheat oven to 450 degrees Fahrenheit.", "time": 0},
+        {"line": "Prep your squash - cut off top, cut in half, and scoop out seeds into a small bowl.", "time": 8080},
+        {"line": "Remove skin with a very sharp knife - paring knife will help get smaller hard to reach places.", "time": 48150},
+        {"line": "Cut into 1/4 inch thick pieces.", "time": 109080},
+        {"line": "Drizzle with olive oil and season with 1/2 tsp paprika, cumin, salt, white pepper, a clove of minced garlic, and 1/2 inch minced ginger.", "time": 142120},
+        {"line": "Stir until squash is evenly coated in seasoning.", "time": 237170},
+        {"line": "Spread squash pieces out on a baking sheet.", "time": 257050},
+        {"line": "Toss the seeds in olive oil in a small bowl.", "time": 281090},
+        {"line": "Spread out on a baking sheet and sprinkle with salt and pepper from a foot away.", "time": 297190}
     ]
 }

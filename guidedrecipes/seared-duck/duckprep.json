@@ -1,5 +1,8 @@
 {
     "recipe": [
-        {"line": "", "time": }
+        {"line": "Gather tools and ingredients.", "time": 0},
+        {"line": "Pat duck breast dry.", "time": 8080},
+        {"line": "Score skin with chef's knife.", "time": 25040},
+        {"line": "Season with salt on both sides, and pepper on the meat side.", "time": 137130}
     ]
 }

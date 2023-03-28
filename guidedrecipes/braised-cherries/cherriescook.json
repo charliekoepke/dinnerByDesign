@@ -1,5 +1,8 @@
 {
     "recipe": [
-        {"line": "", "time": }
+        {"line": "Put sauce pan on medium high heat.", "time": 0},
+        {"line": "Bring to a simmer and stir to incorporate and gently break up the cherries.", "time": 8170},
+        {"line": "Reduce heat to medium-low and allow to reduce until thickened to a syrup and cherries are broken down.", "time": 18090},
+        {"line": "Add a pinch of salt and pepper and stir in about a tablespoon of duck fat.", "time": 34110}
     ]
 }

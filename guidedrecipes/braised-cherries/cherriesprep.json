@@ -1,5 +1,9 @@
 {
     "recipe": [
-        {"line": "", "time": }
+        {"line": "Gather your tools and ingredients.", "time": 0},
+        {"line": "Wash your cherries.", "time": 8000},
+        {"line": "Use a metal straw to remove the pit from the cherries.", "time": 12200},
+        {"line": "Julienne and shallot.", "time": 37110},
+        {"line": "Add shallots, cherries, vinegars, water, and brown sugar to a sauce pan.", "time": 99090}
     ]
 }

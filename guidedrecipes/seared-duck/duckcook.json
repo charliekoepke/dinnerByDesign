@@ -1,5 +1,9 @@
 {
     "recipe": [
-        {"line": "", "time": }
+        {"line": "Place skin side down in a cold pan on low-medium heat.", "time": 0},
+        {"line": "Allow skin to render until the fat has rendered and is crispy.", "time": 3110},
+        {"line": "Flip over and baste with duck fat - allow to cook on meat side on medium heat for 90 seconds - adjust time for thicker duck breast.", "time": 14210},
+        {"line": "Allow duck to rest for 8 minutes.", "time": 48190},
+        {"line": "Cut duck into inch thick pieces.", "time": 63130}
     ]
 }
