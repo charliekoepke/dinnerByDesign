@@ -19,6 +19,11 @@ button {
    border: none;
    padding: 1%;
    font-family: 'Roboto', sans-serif;
+
+   :hover {
+      cursor: pointer;
+      color: #FF561B;
+   }
 }
 
 h2 {

@@ -182,7 +182,7 @@ function onYouTubePlayerAPIReady() {
       });
    }
    // Seared Sirloin
-   else if (videoId == "seared-sirloin") {
+   if (videoId == "seared-sirloin") {
       player = new YT.Player('ytplayer', {
          height: '500',
          width: '980',
@@ -199,7 +199,7 @@ function onYouTubePlayerAPIReady() {
       });
    }
    // Shiitake Mushrooms
-   else if (videoId == "shiitake-mushrooms") {
+   if (videoId == "shiitake-mushrooms") {
       player = new YT.Player('ytplayer', {
          height: '500',
          width: '980',
@@ -216,7 +216,24 @@ function onYouTubePlayerAPIReady() {
       });
    }
    // Aromatic Rice
-   else if (videoId == "aromatic-rice") {
+   if (videoId == "aromatic-rice") {
+      player = new YT.Player('ytplayer', {
+         height: '500',
+         width: '980',
+         videoId: '',
+         playerVars: {
+            'controls': 0,
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+         },
+         events: {
+            'onStateChange': onStateChange
+         }
+      });
+   }
+   // Full Steak Recipe
+   if (videoId == "steak-recipe") {
       player = new YT.Player('ytplayer', {
          height: '500',
          width: '980',
@@ -242,15 +259,13 @@ let previous = false;
 function interactiveCaptions() {
    if (next) {
       i++;
-      console.log(i);
-      console.log("next video");
       next = false;
    }
    else if (previous) {
       i--;
       previous = false;
    }
-   if (videoId == "soy-cured-egg") {
+   if (recipeVideo == "soycuredegg") {
       if ((player.getCurrentTime() * 1000) >= parseInt(soycuredegg["recipe"][i]["time"])) {
          document.getElementById("captions").innerHTML = soycuredegg["recipe"][i]["line"];
          if (i + 1 < soycuredegg["recipe"].length) {
@@ -260,57 +275,53 @@ function interactiveCaptions() {
          }
       }
    }
-   if (videoId == "seared-sirloin") {
-      if (recipeVideo == "steakprep") {
-         if ((player.getCurrentTime() * 1000) >= parseInt(steakprep["recipe"][i]["time"])) {
-            document.getElementById("captions").innerHTML = steakprep["recipe"][i]["line"];
-            console.log(i);
-            if (i + 1 < steakprep["recipe"].length) {
-               if ((player.getCurrentTime() * 1000) >= parseInt(steakprep["recipe"][i + 1]["time"])) {
-                  player.seekTo(parseInt(steakprep["recipe"][i]["time"])/1000);
-               }
-            }
-         }
-      }
-      if (recipeVideo == "steakcook") {
-         if ((player.getCurrentTime() * 1000) >= parseInt(steakcook["recipe"][i]["time"])) {
-            document.getElementById("captions").innerHTML = steakcook["recipe"][i]["line"];
-            if (i + 1 < steakcook["recipe"].length) {
-               if ((player.getCurrentTime() * 1000) >= parseInt(steakcook["recipe"][i + 1]["time"])) {
-                  player.seekTo(parseInt(steakcook["recipe"][i]["time"])/1000);
-               }
+   if (recipeVideo == "steakprep") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(steakprep["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = steakprep["recipe"][i]["line"];
+         console.log(i);
+         if (i + 1 < steakprep["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(steakprep["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(steakprep["recipe"][i]["time"])/1000);
             }
          }
       }
    }
-   if (videoId == "braised-cherries") {
+   if (recipeVideo == "steakcook") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(steakcook["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = steakcook["recipe"][i]["line"];
+         if (i + 1 < steakcook["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(steakcook["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(steakcook["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
+   if (recipeVideo == "mushroomprep") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(mushroomprep["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = mushroomprep["recipe"][i]["line"];
+         if (i + 1 < mushroomprep["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(mushroomprep["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(mushroomprep["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
+   if (recipeVideo == "mushroomcook") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(mushroomcook["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = mushroomcook["recipe"][i]["line"];
+         if (i + 1 < mushroomcook["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(mushroomcook["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(mushroomcook["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
+   if (recipeVideo == "braisedcherries") {
       if ((player.getCurrentTime() * 1000) >= parseInt(braisedcherries["recipe"][i]["time"])) {
          document.getElementById("captions").innerHTML = braisedcherries["recipe"][i]["line"];
          if (i + 1 < braisedcherries["recipe"].length) {
             if ((player.getCurrentTime() * 1000) >= parseInt(braisedcherries["recipe"][i + 1]["time"])) {
                player.seekTo(parseInt(braisedcherries["recipe"][i]["time"])/1000);
-            }
-         }
-      }
-   }
-   if (videoId == "shiitake-mushrooms") {
-      if (recipeVideo == "mushroomprep") {
-         if ((player.getCurrentTime() * 1000) >= parseInt(mushroomprep["recipe"][i]["time"])) {
-            document.getElementById("captions").innerHTML = mushroomprep["recipe"][i]["line"];
-            if (i + 1 < mushroomprep["recipe"].length) {
-               if ((player.getCurrentTime() * 1000) >= parseInt(mushroomprep["recipe"][i + 1]["time"])) {
-                  player.seekTo(parseInt(mushroomprep["recipe"][i]["time"])/1000);
-               }
-            }
-         }
-      }
-      if (recipeVideo == "mushroomcook") {
-         if ((player.getCurrentTime() * 1000) >= parseInt(mushroomcook["recipe"][i]["time"])) {
-            document.getElementById("captions").innerHTML = mushroomcook["recipe"][i]["line"];
-            if (i + 1 < mushroomcook["recipe"].length) {
-               if ((player.getCurrentTime() * 1000) >= parseInt(mushroomcook["recipe"][i + 1]["time"])) {
-                  player.seekTo(parseInt(mushroomcook["recipe"][i]["time"])/1000);
-               }
             }
          }
       }
@@ -323,6 +334,9 @@ let timer;
 function onStateChange(event) {
    if (event.data == YT.PlayerState.PLAYING) {
       timer = window.setInterval(interactiveCaptions, 100);
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=Gqay2XoYqcY") {
+         recipeVideo = "soycuredegg";
+      }
       if (player.getVideoUrl() == "https://www.youtube.com/watch?v=xlnvkOemQI4") {
          recipeVideo = "steakprep";
       }
@@ -342,99 +356,92 @@ function onStateChange(event) {
 }
 
 function nextStep() {
-   if (videoId == "soy-cured-egg") {
+   if (recipeVideo == "soycuredegg") {
       if (i + 1 < soycuredegg["recipe"].length) {
          player.seekTo(parseInt(soycuredegg["recipe"][i + 1]["time"])/1000);
          next = true;
       }
    }
-   if (videoId == "seared-sirloin") {
-      if (recipeVideo == "steakprep") {
-         if (i + 1 < steakprep["recipe"].length) {
-            player.seekTo(parseInt(steakprep["recipe"][i + 1]["time"])/1000);
-            next = true;
-         }
-      }
-      if (recipeVideo == "steakcook") {
-         if (i + 1 < steakcook["recipe"].length) {
-            document.getElementById("captions").innerHTML = steakcook["recipe"][i + 1]["line"];
-            player.seekTo(parseInt(steakcook["recipe"][i + 1]["time"])/1000);
-            next = true;
-         }
+   if (recipeVideo == "steakprep") {
+      if (i + 1 < steakprep["recipe"].length) {
+         player.seekTo(parseInt(steakprep["recipe"][i + 1]["time"])/1000);
+         next = true;
       }
    }
-   if (videoId == "braised-cherries") {
+   if (recipeVideo == "steakcook") {
+      if (i + 1 < steakcook["recipe"].length) {
+         document.getElementById("captions").innerHTML = steakcook["recipe"][i + 1]["line"];
+         player.seekTo(parseInt(steakcook["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+   if (recipeVideo == "braisedcherries") {
       if (i + 1 < braisecherries["recipe"].length) {
          player.seekTo(parseInt(braisedcherries["recipe"][i + 1]["time"])/1000);
          next = true;
       }
    }
-   if (videoId == "shiitake-mushrooms") {
-      if (recipeVideo == "mushroomprep") {
-         if (i + 1 < mushroomprep["recipe"].length) {
-            player.seekTo(parseInt(mushroomprep["recipe"][i + 1]["time"])/1000);
-            next = true;
-         }
-      }
-      if (recipeVideo == "mushroomcook") {
-         if (i + 1 < mushroomcook["recipe"].length) {
-            player.seekTo(parseInt(mushroomcook["recipe"][i + 1]["time"])/1000);
-            next = true;
-         }
+   if (recipeVideo == "mushroomprep") {
+      if (i + 1 < mushroomprep["recipe"].length) {
+         player.seekTo(parseInt(mushroomprep["recipe"][i + 1]["time"])/1000);
+         next = true;
       }
    }
+   if (recipeVideo == "mushroomcook") {
+      if (i + 1 < mushroomcook["recipe"].length) {
+         player.seekTo(parseInt(mushroomcook["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+
 }
 function previousStep() {
-   if (videoId == "soy-cured-egg") {
+   if (recipeVideo == "soycuredegg") {
       if (i - 1 > -1) {
          player.seekTo(parseInt(soycuredegg["recipe"][i - 1]["time"])/1000);
          document.getElementById("captions").innerHTML = soycuredegg["recipe"][i - 1]["line"];
          previous = true;
       }
    }
-   if (videoId == "seared-sirloin") {
-      if (recipeVideo == "steakprep") {
-         if (i - 1 > -1) {
-            player.seekTo(parseInt(steakprep["recipe"][i - 1]["time"])/1000);
-            document.getElementById("captions").innerHTML = steakprep["recipe"][i - 1]["line"];
-            previous = true;
-         }
-      }
-      if (recipeVideo == "steakcook") {
-         if (i - 1 > -1) {
-            player.seekTo(parseInt(steakcook["recipe"][i - 1]["time"])/1000);
-            document.getElementById("captions").innerHTML = steakcook["recipe"][i - 1]["line"];
-            previous = true;
-         }
+   if (recipeVideo == "steakprep") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(steakprep["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = steakprep["recipe"][i - 1]["line"];
+         previous = true;
       }
    }
-   if (videoId == "braised-cherries") {
+   if (recipeVideo == "steakcook") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(steakcook["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = steakcook["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (recipeVideo == "braisedcherries") {
       if (i - 1 > -1) {
          player.seekTo(parseInt(braisedcherries["recipe"][i - 1]["time"])/1000);
          document.getElementById("captions").innerHTML = braisedcherries["recipe"][i - 1]["line"];
          previous = true;
       }
    }
-   if (videoId == "shiitake-mushrooms") {
-      if (recipeVideo == "mushroomprep") {
-         if (i - 1 > -1) {
-            player.seekTo(parseInt(mushroomprep["recipe"][i - 1]["time"])/1000);
-            document.getElementById("captions").innerHTML = mushroomprep["recipe"][i - 1]["line"];
-            previous = true;
-         }
+   if (recipeVideo == "mushroomprep") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(mushroomprep["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = mushroomprep["recipe"][i - 1]["line"];
+         previous = true;
       }
-      if (recipeVideo == "mushroomcook") {
-         if (i - 1 > -1) {
-            player.seekTo(parseInt(mushroomcook["recipe"][i - 1]["time"])/1000);
-            document.getElementById("captions").innerHTML = mushroomcook["recipe"][i - 1]["line"];
-            previous = true;
-         }
+   }
+   if (recipeVideo == "mushroomcook") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(mushroomcook["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = mushroomcook["recipe"][i - 1]["line"];
+         previous = true;
       }
    }
 }
 
 function changeVideo(prepOrCook) {
-   if (videoId == "seared-sirloin") {
+   if (recipeVideo == "steakprep" || recipeVideo == "steakcook") {
       if (prepOrCook == "Prep") {
          player.loadVideoById("xlnvkOemQI4");
          i = 0;
@@ -444,7 +451,7 @@ function changeVideo(prepOrCook) {
          i = 0;
       }
    }
-   else if (videoId == "shiitake-mushrooms") {
+   if (recipeVideo == "mushroomprep" || recipeVideo == "mushroomcook") {
       if (prepOrCook == "Prep") {
          player.loadVideoById("XeRD00WTsQ8");
          i = 0;
@@ -453,5 +460,24 @@ function changeVideo(prepOrCook) {
          player.loadVideoById("bNdiE0umUZc");
          i = 0;
       }
+   }
+}
+
+function changeElement(element) {
+   if (element == "aromatic-rice") {
+      player.loadVideoById("");
+      i = 0;
+   }
+   if (element == "soy-cured-egg") {
+      player.loadVideoById("");
+      i = 0;
+   }
+   if (element == "shiitake-mushrooms") {
+      player.loadVideoById("");
+      i = 0;
+   }
+   if (element == "seared-sirloin") {
+      player.loadVideoById("xlnvkOemQI4");
+      i = 0;
    }
 }
