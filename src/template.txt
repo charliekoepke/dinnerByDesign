@@ -100,8 +100,8 @@ player = new YT.Player('ytplayer', {
 <div class="recipetile <!-- Add either element or recipe -->">
     <img>
     <div class="flex">
-        <h3>Sauteed Shiitake Mushrooms</h3>
-        <a href="shiitake-mushrooms/index.html">Begin</a>
+        <h3></h3>
+        <a href="">Begin</a>
     </div>
 </div>
 
