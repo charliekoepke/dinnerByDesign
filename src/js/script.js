@@ -278,7 +278,6 @@ function interactiveCaptions() {
    if (recipeVideo == "steakprep") {
       if ((player.getCurrentTime() * 1000) >= parseInt(steakprep["recipe"][i]["time"])) {
          document.getElementById("captions").innerHTML = steakprep["recipe"][i]["line"];
-         console.log(i);
          if (i + 1 < steakprep["recipe"].length) {
             if ((player.getCurrentTime() * 1000) >= parseInt(steakprep["recipe"][i + 1]["time"])) {
                player.seekTo(parseInt(steakprep["recipe"][i]["time"])/1000);
@@ -467,17 +466,314 @@ function changeElement(element) {
    if (element == "aromatic-rice") {
       player.loadVideoById("");
       i = 0;
+      // Changing equipment and ingredients
+      document.getElementById("ingredients").innerHTML = `
+      <div class="flex">
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            1 and 1/2 cups medium grain rice
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            2 cups of water
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Sesame oil
+         </label>
+      </div>
+      `;
+      document.getElementById("equipment").innerHTML = `
+      <div class="flex">
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Rice cooker
+         </label>
+      </div>
+      `;
+      // Changing directions
+      document.getElementById("directions").innerHTML = `
+      <h3>Directions</h3>
+      <ol>
+         <li>Measure out 1 and 1/2 cups of medium grain white rice.</li>
+         <li>Rinse the rice thouroughly until the water is clear.</li>
+         <li>Add 2 cups of water to the rice cooker.</li>
+         <li>Allow the rice to soak fo 15 minutes then press cook on the rice cooker.</li>
+      </ol>
+      `;
    }
    if (element == "soy-cured-egg") {
-      player.loadVideoById("");
+      player.loadVideoById("Gqay2XoYqcY");
       i = 0;
+      // Changing equipment and ingredients
+      document.getElementById("ingredients").innerHTML = `
+      <div class="flex">
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            2 pasteurized eggs
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            3 Tbsp soy sauce
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            1 lime
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            1 Thai chili
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            1/2 Tbsp inch-minced garlic
+         </label>
+      </div>
+      `;
+      document.getElementById("equipment").innerHTML = `
+      <div class="flex">
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            3 Small bowls
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Chef's knife
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Cutting board
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Microplane
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Lime squeezer
+         </label>
+      </div>
+      `;
+      // Changing directions
+      document.getElementById("directions").innerHTML = `
+      <h3>Directions</h3>
+      <ol>
+            <li>Gather your ingredients.</li>
+            <li>Peel ginger with a small spoon.</li>
+            <li>Grate ginger into a small bowl with a microplane.</li>
+            <li>Add 6 tbsp of soy sauce to the bowl.</li>
+            <li>Gently roll your limeto release the juices, and cut in half.</li>
+            <li>Thinly slice the thai chili and add to the bowl.</li>
+            <li>Squeeze lime into the bowl.</li>
+            <li>Stir to combine.</li>
+            <li>Separate egg yolk from white and place gently into a small bowl.</li>
+            <li>Gently pour sauce over egg yolks.</li>
+            <li>Cover yolks with a paper towel and fold the edges over the top. This will pull liquid over the top of the yolks since they float.</li>
+            <li>Refrigerate for at least 1 hour.</li>
+      </ol>
+      `;
    }
    if (element == "shiitake-mushrooms") {
-      player.loadVideoById("");
+      player.loadVideoById("XeRD00WTsQ8");
       i = 0;
+      // Changing equipment and ingredients
+      document.getElementById("ingredients").innerHTML = `
+      <div class="flex">
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            3.5 oz mushrooms
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            1 Tbsp butter
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            3 cloves garlic
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Salt & pepper
+         </label>
+      </div>
+      `;
+      document.getElementById("equipment").innerHTML = `
+      <div class="flex">
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Nonstick pan
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Chef's knife
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Cutting board
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Microplane
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Tongs
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            1 Medium bowl
+         </label>
+      </div>
+      `;
+      // Changing directions
+      document.getElementById("directions").innerHTML = `
+      <h3>Directions</h3>
+      <p>Prep</p>
+      <ol>
+            <li>Gather your ingredients.</li>
+            <li>Remove the stems from your mushrooms.</li>
+            <li>Slice your mushrooms into 1/4 inch slices.</li>
+            <li>Finely chop your garlic.</li>
+      </ol>
+      <p>Cook</p>
+      <ol>
+            <li>Put a nonstick pan on high heat and allow it to get hot. Once it is hot, add your mushrooms to the dry pan.</li>
+            <li>Stir and move the mushrooms semi frequently. You should hear them squeaking against the pan. Allow them to shrink down about 10% and the edges will turn golden brown.</li>
+            <li>Once the edges are browned, add in your butter and garlic.</li>
+            <li>Cook the mushrooms, butter and garlic until the garlic is golden brown.</li>
+      </ol>
+      `;
    }
    if (element == "seared-sirloin") {
       player.loadVideoById("xlnvkOemQI4");
       i = 0;
+      // Changing equipment and ingredients
+      document.getElementById("ingredients").innerHTML = `
+      <div class="flex">
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            2 6 oz top sirloin
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            1 large shallot
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            4 cloves garlic, smashed
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            1 scallion for garnish
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Cilantro for garnish
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Salt and pepper
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Drizzle of olive oil
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            1 Tbsp butter
+         </label>
+      </div>
+      `;
+      document.getElementById("equipment").innerHTML = `
+      <div class="flex">
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Carbon steel pan
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Chef's knife
+         </label>
+         <div class="flex">
+            <label class="container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  Cutting board
+            </label>
+         </div>
+         <div class="flex">
+            <label class="container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  Tongs
+            </label>
+         </div>
+         <div class="flex">
+            <label class="container">
+                  <input type="checkbox">
+                  <span class="checkmark"></span>
+                  Basting spoon
+            </label>
+         </div>
+      </div>
+      `;
+      // Changing directions
+      document.getElementById("directions").innerHTML = `
+      <h3>Directions</h3>
+      <p>Prep</p>
+      <ol>
+            <li>Gather your ingredients - your steak should be at room temperature.</li>
+            <li>Prep your shallot by cutting off both ends, cutting in half, removing the peels, then cutting each half in half.</li>
+            <li>Generously season both sides of your steak with salt and pepper from about 10 inches away.</li>
+            <li>Prepare your garnish - pick cilantro off of stems & thinly slice your scallion.</li>
+      </ol>
+      <p>Cook</p>
+      <ol>
+            <li>Add a drizzle of olive oil to a carbon steel pan and turn the heat to high.</li>
+            <li>Once the pan is hot add in your steaks.</li>
+            <li>After about 90 seconds, flip your steaks.</li>
+            <li>After 30 seconds, add in your butter, garlic, and shallots and baste the steaks. Allow them to continue cooking while basting for an additional 90 seconds. <em>Timing will vary based on cook preference & thickness of steaks.</em></li>
+            <li>Remove steaks from the pan and allow to rest for 5 minutes.</li>
+            <li>Meanwhile put the pan with the garlic and shallots back on to medium - high heat and allow to cook until shallots are translucent and garlic is golden brown.</li>
+            <li>Place the cooked garlic and shallots on a cutting board, and pour the butter into the rice.</li>
+            <li>Add a drizzle of sesame oil to the rice and gently fluff the rice to combine.</li>
+            <li>Mince the cooked shallot and garlic and add to the rice gently folding to combine.</li>
+            <li>Slice your steak across the grain.</li>
+      </ol>
+      `;
    }
 }

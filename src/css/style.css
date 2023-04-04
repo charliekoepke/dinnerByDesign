@@ -18,6 +18,10 @@ button {
   padding: 1%;
   font-family: "Roboto", sans-serif;
 }
+button :hover {
+  cursor: pointer;
+  color: #FF561B;
+}
 
 h2 {
   font-size: 40pt;
@@ -227,7 +231,7 @@ footer .flex {
   justify-content: center;
 }
 
-.container {
+#ingredients .container {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -238,16 +242,14 @@ footer .flex {
   -moz-user-select: none;
   user-select: none;
 }
-
-.container input {
+#ingredients .container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0;
   width: 0;
 }
-
-.checkmark {
+#ingredients .checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -255,26 +257,71 @@ footer .flex {
   width: 25px;
   background-color: #c6c6c6;
 }
-
-.container:hover input ~ .checkmark {
+#ingredients .container:hover input ~ .checkmark {
   background-color: rgba(132, 132, 132, 0.6039215686);
 }
-
-.container input:checked ~ .checkmark {
+#ingredients .container input:checked ~ .checkmark {
   background-color: #FF561B;
 }
-
-.checkmark:after {
+#ingredients .checkmark:after {
   content: "";
   position: absolute;
   display: none;
 }
-
-.container input:checked ~ .checkmark:after {
+#ingredients .container input:checked ~ .checkmark:after {
   display: block;
 }
+#ingredients .container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
 
-.container .checkmark:after {
+#equipment .container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+#equipment .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+#equipment .checkmark {
+  position: absolute;
+  top: 0;
+  right: 15%;
+  height: 25px;
+  width: 25px;
+  background-color: #c6c6c6;
+}
+#equipment .container:hover input ~ .checkmark {
+  background-color: rgba(132, 132, 132, 0.6039215686);
+}
+#equipment .container input:checked ~ .checkmark {
+  background-color: #FF561B;
+}
+#equipment .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+#equipment .container input:checked ~ .checkmark:after {
+  display: block;
+}
+#equipment .container .checkmark:after {
   left: 9px;
   top: 5px;
   width: 5px;
