@@ -71,13 +71,31 @@ p {
 
 nav {
    padding: 2%;
+   color: white;
    font-size: 18pt;
    background-color: grey;
    width: 96%;
 
-   .flex {
-      justify-content: space-around;
-      flex-direction: row;
+   h1 {
+      cursor: pointer;
+   }
+   a {
+      color: white;
+   }
+   .grid {
+      display: grid;
+      grid-template-columns: 75% 25%;
+
+      .flex {
+         flex-direction: row;
+         align-items: center;
+      }
+      #nav-menu {
+         justify-content: space-evenly;
+      }
+      #logo {
+         justify-content: left;
+      }
    }
 }
 

@@ -66,13 +66,30 @@ p {
 
 nav {
   padding: 2%;
+  color: white;
   font-size: 18pt;
   background-color: grey;
   width: 96%;
 }
-nav .flex {
-  justify-content: space-around;
+nav h1 {
+  cursor: pointer;
+}
+nav a {
+  color: white;
+}
+nav .grid {
+  display: grid;
+  grid-template-columns: 75% 25%;
+}
+nav .grid .flex {
   flex-direction: row;
+  align-items: center;
+}
+nav .grid #nav-menu {
+  justify-content: space-evenly;
+}
+nav .grid #logo {
+  justify-content: left;
 }
 
 #index h2 {
