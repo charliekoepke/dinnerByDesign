@@ -64,10 +64,10 @@
             </div>
             <div class="tab" id="elements">
                 <!-- Toggle through the elements videos -->
-                <button onclick="changeElement('aromatic-rice')">Aromatic Rice</button>
+                <button onclick="changeElement('aromatic-rice')">Aromatic Rice Prep</button>
                 <button onclick="changeElement('soy-cured-egg')">Soy Cured Egg</button>
                 <button onclick="changeElement('shiitake-mushrooms')">Sauteed Shiitake Mushrooms</button>
-                <button onclick="changeElement('seared-sirloin')">Seared Sirloin</button>
+                <button onclick="changeElement('seared-sirloin')">Seared Sirloin with Aromatic Rice</button>
             </div>
             <!-- Recipe Video -->
             <h2>Interactive Video</h2>
@@ -79,6 +79,13 @@
             <!-- Captions -->
             <div class="flex" id="video-captions">
                 <p id="captions"></p>
+            </div>
+            <div class="grid" id="video-buttons" style="display: none">
+                <!-- Button to get to previous step -->
+                <button onclick="changeVideo('Prep')">Prep</button>
+                <!-- Button to get to next step -->
+                <button onclick="changeVideo('Cook')">Cook</button>
+                <!-- Directions written out -->
             </div>
             <div id="directions">
                 <h3>Directions</h3>

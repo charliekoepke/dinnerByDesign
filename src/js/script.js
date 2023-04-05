@@ -509,6 +509,7 @@ function changeElement(element) {
    if (element == "soy-cured-egg") {
       player.loadVideoById("Gqay2XoYqcY");
       i = 0;
+      document.getElementById("video-buttons").style.display = "none";
       // Changing equipment and ingredients
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
@@ -590,6 +591,7 @@ function changeElement(element) {
    if (element == "shiitake-mushrooms") {
       player.loadVideoById("XeRD00WTsQ8");
       i = 0;
+      document.getElementById("video-buttons").style.display = "grid";
       // Changing equipment and ingredients
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
@@ -671,6 +673,7 @@ function changeElement(element) {
    if (element == "seared-sirloin") {
       player.loadVideoById("xlnvkOemQI4");
       i = 0;
+      document.getElementById("video-buttons").style.display = "grid";
       // Changing equipment and ingredients
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
