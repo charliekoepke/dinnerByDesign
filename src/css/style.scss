@@ -24,6 +24,14 @@ button {
       cursor: pointer;
       color: #FF561B;
    }
+
+   a {
+      color: white;
+
+      :hover {
+         cursor: pointer;
+      }
+   }
 }
 
 h2 {
@@ -45,6 +53,10 @@ p {
 .flex {
    display: flex;
    flex-direction: column;
+
+   img {
+      padding: 2%;
+   }
 }
 
 .grid {
@@ -61,7 +73,7 @@ nav {
    padding: 2%;
    font-size: 18pt;
    background-color: grey;
-   width: 100%;
+   width: 96%;
 
    .flex {
       justify-content: space-around;
@@ -102,19 +114,25 @@ nav {
 }
 
 // Recipe Tiles
-.recipetile {
-   font-family: 'Roboto', sans-serif !important;
-   background-color: black;
-   color: white;
-   padding: 2%;
-
-   a {
-      font-size: 20pt;
+#index {
+   .recipetile {
+      font-family: 'Roboto', sans-serif !important;
+      background-color: black;
       color: white;
-   }
-   h3 {
-      color: white;
-      font-size: 24pt;
+      padding: 2%;
+   
+      a {
+         font-size: 20pt;
+         color: white;
+      }
+      h3 {
+         color: white;
+         font-size: 24pt;
+      }
+      img {
+         width: 100%;
+         height: 50%;
+      }
    }
 }
 
@@ -128,9 +146,29 @@ nav {
 
 // Guided Recipes Page
 #guidedrecipes-recipes {
-   grid-template-columns: repeat(2, 50%);
+   grid-template-columns: repeat(2, 49%);
    grid-template-rows: auto;
    margin: 2%;
+
+   .recipetile {
+      font-family: 'Roboto', sans-serif !important;
+      background-color: black;
+      color: white;
+      padding: 2%;
+   
+      a {
+         font-size: 20pt;
+         color: white;
+      }
+      h3 {
+         color: white;
+         font-size: 24pt;
+      }
+      img {
+         width: 100%;
+         height: 50%;
+      }
+   }
 }
 
 // Individual Recipe Page
@@ -145,6 +183,9 @@ nav {
    }
    p {
       margin: 2%;
+   }
+   #recipe-picture {
+      align-content: center;
    }
 }
 
@@ -231,6 +272,12 @@ main {
    display: flex;
    flex-direction: row;
    justify-content: center;
+
+   button {
+      background-color: white;
+      color: black;
+      cursor: pointer;
+   }
 }
 
 iframe {
@@ -241,7 +288,7 @@ iframe {
 
 footer {
    background-color: grey;
-   width: 100%;
+   width: 96%;
    vertical-align: middle;
    text-align: center;
    padding: 2%;
@@ -337,7 +384,7 @@ footer {
    .checkmark {
       position: absolute;
       top: 0;
-      right: 15%;
+      right: 20%;
       height: 25px;
       width: 25px;
       background-color: #c6c6c6;
