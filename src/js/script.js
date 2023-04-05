@@ -776,4 +776,25 @@ function changeElement(element) {
       </ol>
       `;
    }
+   if (element == "braised-cherries") {
+      player.loadVideoById("");
+      i = 0;
+      document.getElementById("ingredients").innerHTML = ``;
+      document.getElementById("equipment").innerHTML = ``;
+      document.getElementById("directions").innerHTML = ``;
+   }
+   if (element == "crispy-duck") {
+      player.loadVideoById("");
+      i = 0;
+      document.getElementById("ingredients").innerHTML = ``;
+      document.getElementById("equipment").innerHTML = ``;
+      document.getElementById("directions").innerHTML = ``;
+   }
+   if (element == "") {
+      player.loadVideoById("");
+      i = 0;
+      document.getElementById("ingredients").innerHTML = ``;
+      document.getElementById("equipment").innerHTML = ``;
+      document.getElementById("directions").innerHTML = ``;
+   }
 }

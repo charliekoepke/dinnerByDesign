@@ -114,3 +114,13 @@ player = new YT.Player('ytplayer', {
         {"line": "", "time": 0}
     ]
 }
+
+----- CHANGEVIDEO() FUNCTION -----
+
+if (element == "") {
+    player.loadVideoById("");
+    i = 0;
+    document.getElementById("ingredients").innerHTML = ``;
+    document.getElementById("equipment").innerHTML = ``;
+    document.getElementById("directions").innerHTML = ``;
+}

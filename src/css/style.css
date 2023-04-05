@@ -20,13 +20,13 @@ button {
 }
 button :hover {
   cursor: pointer;
-  color: #FF561B;
 }
 button a {
   color: white;
 }
 button a :hover {
   cursor: pointer;
+  color: white;
 }
 
 h2 {
