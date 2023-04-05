@@ -15,7 +15,6 @@ button {
   color: white;
   font-size: 24pt;
   border: none;
-  width: 45%;
   padding: 1%;
   font-family: "Roboto", sans-serif;
 }
@@ -58,7 +57,6 @@ p {
 .grid {
   display: grid;
   grid-gap: 2%;
-  padding: 2%;
 }
 
 .box {
@@ -97,9 +95,17 @@ nav .grid #logo {
   justify-content: left;
 }
 
+.tab button {
+  background-color: white;
+  color: black;
+}
+
 #index h2 {
   margin: 2%;
   color: #FF561B;
+}
+#index button {
+  width: 45%;
 }
 
 #home-banner {
@@ -219,7 +225,6 @@ main p {
   grid-template-columns: repeat(2, 50%);
 }
 #video-buttons button {
-  margin: 2%;
   font-size: 20pt;
   background-color: white;
   color: black;

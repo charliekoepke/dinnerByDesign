@@ -34,27 +34,29 @@
             </div>
             <!-- Toggle between ingredients and equipment -->
             <div class="tab">
-                <button onclick="changetab('Ingredients')" id="tab-ingredients">Ingredients</button>
-                <button onclick="changetab('Equipment')" id="tab-equipment">Equipment</button>
+                <h4>Ingredients</h4>
+                <h4>Equipment</h4>
             </div>
-            <div class="tabcontent" id="ingredients">
-                <!-- Checkboxes of ingredients -->
-                <div class="flex">
-                    <label class="container">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <!-- INGREDIENT -->
-                    </label>
+            <div class="tabcontent">
+                <div id="ingredients">
+                    <!-- Checkboxes of ingredients -->
+                    <div class="flex">
+                        <label class="container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <!-- INGREDIENT -->
+                        </label>
+                    </div>
                 </div>
-            </div>
-            <div class="tabcontent" id="equipment">
-                <!-- Checkboxes of equipment -->
-                <div class="flex">
-                    <label class="container">
-                        <input type="checkbox">
-                        <span class="checkmark"></span>
-                        <!-- EQUIPMENT -->
-                    </label>
+                <div id="equipment">
+                    <!-- Checkboxes of equipment -->
+                    <div class="flex">
+                        <label class="container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            <!-- EQUIPMENT -->
+                        </label>
+                    </div>
                 </div>
             </div>
             <!-- Recipe Video -->
