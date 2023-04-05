@@ -102,21 +102,21 @@ nav .flex {
   grid-template-columns: repeat(3, auto);
 }
 
-#index .recipetile {
+.recipetile {
   font-family: "Roboto", sans-serif !important;
   background-color: black;
   color: white;
   padding: 2%;
 }
-#index .recipetile a {
+.recipetile a {
   font-size: 20pt;
   color: white;
 }
-#index .recipetile h3 {
+.recipetile h3 {
   color: white;
   font-size: 24pt;
 }
-#index .recipetile img {
+.recipetile img {
   width: 100%;
   height: 50%;
 }
@@ -132,24 +132,6 @@ nav .flex {
   grid-template-columns: repeat(2, 49%);
   grid-template-rows: auto;
   margin: 2%;
-}
-#guidedrecipes-recipes .recipetile {
-  font-family: "Roboto", sans-serif !important;
-  background-color: black;
-  color: white;
-  padding: 2%;
-}
-#guidedrecipes-recipes .recipetile a {
-  font-size: 20pt;
-  color: white;
-}
-#guidedrecipes-recipes .recipetile h3 {
-  color: white;
-  font-size: 24pt;
-}
-#guidedrecipes-recipes .recipetile img {
-  width: 100%;
-  height: 50%;
 }
 
 #recipe-header {
@@ -385,4 +367,9 @@ footer .flex {
 }
 .dropdown select :focus {
   outline: none;
+}
+
+#steak-recipe #recipe-header h2,
+#duck-recipe #recipe-header h2 {
+  font-size: 40pt;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Duck Recipe - Dinner by Design</title>
+
+        <meta charset="utf-8">
+        <link href="../../src/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <div class="flex">
+                <!-- Place logo here -->
+                <a href="../../index.html">Home</a>
+                <a href="../../index.html"><strong>Guided Recipes</strong></a>
+                <a href="../../about.html">About</a>
+                <a href="../../comingsoon.html">Sign Up</a>
+            </div>
+        </nav>
+        <main id="steak-recipe">
+            <p><a href="../index.html">Guided Recipes</a> / k</p>
+            <div class="grid" id="recipe-header">
+                <div class="flex">
+                    <h2></h2>
+                    <p></p>
+                </div>
+                <div class="flex">
+                    <img src="../../src/img/duck-recipe.jpg" alt="">
+                </div>
+            </div>
+            <!-- Toggle between ingredients and equipment -->
+            <div class="tab">
+                <button onclick="changetab('Ingredients')" id="tab-ingredients">Ingredients</button>
+                <button onclick="changetab('Equipment')" id="tab-equipment">Equipment</button>
+            </div>
+            <div class="tabcontent" id="ingredients">
+                <!-- Checkboxes of ingredients -->
+                <div class="flex">
+                    <label class="container">
+                       <input type="checkbox">
+                       <span class="checkmark"></span>
+                       1 and 1/2 cups medium grain rice
+                    </label>
+                    <label class="container">
+                       <input type="checkbox">
+                       <span class="checkmark"></span>
+                       2 cups of water
+                    </label>
+                    <label class="container">
+                       <input type="checkbox">
+                       <span class="checkmark"></span>
+                       Sesame oil
+                    </label>
+                 </div>
+            </div>
+            <div class="tabcontent" id="equipment">
+                <!-- Checkboxes of equipment -->
+                <div class="flex">
+                    <label class="container">
+                       <input type="checkbox">
+                       <span class="checkmark"></span>
+                       Rice cooker
+                    </label>
+                 </div>
+            </div>
+            <div class="tab" id="elements">
+                <!-- Toggle through the elements videos -->
+                <button onclick="changeElement('seared-duck')">Pan Seared Duck</button>
+                <button onclick="changeElement('braised-cherries')">Braised Cherries</button>
+                <button onclick="changeElement('acorn-squash')">Roasted Acorn Squash</button>
+            </div>
+            <!-- Recipe Video -->
+            <h2>Interactive Video</h2>
+            <div class="recipe-video">
+                <button onclick="previousStep()"><</button>
+                <div id="ytplayer"></div>
+                <button onclick="nextStep()">></button>
+            </div>
+            <!-- Captions -->
+            <div class="flex" id="video-captions">
+                <p id="captions"></p>
+            </div>
+            <div id="directions">
+                <h3>Directions</h3>
+                <ol>
+                    <li>Measure out 1 and 1/2 cups of medium grain white rice.</li>
+                    <li>Rinse the rice thouroughly until the water is clear.</li>
+                    <li>Add 2 cups of water to the rice cooker.</li>
+                    <li>Allow the rice to soak fo 15 minutes then press cook on the rice cooker.</li>
+                </ol>
+            </div>
+        </main>
+        <script src="../../src/js/script.js"></script>
+    </body>
+</html>
