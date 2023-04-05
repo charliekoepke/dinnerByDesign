@@ -15,6 +15,7 @@ button {
   color: white;
   font-size: 24pt;
   border: none;
+  width: 45%;
   padding: 1%;
   font-family: "Roboto", sans-serif;
 }
@@ -57,6 +58,7 @@ p {
 .grid {
   display: grid;
   grid-gap: 2%;
+  padding: 2%;
 }
 
 .box {
@@ -381,4 +383,12 @@ footer .flex {
 #steak-recipe #recipe-header h2,
 #duck-recipe #recipe-header h2 {
   font-size: 40pt;
+}
+
+#guidedrecipes-grid {
+  grid-template-columns: 25% 75%;
+}
+
+#side-menu {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

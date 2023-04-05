@@ -138,24 +138,6 @@ const squashcook = JSON.parse(`{
    ]
 }`);
 
-document.getElementById("ingredients").style.display = "block";
-document.getElementById("tab-ingredients").style.color = "#FF561B";
-
-function changetab(toggletab) {
-   if (toggletab == "Ingredients") {
-      document.getElementById("ingredients").style.display = "block";
-      document.getElementById("tab-ingredients").style.color = "#FF561B";
-      document.getElementById("equipment").style.display = "none";
-      document.getElementById("tab-equipment").style.color = "black";
-   }
-   else if (toggletab == "Equipment") {
-      document.getElementById("equipment").style.display = "block";
-      document.getElementById("tab-equipment").style.color = "#FF561B";
-      document.getElementById("ingredients").style.display = "none";
-      document.getElementById("tab-ingredients").style.color = "black";
-   }
-}
-
 // ytplayer code: https://developers.google.com/youtube/player_parameters#IFrame_Player_API
 let tag = document.createElement('script');
 tag.src = "https://www.youtube.com/player_api";
@@ -800,4 +782,9 @@ function changeElement(element) {
       document.getElementById("equipment").innerHTML = ``;
       document.getElementById("directions").innerHTML = ``;
    }
+}
+
+// Creates custom meal
+function myMeal() {
+
 }
