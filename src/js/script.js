@@ -139,22 +139,81 @@ const squashcook = JSON.parse(`{
 }`);
 
 // VIDEO ID: RveAV5lcdoc
-const wontonprep = JSON.parse(``);
+const wontonprep = JSON.parse(`{
+   "recipe": [
+       {"line": "Gather all of your equipment and ingredients.", "time": 0},
+       {"line": "Remove stems from shiitake mushrooms and save them to be used in stock, or add them to stock.", "time": 2030},
+       {"line": "Finely chop 10 shiitake mushrooms and add to the mixing bowl.", "time": 11080},
+       {"line": "Finely chop 1 cup cabbage and add to the mixing bowl.", "time": 48180},
+       {"line": "Thinly slice 3 scallions and add to the mixing bowl.", "time": 96190},
+       {"line": "Peel and mince 3 cloves of garlic and 1 inch of ginger with a microplane and add to the mixing bowl.", "time": 183140},
+       {"line": "Add 2 eggs, 1 tbsp soy sauce, 1 tbsp sesame oil, and 1/2 tbsp corn starch to the mixing bowl.", "time": 194190},
+       {"line": "Stir until combined.", "time": 255060},
+       {"line": "Cook a tablespoon of the mixture on a nonstick pan and taste then adjust seasoning with salt and pepper.", "time": 265140},
+       {"line": "Open your pack of dumpling wraps and cover them with a wet paper towel.", "time": 280060},
+       {"line": "Fold the dumplings: Use your finger to wet the edge of the dumpling wrapper add a teaspoon of the mixture to the center of the wrapper. Fold the wrap in half then pinch the corners together.", "time": 285050}
+   ]
+}`);
 
 // VIDEO ID: x-pYLA7JTeY
-const wontoncook = JSON.parse(``);
+const wontoncook = JSON.parse(`{
+   "recipe": [
+       {"line": "Bring 6 cups of water to a boil.", "time": 0},
+       {"line": "Add in wontons", "time": 1030},
+       {"line": "Allow to cook for 4-6 minutes - the dumplings should float.", "time": 11070},
+       {"line": "Serve with dumpling sauce, or in miso soup.", "time": 20210},
+       {"line": "Freeze any leftover uncooked dumplings.", "time": 57150}
+   ]
+}`);
 
 // VIDEO ID: tcmbDJjo1UA
-const stockprep = JSON.parse(``);
+const stockprep = JSON.parse(`{
+   "recipe": [
+       {"line": "Gather all the ingredients and equipment.", "time": 0},
+       {"line": "Wash the carrots and celery.", "time": 5030},
+       {"line": "Roughly chop 2 carrots and add to a large pot.", "time": 71210},
+       {"line": "Roughly chop 1/2 bunch of celery and add to the pot.", "time": 101020},
+       {"line": "Halve 1 white onion and add to the pot.", "time": 142020},
+       {"line": "Peel 1 head of garlic and add to the pot.", "time": 181070},
+       {"line": "Slice 1 inch of ginger and add to the pot.", "time": 218130},
+       {"line": "Add 1 tbsp black peppercorns and 1 tbsp salt.", "time": 239080},
+       {"line": "Optional: Add any left over vegetable scraps you have", "time": 250070}
+   ]
+}`);
 
 // VIDEO ID: _upxRrOTTrs
-const stockcook = JSON.parse(``);
+const stockcook = JSON.parse(`{
+   "recipe": [
+       {"line": "Add water to the large pot of ingredients until they are covered and there is still an inch of room from the top of the pot.", "time": 0},
+       {"line": "Bring the pot to a boil on high heat, then reduce to low heat.", "time": 9000},
+       {"line": "Allow to gently simmer for at least an hour.", "time": 26090},
+       {"line": "Carefully strain into a new container.", "time": 45010},
+       {"line": "Taste and adjust seasoning with salt and pepper.", "time": 66040}
+   ]
+}`);
 
 // VIDEO ID: pwT2zUbGWmA
-const chilioilprep = JSON.parse(``);
+const chilioilprep = JSON.parse(`{
+   "recipe": [
+       {"line": "Gather all of your equipment and ingredients.", "time": 0},
+       {"line": "Slice 1 inch ginger into large thin slices.", "time": 2070},
+       {"line": "Mince 5 cloves of garlic.", "time": 8140},
+       {"line": "Measure out 1/2 cup canola oil and 2 tbsp sesame oil into a small bowl.", "time": 65230},
+       {"line": "Measure out 1 tbsp paprika, 1 tbsp chayanne pepper, 2 tbsp crushed red pepper flakes, 1/2 tbsp salt into a separate small bowl.", "time": 94040}
+   ]
+}`);
 
 // VIDEO ID: 0uXGMDZxkpk 
-const chilioilcook = JSON.parse(``);
+const chilioilcook = JSON.parse(`{
+   "recipe": [
+       {"line": "In a small saucepan combine the oil, garlic, and ginger over medium-low heat.", "time": 0},
+       {"line": "Allow mixture to heat up until the garlic is gently sizzling.", "time": 33010},
+       {"line": "Add in spice mix and turn heat to lowest setting.", "time": 33020},
+       {"line": "Stir gently and allow to infuse for 10 minutes.", "time": 53000},
+       {"line": "Turn off heat and allow oil to cool then taste and adjust seasoning with salt.", "time": 56090},
+       {"line": "Pour into a mason jar and keep refrigerated.", "time": 62220}
+   ]
+}`);
 
 
 // ytplayer code: https://developers.google.com/youtube/player_parameters#IFrame_Player_API
@@ -960,6 +1019,7 @@ function changeElement(element) {
    if (element == "aromatic-rice") {
       player.loadVideoById("");
       i = 0;
+      document.getElementById("video-buttons").style.display = "none";
       // Changing equipment and ingredients
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
@@ -1270,6 +1330,7 @@ function changeElement(element) {
    if (element == "steakrecipe-plating") {
       player.loadVideoById("YHxybjUXSRc");
       i = 0;
+      document.getElementById("video-buttons").style.display = "none";
       document.getElementById("ingredients").innerHTML = "";
       document.getElementById("equipment").innerHTML = "";
       document.getElementById("directions").innerHTML = "";
@@ -1277,6 +1338,7 @@ function changeElement(element) {
    if (element == "braised-cherries") {
       player.loadVideoById("RTyUtGZ0hoU");
       i = 0;
+      document.getElementById("video-buttons").style.display = "grid";
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
          <label class="container">
@@ -1357,6 +1419,7 @@ function changeElement(element) {
    if (element == "crispy-duck") {
       player.loadVideoById("bpwku80duOg");
       i = 0;
+      document.getElementById("video-buttons").style.display = "grid";
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
          <label class="container">
@@ -1412,6 +1475,7 @@ function changeElement(element) {
    if (element == "acorn-squash") {
       player.loadVideoById("JldQ77rO4yE");
       i = 0;
+      document.getElementById("video-buttons").style.display = "grid";
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
          <label class="container">
@@ -1500,22 +1564,400 @@ function changeElement(element) {
    if (element == "duckrecipe-plating") {
       player.loadVideoById("RWGm1EvlmK4");
       i = 0;
+      document.getElementById("video-buttons").style.display = "none";
       document.getElementById("ingredients").innerHTML = "";
       document.getElementById("equipment").innerHTML = "";
       document.getElementById("directions").innerHTML = "";
    }
    if (element == "cabbage-mushroom-wontons") {
-
+      player.loadVideoById("RveAV5lcdoc");
+      i = 0;
+      document.getElementById("video-buttons").style.display = "grid";
+      document.getElementById("ingredients").innerHTML = `
+      <div class="flex">
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 1/2 cups shiitake mushrooms: 8-10
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 1/2 cups cabbage
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               3 scallions
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               3 cloves of garlic
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               2 eggs
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 inch ginger
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 Tbsp soy sauce
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 Tbsp sesame oil
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1/2 Tbsp corn starch
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 pack of thin wonton wrappers
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Salt and pepper to taste
+         </label>
+      </div>
+      `;
+      document.getElementById("equipment").innerHTML = `
+      <div class="flex">
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Large cutting board
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Large mixing bowl
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Microplane
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Tablespoon
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Mixing spoon
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Saucepan
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Chef's knife
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               <em>optional</em> Nonstick pan
+         </label>
+      </div>
+      `;
+      document.getElementById("directions").innerHTML = `
+      <h3>Directions</h3>
+      <p>Prep</p>
+      <ol>
+         <li>Gather all of your equipment and ingredients.</li>
+         <li>Remove stems from shiitake mushrooms and save them to be used in stock, or add them to stock.</li>
+         <li>Finely chop 10 shiitake mushrooms and add to the mixing bowl.</li>
+         <li>Finely chop 1 cup cabbage and add to the mixing bowl.</li>
+         <li>Thinly slice 3 scallions and add to the mixing bowl.</li>
+         <li>Mince 3 cloves of garlic and 1 inch of ginger with a microplane and add to the mixing bowl.</li>
+         <li>Add 2 eggs, 2 tbsp soy sauce, 1 tbsp sesame oil, and 1/2 tbsp corn starch to the mixing bowl.</li>
+         <li>Stir until combined.</li>
+         <li><em>Optional</em> Cook a tablespoon of the mixture on a nonstick pan and taste then adjust seasoning with salt and pepper.</li>
+         <li>Open your pack of dumpling wraps and cover them with a wet paper towel.</li>
+         <li>Use your finger to wet the edge of the dumpling wrapper.</li>
+         <li>Add a teaspoon of the mixture to the center of the wrapper.</li>
+         <li>Fold the wrap in half then pinch the corners together.</li>
+         <li>Do this until you have used all of the filling.</li>
+      </ol>
+      <p>Cook</p>
+      <ol>
+         <li>Bring 6 cups of water to a boil.</li>
+         <li>Add in wontons and allow to cook for 4-6 minutes.</li>
+         <li>Serve in miso wonton soup, or with dumpling sauce.</li>
+         <li>Freeze any leftover uncooked dumplings.</li>
+      </ol>
+      `;
    }
    if (element == "vegetable-stock") {
-
+      player.loadVideoById("tcmbDJjo1UA");
+      i = 0;
+      document.getElementById("video-buttons").style.display = "grid";
+      document.getElementById("ingredients").innerHTML = `
+      <div class="flex">
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               2 carrots
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1/2 bunch celery
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 white onion
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 head of garlic
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 inch ginger
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 Tbsp peppercorns
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 Tbsp salt
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               <em>Optional</em> Any left over vegetable scraps you have
+         </label>
+      </div>
+      `;
+      document.getElementById("equipment").innerHTML = `
+      <div class="flex">
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Large sauce pan
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Large cutting board
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Chef's knife
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Mesh strainer
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Storage container
+         </label>
+      </div>
+      `;
+      document.getElementById("directions").innerHTML = `
+      <h3>Directions</h3>
+      <p>Prep</p>
+      <ol>
+         <li>Gather all the ingredients and equipment.</li>
+         <li>Wash the carrots and celery.</li>
+         <li>Roughly chop 2 carrots and add to a large pot.</li>
+         <li>Roughly chop 1/2 bunch of celery and add to the pot.</li>
+         <li>Halve 1 white onion and add to the pot.</li>
+         <li>Peel 1 head of garlic and add to the pot.</li>
+         <li>Slice 1 inch of ginger and add to the pot.</li>
+         <li>Add 1 tbsp black peppercorns and 1 tbsp salt.</li>
+         <li><em>Optional</em> Add any left over vegetable scraps you have.</li>
+      </ol>
+      <p>Cook</p>
+      <ol>
+         <li>Add water to the large pot of ingredients until they are covered and there is still an inch of room from the top of the pot.</li>
+         <li>Bring the pot to a boil on high heat, then reduce to low heat.</li>
+         <li>Allow to gently simmer for at least an hour.</li>
+         <li>Carefully strain into a new container.</li>
+         <li>Taste and adjust seasoning with salt and pepper.</li>
+      </ol>
+      `;
    }
    if (element == "chili-oil") {
-
+      player.loadVideoById("pwT2zUbGWmA");
+      i = 0;
+      document.getElementById("video-buttons").style.display = "grid";
+      document.getElementById("ingredients").innerHTML = `
+      <div class="flex">
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1/2 cup canola oil
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               2 Tbsp sesame oil
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               5 cloves of garlic
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 inch ginger
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 Tbsp paprika
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 1/2 Tbsp Cheyenne pepper
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               2 1/2 Tbsp crushed red pepper flakes
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1/2 Tbsp salt
+         </label>
+      </div>
+      `;
+      document.getElementById("equipment").innerHTML = `
+      <div class="flex">
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Large cutting board
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Chef's knife
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Small saucepan
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Microplane
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Mason jar
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               2 small bowls
+         </label>
+      </div>
+      `;
+      document.getElementById("directions").innerHTML = `
+      <h3>Directions</h3>
+      <p>Prep</p>
+      <ol>
+         <li>Gather all of your equipment and ingredients.</li>
+         <li>Slice 1 inch ginger into large thin slices.</li>
+         <li>Mince 5 cloves of garlic.</li>
+         <li>Measure out 1/2 cup canola oil and 2 tbsp sesame oil into a small bowl.</li>
+         <li>Measure out 1 tbsp paprika, 1 tbsp chayenne pepper, 2 tbsp crushed red pepper flakes, 1/2 tbsp salt into a separate small bowl.</li>
+      </ol>
+      <p>Cook</p>
+      <ol>
+         <li>In a small saucepan combine the oil, garlic, and ginger over medium-low heat.</li>
+         <li>Allow mixture to heat up and when the garlic begins to sizzle, remove the ginger.</li>
+         <li>Add in spice mix and turn heat to lowest setting.</li>
+         <li>Stir gently and allow to infuse for 10 minutes.</li>
+         <li>Turn off heat and allow oil to cool then taste and adjust seasoning with salt.</li>
+         <li>Pour into a mason jar and keep refrigerated.</li>
+      </ol>
+      `;
+   }
+   if (element == "dumpling-sauce") {
+      player.loadVideoById("");
+      i = 0;
+      document.getElementById("video-buttons").style.display = "none";
+      document.getElementById("ingredients").innerHTML = `
+      <div class="flex">
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               3 Tbsp soy sauce
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 Tbsp black vinegar
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 Tbsp chili oil
+         </label>
+      </div>
+      `;
+      document.getElementById("equipment").innerHTML = `
+      <div class="flex">
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Spoon
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Mason jar
+         </label>
+      </div>
+      `;
+      document.getElementById("directions").innerHTML = `
+      <h3>Directions</h3>
+      <p>There is no interactive video for this recipe</p>
+      <ol>
+         <li>n a mason jar combine 3 tbsp soy sauce, 1 tbsp black vinegar, and 1 tbsp chili oil.</li>
+         <li>Taste and adjust ingredients based on your preference - If you want it more salty add soy sauce, if you want it spicier add Chili oil, if you want it more acidic/pungent add black vinegar.</li>
+      </ol>
+      `;
    }
    if (element == "souprecipe-plating") {
       player.loadVideoById("NvOrGDBkzUQ");
       i = 0;
+      document.getElementById("video-buttons").style.display = "none";
       document.getElementById("ingredients").innerHTML = "";
       document.getElementById("equipment").innerHTML = "";
       document.getElementById("directions").innerHTML = "";

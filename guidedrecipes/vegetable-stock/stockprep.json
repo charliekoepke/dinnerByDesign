@@ -1,0 +1,13 @@
+{
+    "recipe": [
+        {"line": "Gather all the ingredients and equipment.", "time": 0},
+        {"line": "Wash the carrots and celery.", "time": 5030},
+        {"line": "Roughly chop 2 carrots and add to a large pot.", "time": 71210},
+        {"line": "Roughly chop 1/2 bunch of celery and add to the pot.", "time": 101020},
+        {"line": "Halve 1 white onion and add to the pot.", "time": 142020},
+        {"line": "Peel 1 head of garlic and add to the pot.", "time": 181070},
+        {"line": "Slice 1 inch of ginger and add to the pot.", "time": 218130},
+        {"line": "Add 1 tbsp black peppercorns and 1 tbsp salt.", "time": 239080},
+        {"line": "Optional: Add any left over vegetable scraps you have", "time": 250070}
+    ]
+}
