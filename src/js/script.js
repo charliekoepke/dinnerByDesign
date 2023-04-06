@@ -844,20 +844,38 @@ function removeElement(element) {
    }
 }
 
+// Storing the recipe array to be pulled up on next page
+function storeMeal() {
+   const jsonArrayMeal = JSON.stringify(customMeal);
+   const jsonArrayName = JSON.stringify(mealName);
+
+   localStorage.setItem('customMeal', jsonArrayMeal);
+   localStorage.setItem('mealName', jsonArrayName);
+}
+
 // Creates custom meal
 function myMeal() {
+   // Retrieving the stored array
+   let jsonCustomMeal = localStorage.getItem('customMeal');
+   let parseCustomMeal = JSON.parse(jsonCustomMeal);
+
+   let jsonMealName = localStorage.getItem('mealName');
+   let parseMealName = JSON.parse(jsonMealName);
+
+
    // Changing id of video to get started
-   document.getElementById("my-meal").id = customMeal[0];
+   document.getElementById("my-meal").id = parseCustomMeal[0];
+   videoId = parseCustomMeal[0];
    // Load the first video
    onYouTubePlayerAPIReady();
 
    // Loading first recipe information
-   changeElement(customMeal[0].toString());
+   changeElement(parseCustomMeal[0]);
 
    // Adding element change buttons
    for (let j = 0; j < customMeal.length; j++) {
       document.getElementById("elements").innerHTML += `
-         <button onclick="changeElement('` + customMeal[j].toString() + `')">` + mealName[j].toString() + `</button>
+         <button onclick="changeElement('` + parseCustomMeal[j].toString() + `')">` + parseMealName[j].toString() + `</button>
       `;
    }
 }

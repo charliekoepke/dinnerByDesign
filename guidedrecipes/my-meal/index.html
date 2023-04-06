@@ -57,9 +57,19 @@
             <div class="flex" id="video-captions">
                 <p id="captions"></p>
             </div>
+            <div class="grid" id="video-buttons" style="display: none">
+                <!-- Button to get to previous step -->
+                <button onclick="changeVideo('Prep')">Prep</button>
+                <!-- Button to get to next step -->
+                <button onclick="changeVideo('Cook')">Cook</button>
+                <!-- Directions written out -->
+            </div>
             <div id="directions">
             </div>
         </main>
         <script src="../../src/js/script.js"></script>
+        <script>
+            window.onload = myMeal();
+        </script>
     </body>
 </html>

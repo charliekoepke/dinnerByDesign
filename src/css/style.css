@@ -423,5 +423,6 @@ footer .flex {
 
 #my-meal {
   text-decoration: none;
-  list-style: none;
+  list-style-type: "X";
+  list-style-position: outside;
 }/*# sourceMappingURL=style.css.map */
