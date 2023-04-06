@@ -61,7 +61,7 @@ const mushroomcook = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID:
+// VIDEO ID: aJjLTsN2ftQ 
 const aromaticrice = JSON.parse(`{
    "recipe":
    [
@@ -72,7 +72,7 @@ const aromaticrice = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID:
+// VIDEO ID: RTyUtGZ0hoU
 const cherriesprep = JSON.parse(`{
    "recipe": [
       {"line": "Gather your tools and ingredients.", "time": 0},
@@ -83,7 +83,7 @@ const cherriesprep = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID:
+// VIDEO ID: KvFJ4gFjhr8
 const cherriescook = JSON.parse(`{
    "recipe": [
       {"line": "Put sauce pan on medium high heat.", "time": 0},
@@ -93,7 +93,7 @@ const cherriescook = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID:
+// VIDEO ID: bpwku80duOg
 const duckprep = JSON.parse(`{
    "recipe": [
       {"line": "Gather tools and ingredients.", "time": 0},
@@ -103,7 +103,7 @@ const duckprep = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID:
+// VIDEO ID: TTW_0HnqnO0
 const duckcook = JSON.parse(`{
    "recipe": [
       {"line": "Place skin side down in a cold pan on low-medium heat.", "time": 0},
@@ -114,7 +114,7 @@ const duckcook = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID:
+// VIDEO ID: JldQ77rO4yE
 const squashprep = JSON.parse(`{
    "recipe": [
       {"line": "Gather tools and ingredients, and preheat oven to 450 degrees Fahrenheit.", "time": 0},
@@ -129,7 +129,7 @@ const squashprep = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID:
+// VIDEO ID: gvho9vOGOTw
 const squashcook = JSON.parse(`{
    "recipe": [
       {"line": "Put acorn squash in the oven and roast for 10 minutes at 450 degrees Fahrenheit.", "time": 0},
@@ -137,6 +137,25 @@ const squashcook = JSON.parse(`{
       {"line": "Remove from oven and allow seed to cool completely so they become crisp.", "time": 24130}
    ]
 }`);
+
+// VIDEO ID: RveAV5lcdoc
+const wontonprep = JSON.parse(``);
+
+// VIDEO ID: x-pYLA7JTeY
+const wontoncook = JSON.parse(``);
+
+// VIDEO ID: tcmbDJjo1UA
+const stockprep = JSON.parse(``);
+
+// VIDEO ID: _upxRrOTTrs
+const stockcook = JSON.parse(``);
+
+// VIDEO ID: pwT2zUbGWmA
+const chilioilprep = JSON.parse(``);
+
+// VIDEO ID: 0uXGMDZxkpk 
+const chilioilcook = JSON.parse(``);
+
 
 // ytplayer code: https://developers.google.com/youtube/player_parameters#IFrame_Player_API
 let tag = document.createElement('script');
@@ -202,7 +221,7 @@ function onYouTubePlayerAPIReady() {
       player = new YT.Player('ytplayer', {
          height: '500',
          width: '980',
-         videoId: '',
+         videoId: 'aJjLTsN2ftQ',
          playerVars: {
             'controls': 0,
             'showinfo': 0,
@@ -219,7 +238,143 @@ function onYouTubePlayerAPIReady() {
       player = new YT.Player('ytplayer', {
          height: '500',
          width: '980',
-         videoId: '',
+         videoId: 'aJjLTsN2ftQ',
+         playerVars: {
+            'controls': 0,
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+         },
+         events: {
+            'onStateChange': onStateChange
+         }
+      });
+   }
+   // Crispy Skin Duck Breast
+   if (videoId == "crispy-duck") {
+      player = new YT.Player('ytplayer', {
+         height: '500',
+         width: '980',
+         videoId: 'bpwku80duOg',
+         playerVars: {
+            'controls': 0,
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+         },
+         events: {
+            'onStateChange': onStateChange
+         }
+      });
+   }
+   // Braised Cherries
+   if (videoId == "braised-cherries") {
+      player = new YT.Player('ytplayer', {
+         height: '500',
+         width: '980',
+         videoId: 'RTyUtGZ0hoU',
+         playerVars: {
+            'controls': 0,
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+         },
+         events: {
+            'onStateChange': onStateChange
+         }
+      });
+   }
+   // Roasted Acorn Squash
+   if (videoId == "acorn-squash") {
+      player = new YT.Player('ytplayer', {
+         height: '500',
+         width: '980',
+         videoId: 'JldQ77rO4yE',
+         playerVars: {
+            'controls': 0,
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+         },
+         events: {
+            'onStateChange': onStateChange
+         }
+      });
+   }
+   // Full Duck Recipe
+   if (videoId == "duck-recipe") {
+      player = new YT.Player('ytplayer', {
+         height: '500',
+         width: '980',
+         videoId: 'bpwku80duOg',
+         playerVars: {
+            'controls': 0,
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+         },
+         events: {
+            'onStateChange': onStateChange
+         }
+      });
+   }
+   // Cabbage and Mushroom Wontons
+   if (videoId == "cabbage-mushroom-wontons") {
+      player = new YT.Player('ytplayer', {
+         height: '500',
+         width: '980',
+         videoId: 'RveAV5lcdoc',
+         playerVars: {
+            'controls': 0,
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+         },
+         events: {
+            'onStateChange': onStateChange
+         }
+      });
+   }
+   // Homemade Vegetable Stock
+   if (videoId == "vegetable-stock") {
+      player = new YT.Player('ytplayer', {
+         height: '500',
+         width: '980',
+         videoId: 'tcmbDJjo1UA',
+         playerVars: {
+            'controls': 0,
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+         },
+         events: {
+            'onStateChange': onStateChange
+         }
+      });
+   }
+   // Homemade Chili Oil
+   if (videoId == "chili-oil") {
+      player = new YT.Player('ytplayer', {
+         height: '500',
+         width: '980',
+         videoId: 'pwT2zUbGWmA',
+         playerVars: {
+            'controls': 0,
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+         },
+         events: {
+            'onStateChange': onStateChange
+         }
+      });
+   }
+   // Full Soup Recipe
+   if (videoId == "soup-recipe") {
+      player = new YT.Player('ytplayer', {
+         height: '500',
+         width: '980',
+         videoId: 'RveAV5lcdoc',
          playerVars: {
             'controls': 0,
             'showinfo': 0,
@@ -297,12 +452,122 @@ function interactiveCaptions() {
          }
       }
    }
-   if (recipeVideo == "braisedcherries") {
-      if ((player.getCurrentTime() * 1000) >= parseInt(braisedcherries["recipe"][i]["time"])) {
-         document.getElementById("captions").innerHTML = braisedcherries["recipe"][i]["line"];
-         if (i + 1 < braisedcherries["recipe"].length) {
-            if ((player.getCurrentTime() * 1000) >= parseInt(braisedcherries["recipe"][i + 1]["time"])) {
-               player.seekTo(parseInt(braisedcherries["recipe"][i]["time"])/1000);
+   if (recipeVideo == "cherriesprep") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(cherriesprep["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = cherriesprep["recipe"][i]["line"];
+         if (i + 1 < cherriesprep["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(cherriesprep["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(cherriesprep["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
+   if (recipeVideo == "cherriescook") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(cherriescook["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = cherriescook["recipe"][i]["line"];
+         if (i + 1 < cherriescook["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(cherriescook["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(cherriescook["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
+   if (recipeVideo == "duckprep") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(duckprep["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = duckprep["recipe"][i]["line"];
+         if (i + 1 < duckprep["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(duckprep["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(duckprep["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
+   if (recipeVideo == "duckcook") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(duckcook["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = duckcook["recipe"][i]["line"];
+         if (i + 1 < duckcook["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(duckcook["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(duckcook["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
+   if (recipeVideo == "squashprep") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(squashprep["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = squashprep["recipe"][i]["line"];
+         if (i + 1 < squashprep["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(squashprep["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(squashprep["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
+   if (recipeVideo == "squashcook") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(squashcook["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = squashcook["recipe"][i]["line"];
+         if (i + 1 < squashcook["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(squashcook["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(squashcook["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
+   if (recipeVideo == "wontonprep") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(wontonprep["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = wontonprep["recipe"][i]["line"];
+         if (i + 1 < wontonprep["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(wontonprep["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(wontonprep["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
+   if (recipeVideo == "wontoncook") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(wontoncook["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = wontoncook["recipe"][i]["line"];
+         if (i + 1 < wontoncook["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(wontoncook["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(wontoncook["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
+   if (recipeVideo == "stockprep") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(stockprep["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = stockprep["recipe"][i]["line"];
+         if (i + 1 < stockprep["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(stockprep["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(stockprep["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
+   if (recipeVideo == "stockcook") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(stockcook["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = stockcook["recipe"][i]["line"];
+         if (i + 1 < stockcook["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(stockcook["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(stockcook["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
+   if (recipeVideo == "chilioilprep") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(chilioilprep["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = chilioilprep["recipe"][i]["line"];
+         if (i + 1 < chilioilprep["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(chilioilprep["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(chilioilprep["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
+   if (recipeVideo == "chilioilcook") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(chilioilcook["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = chilioilcook["recipe"][i]["line"];
+         if (i + 1 < chilioilcook["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(chilioilcook["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(chilioilcook["recipe"][i]["time"])/1000);
             }
          }
       }
@@ -330,6 +595,51 @@ function onStateChange(event) {
       if (player.getVideoUrl() == "https://www.youtube.com/watch?v=bNdiE0umUZc") {
          recipeVideo = "mushroomcook";
       }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=YHxybjUXSRc ") {
+         recipeVideo = "steakrecipe-plating";
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=RTyUtGZ0hoU") {
+         recipeVideo = "cherriesprep";
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=KvFJ4gFjhr8") {
+         recipeVideo = "cherriescook";
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=bpwku80duOg") {
+         recipeVideo = "duckprep";
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=TTW_0HnqnO0") {
+         recipeVideo = "duckcook";
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=JldQ77rO4yE") {
+         recipeVideo = "squashprep";
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=gvho9vOGOTw") {
+         recipeVideo = "squashcook";
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=RWGm1EvlmK4") {
+         recipeVideo = "duckrecipe-plating";
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=RveAV5lcdoc") {
+         recipeVideo = "wontonprep";
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=x-pYLA7JTeY") {
+         recipeVideo = "wontoncook";
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=tcmbDJjo1UA") {
+         recipeVideo = "stockprep";
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=_upxRrOTTrs") {
+         recipeVideo = "stockcook";
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=pwT2zUbGWmA") {
+         recipeVideo = "chilioilprep";
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=0uXGMDZxkpk ") {
+         recipeVideo = "chilioilcook";
+      }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=NvOrGDBkzUQ") {
+         recipeVideo = "souprecipe-plating";
+      }
    }
    if (event.data == YT.PlayerState.ENDED) {
       window.clearInterval(timer);
@@ -356,12 +666,6 @@ function nextStep() {
          next = true;
       }
    }
-   if (recipeVideo == "braisedcherries") {
-      if (i + 1 < braisecherries["recipe"].length) {
-         player.seekTo(parseInt(braisedcherries["recipe"][i + 1]["time"])/1000);
-         next = true;
-      }
-   }
    if (recipeVideo == "mushroomprep") {
       if (i + 1 < mushroomprep["recipe"].length) {
          player.seekTo(parseInt(mushroomprep["recipe"][i + 1]["time"])/1000);
@@ -374,7 +678,78 @@ function nextStep() {
          next = true;
       }
    }
-
+   if (recipeVideo == "cherriesprep") {
+      if (i + 1 < cherriesprep["recipe"].length) {
+         player.seekTo(parseInt(cherriesprep["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+   if (recipeVideo == "cherriescook") {
+      if (i + 1 < cherriescook["recipe"].length) {
+         player.seekTo(parseInt(cherriescook["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+   if (recipeVideo == "duckprep") {
+      if (i + 1 < duckprep["recipe"].length) {
+         player.seekTo(parseInt(duckprep["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+   if (recipeVideo == "duckcook") {
+      if (i + 1 < duckcook["recipe"].length) {
+         player.seekTo(parseInt(duckcook["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+   if (recipeVideo == "squashprep") {
+      if (i + 1 < squashprep["recipe"].length) {
+         player.seekTo(parseInt(squashprep["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+   if (recipeVideo == "squashcook") {
+      if (i + 1 < squashcook["recipe"].length) {
+         player.seekTo(parseInt(squashcook["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+   if (recipeVideo == "wontonprep") {
+      if (i + 1 < wontonprep["recipe"].length) {
+         player.seekTo(parseInt(wontonprep["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+   if (recipeVideo == "wontoncook") {
+      if (i + 1 < wontoncook["recipe"].length) {
+         player.seekTo(parseInt(wontoncook["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+   if (recipeVideo == "stockprep") {
+      if (i + 1 < stockprep["recipe"].length) {
+         player.seekTo(parseInt(stockprep["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+   if (recipeVideo == "stockcook") {
+      if (i + 1 < stockcook["recipe"].length) {
+         player.seekTo(parseInt(stockcook["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+   if (recipeVideo == "chilioilprep") {
+      if (i + 1 < chilioilprep["recipe"].length) {
+         player.seekTo(parseInt(chilioilprep["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+   if (recipeVideo == "chilioilcook") {
+      if (i + 1 < chilioilcook["recipe"].length) {
+         player.seekTo(parseInt(chilioilcook["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
 }
 function previousStep() {
    if (recipeVideo == "soycuredegg") {
@@ -398,13 +773,6 @@ function previousStep() {
          previous = true;
       }
    }
-   if (recipeVideo == "braisedcherries") {
-      if (i - 1 > -1) {
-         player.seekTo(parseInt(braisedcherries["recipe"][i - 1]["time"])/1000);
-         document.getElementById("captions").innerHTML = braisedcherries["recipe"][i - 1]["line"];
-         previous = true;
-      }
-   }
    if (recipeVideo == "mushroomprep") {
       if (i - 1 > -1) {
          player.seekTo(parseInt(mushroomprep["recipe"][i - 1]["time"])/1000);
@@ -416,6 +784,90 @@ function previousStep() {
       if (i - 1 > -1) {
          player.seekTo(parseInt(mushroomcook["recipe"][i - 1]["time"])/1000);
          document.getElementById("captions").innerHTML = mushroomcook["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (recipeVideo == "cherriesprep") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(cherriesprep["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = cherriesprep["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (recipeVideo == "cherriescook") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(cherriescook["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = cherriescook["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (recipeVideo == "duckprep") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(duckprep["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = duckprep["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (recipeVideo == "duckcook") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(duckcook["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = duckcook["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (recipeVideo == "squashprep") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(squashprep["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = squashprep["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (recipeVideo == "squashcook") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(squashcook["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = squashcook["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (recipeVideo == "wontonprep") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(wontonprep["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = wontonprep["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (recipeVideo == "wontoncook") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(wontoncook["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = wontoncook["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (recipeVideo == "stockprep") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(stockprep["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = stockprep["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (recipeVideo == "stockcook") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(stockcook["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = stockcook["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (recipeVideo == "chilioilprep") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(chilioilprep["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = chilioilprep["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (recipeVideo == "chilioilcook") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(chilioilcook["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = chilioilcook["recipe"][i - 1]["line"];
          previous = true;
       }
    }
@@ -439,6 +891,66 @@ function changeVideo(prepOrCook) {
       }
       else if (prepOrCook == "Cook") {
          player.loadVideoById("bNdiE0umUZc");
+         i = 0;
+      }
+   }
+   if (recipeVideo == "cherriesprep" || recipeVideo == "cherriescook") {
+      if (prepOrCook == "Prep") {
+         player.loadVideoById("RTyUtGZ0hoU");
+         i = 0;
+      }
+      else if (prepOrCook == "Cook") {
+         player.loadVideoById("KvFJ4gFjhr8");
+         i = 0;
+      }
+   }
+   if (recipeVideo == "duckprep" || recipeVideo == "duckcook") {
+      if (prepOrCook == "Prep") {
+         player.loadVideoById("bpwku80duOg");
+         i = 0;
+      }
+      else if (prepOrCook == "Cook") {
+         player.loadVideoById("TTW_0HnqnO0");
+         i = 0;
+      }
+   }
+   if (recipeVideo == "squashprep" || recipeVideo == "squashcook") {
+      if (prepOrCook == "Prep") {
+         player.loadVideoById("JldQ77rO4yE");
+         i = 0;
+      }
+      else if (prepOrCook == "Cook") {
+         player.loadVideoById("gvho9vOGOTw");
+         i = 0;
+      }
+   }
+   if (recipeVideo == "wontonprep" || recipeVideo == "wontoncook") {
+      if (prepOrCook == "Prep") {
+         player.loadVideoById("RveAV5lcdoc");
+         i = 0;
+      }
+      else if (prepOrCook == "Cook") {
+         player.loadVideoById("x-pYLA7JTeY");
+         i = 0;
+      }
+   }
+   if (recipeVideo == "stockprep" || recipeVideo == "stockcook") {
+      if (prepOrCook == "Prep") {
+         player.loadVideoById("tcmbDJjo1UA");
+         i = 0;
+      }
+      else if (prepOrCook == "Cook") {
+         player.loadVideoById("_upxRrOTTrs");
+         i = 0;
+      }
+   }
+   if (recipeVideo == "chilioilprep" || recipeVideo == "chilioilcook") {
+      if (prepOrCook == "Prep") {
+         player.loadVideoById("pwT2zUbGWmA");
+         i = 0;
+      }
+      else if (prepOrCook == "Cook") {
+         player.loadVideoById("0uXGMDZxkpk ");
          i = 0;
       }
    }
@@ -713,27 +1225,21 @@ function changeElement(element) {
             <span class="checkmark"></span>
             Chef's knife
          </label>
-         <div class="flex">
-            <label class="container">
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                  Cutting board
-            </label>
-         </div>
-         <div class="flex">
-            <label class="container">
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                  Tongs
-            </label>
-         </div>
-         <div class="flex">
-            <label class="container">
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                  Basting spoon
-            </label>
-         </div>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Cutting board
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Tongs
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Basting spoon
+         </label>
       </div>
       `;
       // Changing directions
@@ -761,26 +1267,258 @@ function changeElement(element) {
       </ol>
       `;
    }
-   if (element == "braised-cherries") {
-      player.loadVideoById("");
+   if (element == "steakrecipe-plating") {
+      player.loadVideoById("YHxybjUXSRc");
       i = 0;
-      document.getElementById("ingredients").innerHTML = ``;
-      document.getElementById("equipment").innerHTML = ``;
-      document.getElementById("directions").innerHTML = ``;
+      document.getElementById("ingredients").innerHTML = "";
+      document.getElementById("equipment").innerHTML = "";
+      document.getElementById("directions").innerHTML = "";
+   }
+   if (element == "braised-cherries") {
+      player.loadVideoById("RTyUtGZ0hoU");
+      i = 0;
+      document.getElementById("ingredients").innerHTML = `
+      <div class="flex">
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               8 cherries
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 tsp black vinegar
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               2 tsps balsamic vinegar
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 medium shallot
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               2 Tbsp brown sugar
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1/4 cup of water
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               salt and pepper to taste
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 tsp duck fat (optional)
+         </label>
+      </div>
+      `;
+      document.getElementById("equipment").innerHTML = `
+      <div class="flex">
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Metal straw
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Saucepan
+         </label>
+      </div>
+      `;
+      document.getElementById("directions").innerHTML = `
+      <h3>Directions</h3>
+      <p>Prep</p>
+      <ol>
+         <li>Gather your tools and ingredients.</li>
+         <li>Wash your cherries.</li>
+         <li>Use a metal straw to remove the pit from the cherries.</li>
+         <li>Julienne a shallot.</li>
+         <li>Add shallots, cherries, vinegars, water, and brown sugar to a sauce pan.</li>
+      </ol>
+      <p>Cook</p>
+      <ol>
+         <li>Put sauce pan on stove on medium high heat.</li>
+         <li>Bring to a simmer and stir to incorporate and gently break up the cherries.</li>
+         <li>Reduce heat to medium-low and allow to reduce until thickened to a syrup and cherries are broken down.</li>
+         <li>Add a pinch of salt and pepper and stir in about a tablespoon of duck fat (optional).</li>
+      </ol>
+      `;
    }
    if (element == "crispy-duck") {
-      player.loadVideoById("");
+      player.loadVideoById("bpwku80duOg");
       i = 0;
-      document.getElementById("ingredients").innerHTML = ``;
-      document.getElementById("equipment").innerHTML = ``;
-      document.getElementById("directions").innerHTML = ``;
+      document.getElementById("ingredients").innerHTML = `
+      <div class="flex">
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Duck breast
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Salt and pepper
+         </label>
+      </div>
+      `;
+      document.getElementById("equipment").innerHTML = `
+      <div class="flex">
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Cutting board
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Chef's knife
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               Carbon steel pan
+         </label>
+      </div>
+      `;
+      document.getElementById("directions").innerHTML = `
+      <h3>Directions</h3>
+      <p>Prep</p>
+      <ol>
+         <li>Gather tools and ingredients.</li>
+         <li>Pat duck breast dry.</li>
+         <li>Score skin with Chef's knife.</li>
+         <li>Season with salt on both sides and pepper on meat side.</li>
+      </ol>
+      <p>Cook</p>
+      <ol>
+         <li>Place skin side down in a cold pan on low-medium heat.</li>
+         <li>Allow skin to render until the fat has rendered and is crispy.</li>
+         <li>Flip over and baste with duck fat - allow to cook on meat side on medium heat for 90 seconds - adjust time for thicker duck breast.</li>
+         <li>Allow duck to rest for 5-8 minutes.</li>
+         <li>Cut duck into inch thick pieces.</li>
+      </ol>
+      `;
    }
-   if (element == "") {
-      player.loadVideoById("");
+   if (element == "acorn-squash") {
+      player.loadVideoById("JldQ77rO4yE");
       i = 0;
-      document.getElementById("ingredients").innerHTML = ``;
-      document.getElementById("equipment").innerHTML = ``;
-      document.getElementById("directions").innerHTML = ``;
+      document.getElementById("ingredients").innerHTML = `
+      <div class="flex">
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 Acorn squash and its seeds
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 Tbsp olive oil
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1/2 tsp paprika, salt, white pepper, and cumin
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1 clove minced garlic
+         </label>
+         <label class="container">
+               <input type="checkbox">
+               <span class="checkmark"></span>
+               1/2 inch minced ginger
+         </label>
+      </div>
+      `;
+      document.getElementById("equipment").innerHTML = `
+      <div class="flex">
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            1 medium bowl
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Cutting board
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Chef's knife
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Paring knife
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Microplane
+         </label>
+         <label class="container">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+            Air fryer or oven
+         </label>
+      </div>
+      `;
+      document.getElementById("directions").innerHTML = `
+      <h3>Directions</h3>
+      <p>Prep</p>
+      <ol>
+            <li>Gather your tools and ingredients, and preheat oven to 450 degrees Fahrenheit.</li>
+            <li>Prep your squash - cut off top, cut in half, and scoop out seeds into a small bowl.</li>
+            <li>Remove skin with a very sharp knife - a paring knife will help get smaller hard to reach places.</li>
+            <li>Cut the squash into 1/4 inch thick slices.</li>
+            <li>Drizzle with olive oil and season with 1/2 tsp paprika, cumin, salt, white pepper, a clove of minced garlic, and 1/2 inch minced ginger.</li>
+            <li>Stir until squash is evenly coated in seasoning.</li>
+            <li>Spread squash pieces out on a baking sheet.</li>
+            <li>Toss the seeds in olive oil in a small bowl.</li>
+            <li>Spread out on a baking sheet and sprinkle with salt and pepper from a foot away.</li>
+      </ol>
+      <p>Cook</p>
+      <ol>
+            <li>Put acorn squash in the oven and roast for 8 minutes at 450 degrees Fahrenheit.</li>
+            <li>After 8 minutes, add the squash seeds to the oven and roast both the squash and the seeds for an additional 5 minutes.</li>
+            <li>Remove from oven and allow seeds to cool completely so they become crisp.</li>
+      </ol>
+      `;
+   }
+   if (element == "duckrecipe-plating") {
+      player.loadVideoById("RWGm1EvlmK4");
+      i = 0;
+      document.getElementById("ingredients").innerHTML = "";
+      document.getElementById("equipment").innerHTML = "";
+      document.getElementById("directions").innerHTML = "";
+   }
+   if (element == "cabbage-mushroom-wontons") {
+
+   }
+   if (element == "vegetable-stock") {
+
+   }
+   if (element == "chili-oil") {
+
+   }
+   if (element == "souprecipe-plating") {
+      player.loadVideoById("NvOrGDBkzUQ");
+      i = 0;
+      document.getElementById("ingredients").innerHTML = "";
+      document.getElementById("equipment").innerHTML = "";
+      document.getElementById("directions").innerHTML = "";
    }
 }
 

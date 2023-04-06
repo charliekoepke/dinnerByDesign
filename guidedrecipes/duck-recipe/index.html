@@ -19,11 +19,11 @@
                 </div>
             </div>
         </nav>
-        <main id="steak-recipe">
-            <p><a href="../index.html">Guided Recipes</a> / k</p>
+        <main id="duck-recipe">
+            <p><a href="../index.html">Guided Recipes</a> / Pan Seared Duck, Braised Cherries, Roasted Acorn Squash</p>
             <div class="grid" id="recipe-header">
                 <div class="flex">
-                    <h2></h2>
+                    <h2>Pan Seared Duck, Braised Cherries, Roasted Acorn Squash</h2>
                     <p></p>
                 </div>
                 <div class="flex">
@@ -37,34 +37,43 @@
             </div>
             <div class="tabcontent">
                 <div id="ingredients">
-                    <!-- Checkboxes of ingredients -->
                     <div class="flex">
                         <label class="container">
-                           <input type="checkbox">
-                           <span class="checkmark"></span>
-                           1 and 1/2 cups medium grain rice
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Duck breast
                         </label>
+                    </div>
+                    <div class="flex">
                         <label class="container">
-                           <input type="checkbox">
-                           <span class="checkmark"></span>
-                           2 cups of water
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Salt and pepper
                         </label>
-                        <label class="container">
-                           <input type="checkbox">
-                           <span class="checkmark"></span>
-                           Sesame oil
-                        </label>
-                     </div>
+                    </div>
                 </div>
                 <div id="equipment">
-                    <!-- Checkboxes of equipment -->
                     <div class="flex">
                         <label class="container">
-                           <input type="checkbox">
-                           <span class="checkmark"></span>
-                           Rice cooker
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Cutting board
                         </label>
-                     </div>
+                    </div>
+                    <div class="flex">
+                        <label class="container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Chef's knife
+                        </label>
+                    </div>
+                    <div class="flex">
+                        <label class="container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            Carbon steel pan
+                        </label>
+                    </div>
                 </div>
             </div>
             <div class="tab" id="elements">
@@ -72,6 +81,7 @@
                 <button onclick="changeElement('crispy-duck')">Crispy Skin Duck</button>
                 <button onclick="changeElement('braised-cherries')">Braised Cherries</button>
                 <button onclick="changeElement('acorn-squash')">Roasted Acorn Squash</button>
+                <button onclick="changeElement('duckrecipe-plating')">Plating</button>
             </div>
             <!-- Recipe Video -->
             <h2>Interactive Video</h2>
@@ -84,13 +94,29 @@
             <div class="flex" id="video-captions">
                 <p id="captions"></p>
             </div>
+            <div class="grid" id="video-buttons">
+                <!-- Button to get to previous step -->
+                <button onclick="changeVideo('Prep')">Prep</button>
+                <!-- Button to get to next step -->
+                <button onclick="changeVideo('Cook')">Cook</button>
+                <!-- Directions written out -->
+            </div>
             <div id="directions">
                 <h3>Directions</h3>
+                <p>Prep</p>
                 <ol>
-                    <li>Measure out 1 and 1/2 cups of medium grain white rice.</li>
-                    <li>Rinse the rice thouroughly until the water is clear.</li>
-                    <li>Add 2 cups of water to the rice cooker.</li>
-                    <li>Allow the rice to soak fo 15 minutes then press cook on the rice cooker.</li>
+                    <li>Gather tools and ingredients.</li>
+                    <li>Pat duck breast dry.</li>
+                    <li>Score skin with Chef's knife.</li>
+                    <li>Season with salt on both sides and pepper on meat side.</li>
+                </ol>
+                <p>Cook</p>
+                <ol>
+                    <li>Place skin side down in a cold pan on low-medium heat.</li>
+                    <li>Allow skin to render until the fat has rendered and is crispy.</li>
+                    <li>Flip over and baste with duck fat - allow to cook on meat side on medium heat for 90 seconds - adjust time for thicker duck breast.</li>
+                    <li>Allow duck to rest for 5-8 minutes.</li>
+                    <li>Cut duck into inch thick pieces.</li>
                 </ol>
             </div>
         </main>

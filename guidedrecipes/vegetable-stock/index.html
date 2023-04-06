@@ -1,9 +1,6 @@
------ GUIDED RECIPE TEMPLATE -----
-
-<!DOCTYPE html>
 <html>
     <head>
-        <title><!-- TITLE --></title>
+        <title>Homemade Vegetable Stock - Dinner by Design</title>
 
         <meta charset="utf-8">
         <link href="../../src/css/style.css" rel="stylesheet">
@@ -12,7 +9,7 @@
         <nav>
             <div class="grid">
                 <div id="logo" class="flex">
-                    <h1><a href="">Dinner by Design</a></h1>
+                    <h1><a href="../../index.html">Dinner by Design</a></h1>
                 </div>
                 <div id="nav-menu" class="flex">
                     <!-- Place logo here -->
@@ -21,11 +18,11 @@
                 </div>
             </div>
         </nav>
-        <main id="">
-            <p><a href="../index.html">Guided Recipes</a> / </p>
+        <main id="vegetable-stock">
+            <p><a href="../index.html">Guided Recipes</a> / Homemade Vegetable Stock</p>
             <div class="grid" id="recipe-header">
             <div class="flex">
-                <h2><!-- RECIPE NAME --></h2>
+                <h2>Homemade Vegetable Stock</h2>
                 <p><!-- RECIPE DESCRIPTION --></p>
             </div>
             <div class="flex">
@@ -80,61 +77,3 @@
         <script src="../../src/js/script.js"></script>
     </body>
 </html>
-
---------------------
-
------ VIDEO LINK TEMPLATE -----
-
-if (videoId == "") {
-    player = new YT.Player('ytplayer', {
-        height: '500',
-        width: '980',
-        videoId: '',
-        playerVars: {
-        'controls': 0,
-        'showinfo': 0,
-        'rel': 0,
-        'loop': 1
-        },
-        events: {
-        'onStateChange': onStateChange
-        }
-    });
-}
-
---------------------
-
------ RECIPE TILE TEMPLATE -----
-
-<div class="recipetile <!-- Add either element or recipe -->">
-    <img>
-    <div class="flex">
-        <h3></h3>
-        <p>Description</p>
-    </div>
-    <div class="flex" id="recipeadd">
-        <a href="">Begin</a>
-        <p class="elementview">|</p>
-        <a class="elementview" onclick="addElement('')">Add</a>
-    </div>
-</div>
-
---------------------
-
------ JSON TEMPLATE -----
-
-{
-    "recipe": [
-        {"line": "", "time": 0}
-    ]
-}
-
------ CHANGEVIDEO() FUNCTION -----
-
-if (element == "") {
-    player.loadVideoById("");
-    i = 0;
-    document.getElementById("ingredients").innerHTML = ``;
-    document.getElementById("equipment").innerHTML = ``;
-    document.getElementById("directions").innerHTML = ``;
-}
