@@ -11,6 +11,11 @@ function toggleView(view) {
 
         document.getElementById("side-menu").style.display = "none";
         document.getElementById("guidedrecipes-grid").style.display = "block";
+        
+        for (let x = 0; x < document.getElementsByClassName("elementview").length; x++) {
+            document.getElementsByClassName("elementview")[x].style.display = "none";
+        }
+
     }
     if (view.value.toString() == "element") {
         for (let i = 0; i < recipeTiles.length; i++) {
@@ -22,6 +27,10 @@ function toggleView(view) {
 
         document.getElementById("side-menu").style.display = "flex";
         document.getElementById("guidedrecipes-grid").style.display = "grid";
+        
+        for (let x = 0; x < document.getElementsByClassName("elementview").length; x++) {
+            document.getElementsByClassName("elementview")[x].style.display = "flex";
+        }
     }
     if (view.value.toString() == "none") {
         for (let i = 0; i < recipeTiles.length; i++) {
@@ -33,5 +42,9 @@ function toggleView(view) {
 
         document.getElementById("side-menu").style.display = "none";
         document.getElementById("guidedrecipes-grid").style.display = "block";
+        
+        for (let x = 0; x < document.getElementsByClassName("elementview").length; x++) {
+            document.getElementsByClassName("elementview")[x].style.display = "none";
+        }
     }
 }

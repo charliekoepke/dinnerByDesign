@@ -784,7 +784,80 @@ function changeElement(element) {
    }
 }
 
+
+// Array of custom meals
+let customMeal = new Array();
+let mealName = new Array();
+
+// Adds element into my meal menu
+function addElement(element) {
+   // Adding element to array
+   customMeal[customMeal.length] = element;
+
+   // Adding official name into new array
+   if (element == "seared-sirloin") {
+      mealName[customMeal.length] = "Seared Sirloin with Aromatic Rice";
+   }
+   if (element == "shiitake-mushrooms") {
+      mealName[customMeal.length] = "Sauteed Shiitake Mushrooms";
+   }
+   if (element == "braised-cherries") {
+      mealName[customMeal.length] = "Braised Cherries";
+   }
+   if (element == "soy-cured-egg") {
+      mealName[customMeal.length] = "Soy Cured Egg Yolk";
+   }
+   if (element == "crispy-duck") {
+      mealName[customMeal.length] = "Crispy Skin Duck Breast";
+   }
+   if (element == "cabbage-mushroom-wontons") {
+      mealName[customMeal.length] = "Cabbage and Mushroom Wontons";
+   }
+   if (element  == "vegetable-stock") {
+      mealName[customMeal.length] = "Homemade Vegetable Stock";
+   }
+   if (element == "chili-oil") {
+      mealName[customMeal.length] = "Homemade Chili Oil";
+   }
+   if (element == "dumpling-sauce") {
+      mealName[customMeal.length] = "Dumpling Sauce";
+   }
+
+   // Putting elements into view
+   let listItem = document.createElement("li");
+   listItem.innerHTML = `<a id="` + element + `" onclick="removeElement('` + element + `')">` + mealName[customMeal.length].toString() + `</a>`;
+   document.getElementById("my-meal").appendChild(listItem);
+}
+
+// Removes element from my meal menu
+function removeElement(element) {
+   // List of all items in list
+   let listItems = document.querySelectorAll("#my-meal li");
+   // Removing from array
+   for (let j = 0; j < customMeal.length; j++) {
+      if (customMeal[j].toString() == element) {
+         customMeal.splice(j, 1);
+         mealName.splice(j, 1);
+         console.log("remove");
+         document.getElementById("my-meal").removeChild(listItems[j]);
+      }
+   }
+}
+
 // Creates custom meal
 function myMeal() {
+   // Changing id of video to get started
+   document.getElementById("my-meal").id = customMeal[0];
+   // Load the first video
+   onYouTubePlayerAPIReady();
 
+   // Loading first recipe information
+   changeElement(customMeal[0].toString());
+
+   // Adding element change buttons
+   for (let j = 0; j < customMeal.length; j++) {
+      document.getElementById("elements").innerHTML += `
+         <button onclick="changeElement('` + customMeal[j].toString() + `')">` + mealName[j].toString() + `</button>
+      `;
+   }
 }

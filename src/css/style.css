@@ -133,6 +133,7 @@ nav .grid #logo {
 .recipetile {
   font-family: "Roboto", sans-serif !important;
   background-color: black;
+  box-shadow: 0.5rem 0.5rem 1rem grey;
   color: white;
   padding: 2%;
 }
@@ -147,6 +148,12 @@ nav .grid #logo {
 .recipetile img {
   width: 100%;
   height: 50%;
+}
+
+#recipeadd {
+  flex-direction: row;
+  justify-content: right;
+  align-items: bottom;
 }
 
 #about-header {
@@ -397,4 +404,24 @@ footer .flex {
 
 #side-menu {
   display: none;
+  margin: 5%;
+  padding: 2%;
+}
+#side-menu button {
+  width: 50%;
+}
+#side-menu a {
+  font-size: 20pt;
+}
+#side-menu h5 {
+  font-size: 24pt;
+}
+
+.elementview {
+  display: none;
+}
+
+#my-meal {
+  text-decoration: none;
+  list-style: none;
 }/*# sourceMappingURL=style.css.map */

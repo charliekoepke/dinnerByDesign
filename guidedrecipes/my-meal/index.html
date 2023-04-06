@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Meal - Dinner by Design</title>
+
+        <meta charset="utf-8">
+        <link href="../../src/css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <nav>
+            <div class="grid">
+                <div id="logo" class="flex">
+                    <h1><a href="../../index.html">Dinner by Design</a></h1>
+                </div>
+                <div id="nav-menu" class="flex">
+                    <!-- Place logo here -->
+                    <a href="../index.html"><strong>Guided Recipes</strong></a>
+                    <a href="../../about.html">About</a>
+                </div>
+            </div>
+        </nav>
+        <main id="my-meal">
+            <p><a href="../index.html">Guided Recipes</a> / My Dinner by Design</p>
+            <div class="grid" id="recipe-header">
+            <div class="flex">
+                <h2>My Dinner by Design</h2>
+                <p><!-- RECIPE DESCRIPTION --></p>
+            </div>
+            <div class="flex">
+                <img>
+            </div>
+            </div>
+            <!-- Toggle between ingredients and equipment -->
+            <div class="tab">
+                <h4>Ingredients</h4>
+                <h4>Equipment</h4>
+            </div>
+            <div class="tabcontent">
+                <div id="ingredients">
+                    <!-- Checkboxes of ingredients -->
+                </div>
+                <div id="equipment">
+                    <!-- Checkboxes of equipment -->
+                </div>
+            </div>
+            <!-- Recipe Video -->
+            <div class="tab" id="elements">
+                <!-- Toggle through the elements videos -->
+            </div>
+            <h2>Interactive Video</h2>
+            <div class="recipe-video">
+                <button onclick="previousStep()"><</button>
+                <div id="ytplayer"></div>
+                <button onclick="nextStep()">></button>
+            </div>
+            <!-- Captions -->
+            <div class="flex" id="video-captions">
+                <p id="captions"></p>
+            </div>
+            <div id="directions">
+            </div>
+        </main>
+        <script src="../../src/js/script.js"></script>
+    </body>
+</html>

@@ -12,12 +12,12 @@
         <nav>
             <div class="grid">
                 <div id="logo" class="flex">
-                    <h1>Dinner by Design</h1>
+                    <h1><a href="">Dinner by Design</a></h1>
                 </div>
                 <div id="nav-menu" class="flex">
                     <!-- Place logo here -->
-                        <a href="../index.html"><strong>Guided Recipes</strong></a>
-                        <a href="../../about.html">About</a>
+                    <a href="../index.html"><strong>Guided Recipes</strong></a>
+                    <a href="../../about.html">About</a>
                 </div>
             </div>
         </nav>
@@ -70,10 +70,12 @@
             <div class="flex" id="video-captions">
                 <p id="captions"></p>
             </div>
-            <h3>Directions</h3>
-            <ol>
-                <li><!-- DIRECTIONS --></li>
-            </ol>
+            <div id="directions">
+                <h3>Directions</h3>
+                <ol>
+                    <li><!-- DIRECTIONS --></li>
+                </ol>
+            </div>
         </main>
         <script src="../../src/js/script.js"></script>
     </body>
@@ -106,7 +108,12 @@ player = new YT.Player('ytplayer', {
     <img>
     <div class="flex">
         <h3></h3>
+        <p>Description</p>
+    </div>
+    <div class="flex" id="recipeadd">
         <a href="">Begin</a>
+        <p class="elementview">|</p>
+        <a class="elementview" onclick="addElement('')">Add</a>
     </div>
 </div>
 
