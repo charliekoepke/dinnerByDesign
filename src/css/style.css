@@ -48,6 +48,7 @@ p {
 
 .flex {
   display: flex;
+  flex: 1;
   flex-direction: column;
 }
 .flex img {
@@ -93,6 +94,9 @@ nav .grid #nav-menu {
 }
 nav .grid #logo {
   justify-content: left;
+}
+nav .grid #logo img {
+  width: 10%;
 }
 
 .tab button {

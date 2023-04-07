@@ -52,6 +52,7 @@ p {
 
 .flex {
    display: flex;
+   flex: 1;
    flex-direction: column;
 
    img {
@@ -98,6 +99,13 @@ nav {
       }
       #logo {
          justify-content: left;
+
+         h1 {
+
+         }
+         img {
+            width: 10%;
+         }
       }
    }
 }
@@ -148,6 +156,8 @@ nav {
 .recipetile {
    font-family: 'Roboto', sans-serif !important;
    background-color: black;
+   // height: 30rem;
+   // width: 40rem;
    box-shadow: 0.5rem 0.5rem 1rem grey;
    color: white;
    padding: 2%;
