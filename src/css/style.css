@@ -95,8 +95,11 @@ nav .grid #nav-menu {
 nav .grid #logo {
   justify-content: left;
 }
+nav .grid #logo h1 {
+  text-align: left;
+}
 nav .grid #logo img {
-  width: 10%;
+  width: 5rem;
 }
 
 .tab button {
