@@ -237,7 +237,7 @@ main p {
 }
 
 #video-buttons {
-  grid-template-columns: repeat(2, 50%);
+  grid-template-columns: repeat(2, 49%);
 }
 #video-buttons button {
   font-size: 20pt;

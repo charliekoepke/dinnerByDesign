@@ -61,7 +61,7 @@ const mushroomcook = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID: aJjLTsN2ftQ 
+// VIDEO ID: aJjLTsN2ftQ
 const aromaticrice = JSON.parse(`{
    "recipe":
    [
@@ -511,6 +511,16 @@ function interactiveCaptions() {
          }
       }
    }
+   if (recipeVideo == "aromaticrice") {
+      if ((player.getCurrentTime() * 1000) >= parseInt(aromaticrice["recipe"][i]["time"])) {
+         document.getElementById("captions").innerHTML = aromaticrice["recipe"][i]["line"];
+         if (i + 1 < aromaticrice["recipe"].length) {
+            if ((player.getCurrentTime() * 1000) >= parseInt(aromaticrice["recipe"][i + 1]["time"])) {
+               player.seekTo(parseInt(aromaticrice["recipe"][i]["time"])/1000);
+            }
+         }
+      }
+   }
    if (recipeVideo == "cherriesprep") {
       if ((player.getCurrentTime() * 1000) >= parseInt(cherriesprep["recipe"][i]["time"])) {
          document.getElementById("captions").innerHTML = cherriesprep["recipe"][i]["line"];
@@ -654,6 +664,9 @@ function onStateChange(event) {
       if (player.getVideoUrl() == "https://www.youtube.com/watch?v=bNdiE0umUZc") {
          recipeVideo = "mushroomcook";
       }
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=aJjLTsN2ftQ") {
+         recipeVideo = "aromaticrice";
+      }
       if (player.getVideoUrl() == "https://www.youtube.com/watch?v=YHxybjUXSRc ") {
          recipeVideo = "steakrecipe-plating";
       }
@@ -734,6 +747,13 @@ function nextStep() {
    if (recipeVideo == "mushroomcook") {
       if (i + 1 < mushroomcook["recipe"].length) {
          player.seekTo(parseInt(mushroomcook["recipe"][i + 1]["time"])/1000);
+         next = true;
+      }
+   }
+   if (recipeVideo == "aromaticrice") {
+      if (i + 1 < aromaticrice["recipe"].length) {
+         document.getElementById("captions").innerHTML = aromaticrice["recipe"][i + 1]["line"];
+         player.seekTo(parseInt(aromaticrice["recipe"][i + 1]["time"])/1000);
          next = true;
       }
    }
@@ -843,6 +863,13 @@ function previousStep() {
       if (i - 1 > -1) {
          player.seekTo(parseInt(mushroomcook["recipe"][i - 1]["time"])/1000);
          document.getElementById("captions").innerHTML = mushroomcook["recipe"][i - 1]["line"];
+         previous = true;
+      }
+   }
+   if (recipeVideo == "aromaticrice") {
+      if (i - 1 > -1) {
+         player.seekTo(parseInt(aromaticrice["recipe"][i - 1]["time"])/1000);
+         document.getElementById("captions").innerHTML = aromaticrice["recipe"][i - 1]["line"];
          previous = true;
       }
    }
@@ -1017,7 +1044,7 @@ function changeVideo(prepOrCook) {
 
 function changeElement(element) {
    if (element == "aromatic-rice") {
-      player.loadVideoById("");
+      player.loadVideoById("aJjLTsN2ftQ");
       i = 0;
       document.getElementById("video-buttons").style.display = "none";
       // Changing equipment and ingredients
