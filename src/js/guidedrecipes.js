@@ -23,9 +23,10 @@ function toggleView(view) {
         }
         for (let j = 0; j < elementTiles.length; j++) {
             elementTiles[j].style.display = "block";
+            elementTiles[j].style.width = "98%";
         }
 
-        document.getElementById("side-menu").style.display = "flex";
+        document.getElementById("side-menu").style.display = "block";
         document.getElementById("guidedrecipes-grid").style.display = "grid";
         
         for (let x = 0; x < document.getElementsByClassName("elementview").length; x++) {

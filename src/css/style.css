@@ -102,9 +102,27 @@ nav .grid #logo img {
   width: 5rem;
 }
 
+footer .flex {
+  flex-direction: row;
+  align-items: center;
+}
+footer img {
+  width: 5rem;
+}
+footer p {
+  font-size: 12pt;
+}
+footer .logo {
+  padding: 0.5rem;
+}
+footer .logo img {
+  width: 50px;
+}
+
 .tab button {
   background-color: white;
   color: black;
+  cursor: pointer;
 }
 
 #index h2 {
@@ -131,6 +149,10 @@ nav .grid #logo img {
   grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(2, 300px);
 }
+#home-getting-started .flex {
+  flex-direction: row;
+  align-items: center;
+}
 
 #home-suggested-meals {
   margin: 2%;
@@ -143,6 +165,7 @@ nav .grid #logo img {
   box-shadow: 0.5rem 0.5rem 1rem grey;
   color: white;
   padding: 2%;
+  width: 98%;
 }
 .recipetile a {
   font-size: 20pt;
@@ -175,6 +198,9 @@ nav .grid #logo img {
   grid-template-rows: auto;
   margin: 2%;
   padding: 2%;
+}
+#guidedrecipes-recipes .recipetile {
+  height: 30rem;
 }
 
 #recipe-header {
@@ -432,4 +458,5 @@ footer .flex {
   text-decoration: none;
   list-style-type: "X";
   list-style-position: outside;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

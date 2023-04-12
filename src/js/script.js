@@ -445,6 +445,24 @@ function onYouTubePlayerAPIReady() {
          }
       });
    }
+   // My Meal
+   if (videoId == "my-meal") {
+      player = new YT.Player('ytplayer', {
+         height: '500',
+         width: '980',
+         videoId: '',
+         playerVars: {
+            'controls': 0,
+            'showinfo': 0,
+            'rel': 0,
+            'loop': 1
+         },
+         events: {
+            'onReady': myMeal,
+            'onStateChange': onStateChange
+         }
+      });
+   }
 }
 
 let recipeVideo;
@@ -2069,20 +2087,14 @@ function myMeal() {
    let jsonMealName = localStorage.getItem('mealName');
    let parseMealName = JSON.parse(jsonMealName);
 
-
-   // Changing id of video to get started
-   document.getElementById("my-meal").id = parseCustomMeal[0];
-   videoId = parseCustomMeal[0];
-   // Load the first video
-   onYouTubePlayerAPIReady();
-
    // Loading first recipe information
    changeElement(parseCustomMeal[0]);
 
    // Adding element change buttons
-   for (let j = 0; j < customMeal.length; j++) {
+   for (let j = 0; j < parseMealName.length; j++) {
       document.getElementById("elements").innerHTML += `
-         <button onclick="changeElement('` + parseCustomMeal[j].toString() + `')">` + parseMealName[j].toString() + `</button>
+      <button onclick="changeElement('` + parseCustomMeal[j] + `')">` + parseMealName[j] + `</button>
       `;
    }
+   localStorage.clear();
 }

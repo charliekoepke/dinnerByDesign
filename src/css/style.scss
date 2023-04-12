@@ -110,10 +110,30 @@ nav {
    }
 }
 
+footer {
+   .flex {
+      flex-direction: row;
+      align-items: center;
+   }
+   img {
+      width: 5rem;
+   }
+   p {
+      font-size: 12pt;
+   }
+   .logo {
+      padding: 0.5rem;
+      img {
+         width: 50px;
+      }
+   }
+}
+
 .tab {
    button {
       background-color: white;
       color: black;
+      cursor: pointer;
    }
 }
 
@@ -145,6 +165,11 @@ nav {
    margin: 2%;
    grid-template-columns: repeat(2, 50%);
    grid-template-rows: repeat(2, 300px);
+   
+   .flex {
+      flex-direction: row;
+      align-items: center;
+   }
 }
 
 #home-suggested-meals {
@@ -156,11 +181,10 @@ nav {
 .recipetile {
    font-family: 'Roboto', sans-serif !important;
    background-color: black;
-   // height: 30rem;
-   // width: 40rem;
    box-shadow: 0.5rem 0.5rem 1rem grey;
    color: white;
    padding: 2%;
+   width: 98%;
 
    a {
       font-size: 20pt;
@@ -197,6 +221,9 @@ nav {
    grid-template-rows: auto;
    margin: 2%;
    padding: 2%;
+   .recipetile {
+      height: 30rem;
+   }
 }
 
 // Individual Recipe Page
@@ -491,4 +518,5 @@ footer {
    text-decoration: none;
    list-style-type: "X";
    list-style-position: outside;
+   cursor: pointer;
 }
