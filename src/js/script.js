@@ -2029,6 +2029,9 @@ function addElement(element) {
    if (element == "braised-cherries") {
       mealName[customMeal.length] = "Braised Cherries";
    }
+   if (element == "acorn-squash") {
+      mealName[customMeal.length] = "Roasted Acorn Squash"
+   }
    if (element == "soy-cured-egg") {
       mealName[customMeal.length] = "Soy Cured Egg Yolk";
    }
@@ -2091,10 +2094,12 @@ function myMeal() {
    changeElement(parseCustomMeal[0]);
 
    // Adding element change buttons
-   for (let j = 0; j < parseMealName.length; j++) {
+   for (let j = 0; j < parseCustomMeal.length; j++) {
       document.getElementById("elements").innerHTML += `
-      <button onclick="changeElement('` + parseCustomMeal[j] + `')">` + parseMealName[j] + `</button>
+      <button onclick="changeElement('` + parseCustomMeal[j] + `')">` + parseMealName[j + 1] + `</button>
       `;
    }
    localStorage.clear();
+   console.log(jsonCustomMeal);
+   console.log(jsonMealName);
 }
