@@ -459,4 +459,13 @@ footer .flex {
   list-style-type: "X";
   list-style-position: outside;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 720px) {
+  img {
+    width: 1rem;
+  }
+  .flex img {
+    width: 0.5rem;
+  }
 }/*# sourceMappingURL=style.css.map */
