@@ -72,7 +72,7 @@ const aromaticrice = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID: RTyUtGZ0hoU
+// VIDEO ID: nvyQ75ucKOg
 const cherriesprep = JSON.parse(`{
    "recipe": [
       {"line": "Gather your tools and ingredients.", "time": 0},
@@ -83,7 +83,7 @@ const cherriesprep = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID: KvFJ4gFjhr8
+// VIDEO ID: POOC7Ck-alk
 const cherriescook = JSON.parse(`{
    "recipe": [
       {"line": "Put sauce pan on medium high heat.", "time": 0},
@@ -93,7 +93,7 @@ const cherriescook = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID: bpwku80duOg
+// VIDEO ID: 8v-CRgyB-WQ
 const duckprep = JSON.parse(`{
    "recipe": [
       {"line": "Gather tools and ingredients.", "time": 0},
@@ -103,7 +103,7 @@ const duckprep = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID: TTW_0HnqnO0
+// VIDEO ID: qCYkp693A0g
 const duckcook = JSON.parse(`{
    "recipe": [
       {"line": "Place skin side down in a cold pan on low-medium heat.", "time": 0},
@@ -114,7 +114,7 @@ const duckcook = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID: JldQ77rO4yE
+// VIDEO ID: 6h7rXTb1L6c
 const squashprep = JSON.parse(`{
    "recipe": [
       {"line": "Gather tools and ingredients, and preheat oven to 450 degrees Fahrenheit.", "time": 0},
@@ -129,7 +129,7 @@ const squashprep = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID: gvho9vOGOTw
+// VIDEO ID: kY8y2Zw_cBY
 const squashcook = JSON.parse(`{
    "recipe": [
       {"line": "Put acorn squash in the oven and roast for 10 minutes at 450 degrees Fahrenheit.", "time": 0},
@@ -314,7 +314,7 @@ function onYouTubePlayerAPIReady() {
       player = new YT.Player('ytplayer', {
          height: '500',
          width: '980',
-         videoId: 'bpwku80duOg',
+         videoId: '8v-CRgyB-WQ',
          playerVars: {
             'controls': 0,
             'showinfo': 0,
@@ -331,7 +331,7 @@ function onYouTubePlayerAPIReady() {
       player = new YT.Player('ytplayer', {
          height: '500',
          width: '980',
-         videoId: 'RTyUtGZ0hoU',
+         videoId: 'nvyQ75ucKOg',
          playerVars: {
             'controls': 0,
             'showinfo': 0,
@@ -348,7 +348,7 @@ function onYouTubePlayerAPIReady() {
       player = new YT.Player('ytplayer', {
          height: '500',
          width: '980',
-         videoId: 'JldQ77rO4yE',
+         videoId: '6h7rXTb1L6c',
          playerVars: {
             'controls': 0,
             'showinfo': 0,
@@ -365,7 +365,7 @@ function onYouTubePlayerAPIReady() {
       player = new YT.Player('ytplayer', {
          height: '500',
          width: '980',
-         videoId: 'bpwku80duOg',
+         videoId: '8v-CRgyB-WQ',
          playerVars: {
             'controls': 0,
             'showinfo': 0,
@@ -688,22 +688,22 @@ function onStateChange(event) {
       if (player.getVideoUrl() == "https://www.youtube.com/watch?v=YHxybjUXSRc ") {
          recipeVideo = "steakrecipe-plating";
       }
-      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=RTyUtGZ0hoU") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=nvyQ75ucKOg") {
          recipeVideo = "cherriesprep";
       }
-      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=KvFJ4gFjhr8") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=POOC7Ck-alk") {
          recipeVideo = "cherriescook";
       }
-      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=bpwku80duOg") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=8v-CRgyB-WQ") {
          recipeVideo = "duckprep";
       }
-      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=TTW_0HnqnO0") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=qCYkp693A0g") {
          recipeVideo = "duckcook";
       }
-      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=JldQ77rO4yE") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=6h7rXTb1L6c") {
          recipeVideo = "squashprep";
       }
-      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=gvho9vOGOTw") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=kY8y2Zw_cBY") {
          recipeVideo = "squashcook";
       }
       if (player.getVideoUrl() == "https://www.youtube.com/watch?v=RWGm1EvlmK4") {
@@ -1389,7 +1389,7 @@ function changeElement(element) {
       document.getElementById("directions").innerHTML = "";
    }
    if (element == "braised-cherries") {
-      player.loadVideoById("RTyUtGZ0hoU");
+      player.loadVideoById("nvyQ75ucKOg");
       i = 0;
       document.getElementById("video-buttons").style.display = "grid";
       document.getElementById("ingredients").innerHTML = `
@@ -1472,7 +1472,7 @@ function changeElement(element) {
       `;
    }
    if (element == "crispy-duck") {
-      player.loadVideoById("bpwku80duOg");
+      player.loadVideoById("8v-CRgyB-WQ");
       i = 0;
       document.getElementById("video-buttons").style.display = "grid";
       document.getElementById("ingredients").innerHTML = `
@@ -1530,7 +1530,7 @@ function changeElement(element) {
       `;
    }
    if (element == "acorn-squash") {
-      player.loadVideoById("JldQ77rO4yE");
+      player.loadVideoById("6h7rXTb1L6c");
       i = 0;
       document.getElementById("video-buttons").style.display = "grid";
       document.getElementById("ingredients").innerHTML = `
@@ -1621,7 +1621,7 @@ function changeElement(element) {
       `;
    }
    if (element == "duckrecipe-plating") {
-      player.loadVideoById("RWGm1EvlmK4");
+      player.loadVideoById("rFjwlm_2hmA");
       i = 0;
       document.getElementById("video-buttons").style.display = "none";
       document.getElementById("ingredients").innerHTML = "";
