@@ -41,6 +41,8 @@ button {
    margin: 2%;
    padding: 2%;
    .recipetile {
+      display: block;
+      width: 40rem;
       height: 30rem;
    }
 }
@@ -199,18 +201,39 @@ footer {
 
 #home-suggested-meals {
    margin: 2%;
-   grid-template-columns: repeat(3, auto);
+   grid-template-columns: 40% 60%;
+
+   .recipetile {
+      box-shadow: none;
+   }
+}
+
+.carousel {
+   display: flex;
+   
+   button {
+      background-color: white;
+      color: black;
+
+      :hover {
+         color: #FF561B;
+      }
+   }
+   .recipetile {
+      display: block;
+      height: 40rem;
+      width: 50rem;
+   }
 }
 
 // Recipe Tiles
 .recipetile {
+   flex-direction: column;
    font-family: 'Roboto', sans-serif !important;
    background-color: black;
    box-shadow: 0.5rem 0.5rem 1rem grey;
    color: white;
    padding: 2%;
-   width: 98%;
-
    a {
       font-size: 20pt;
       color: white;
@@ -240,6 +263,9 @@ footer {
    color: white;
 }
 
+.gallery {
+   counter-increment: gallery-cell;
+}
 
 
 // Individual Recipe Page

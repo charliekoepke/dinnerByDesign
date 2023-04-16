@@ -2113,3 +2113,45 @@ document.getElementById("closebutton").addEventListener("click",
       document.getElementsByTagName("nav")[0].style.width = "0";
    }
 );
+
+function previousSlide() {
+   if (document.getElementById("slide1").style.display != "none") {
+      // Slide 3
+      document.getElementById("slide1").style.display = "none";
+      document.getElementById("slide2").style.display = "none";
+      document.getElementById("slide3").style.display = "block";
+   }
+   else if (document.getElementById("slide2").style.display != "none") {
+      // Slide 1
+      document.getElementById("slide1").style.display = "block";
+      document.getElementById("slide2").style.display = "none";
+      document.getElementById("slide3").style.display = "none";
+   }
+   else if (document.getElementById("slide3").style.display != "none") {
+      // Slide 2
+      document.getElementById("slide1").style.display = "none";
+      document.getElementById("slide2").style.display = "block";
+      document.getElementById("slide3").style.display = "none";
+   }
+}
+
+function nextSlide() {
+   if (document.getElementById("slide1").style.display != "none") {
+      // Slide 2
+      document.getElementById("slide1").style.display = "none";
+      document.getElementById("slide2").style.display = "block";
+      document.getElementById("slide3").style.display = "none";
+   }
+   else if (document.getElementById("slide2").style.display != "none") {
+      // Slide 3
+      document.getElementById("slide1").style.display = "none";
+      document.getElementById("slide2").style.display = "none";
+      document.getElementById("slide3").style.display = "block";
+   }
+   else if (document.getElementById("slide3").style.display != "none") {
+      // Slide 1
+      document.getElementById("slide1").style.display = "block";
+      document.getElementById("slide2").style.display = "none";
+      document.getElementById("slide3").style.display = "none";
+   }
+}

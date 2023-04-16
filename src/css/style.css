@@ -35,6 +35,8 @@ button a :hover {
   padding: 2%;
 }
 #guidedrecipes-recipes .recipetile {
+  display: block;
+  width: 40rem;
   height: 30rem;
 }
 
@@ -179,16 +181,35 @@ footer .logo img {
 
 #home-suggested-meals {
   margin: 2%;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: 40% 60%;
+}
+#home-suggested-meals .recipetile {
+  box-shadow: none;
+}
+
+.carousel {
+  display: flex;
+}
+.carousel button {
+  background-color: white;
+  color: black;
+}
+.carousel button :hover {
+  color: #FF561B;
+}
+.carousel .recipetile {
+  display: block;
+  height: 40rem;
+  width: 50rem;
 }
 
 .recipetile {
+  flex-direction: column;
   font-family: "Roboto", sans-serif !important;
   background-color: black;
   box-shadow: 0.5rem 0.5rem 1rem grey;
   color: white;
   padding: 2%;
-  width: 98%;
 }
 .recipetile a {
   font-size: 20pt;
@@ -214,6 +235,10 @@ footer .logo img {
   padding: 2%;
   background-color: black;
   color: white;
+}
+
+.gallery {
+  counter-increment: gallery-cell;
 }
 
 #recipe-header {
