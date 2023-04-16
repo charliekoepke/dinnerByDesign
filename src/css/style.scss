@@ -11,15 +11,15 @@ body {
    padding: 0;
 }
 
-button {
-   text-align: center;
-   background-color: black;
-   color: white;
-   font-size: 24pt;
-   border: none;
-   padding: 1%;
-   font-family: 'Roboto', sans-serif;
+#openbutton {
+   display: none;
+}
 
+.closebutton {
+   display: none;
+}
+
+button {
    :hover {
       cursor: pointer;
    }
@@ -32,6 +32,31 @@ button {
          color: white;
       }
    }
+}
+
+// Guided Recipes Page
+#guidedrecipes-recipes {
+   grid-template-columns: repeat(2, 49%);
+   grid-template-rows: auto;
+   margin: 2%;
+   padding: 2%;
+   .recipetile {
+      height: 30rem;
+   }
+}
+
+#guidedrecipes-grid {
+   grid-template-columns: 25% 75%;
+}
+
+button {
+   text-align: center;
+   background-color: black;
+   color: white;
+   font-size: 24pt;
+   border: none;
+   padding: 1%;
+   font-family: 'Roboto', sans-serif;
 }
 
 h2 {
@@ -71,10 +96,10 @@ p {
 }
 
 nav {
-   padding: 2%;
    color: white;
    font-size: 18pt;
    background-color: grey;
+   padding: 2%;
    width: 96%;
 
    h1 {
@@ -215,16 +240,7 @@ footer {
    color: white;
 }
 
-// Guided Recipes Page
-#guidedrecipes-recipes {
-   grid-template-columns: repeat(2, 49%);
-   grid-template-rows: auto;
-   margin: 2%;
-   padding: 2%;
-   .recipetile {
-      height: 30rem;
-   }
-}
+
 
 // Individual Recipe Page
 #recipe-header {
@@ -271,7 +287,6 @@ footer {
 main {
    h2 {
       color: #FF561B;
-      font-size: 32pt;
       margin: 2%;
    }
    h3 {
@@ -491,10 +506,6 @@ footer {
    }
 }
 
-#guidedrecipes-grid {
-   grid-template-columns: 25% 75%;
-}
-
 #side-menu {
    display: none;
    margin: 5%;
@@ -522,13 +533,95 @@ footer {
 }
 
 @media only screen and (max-width: 720px) {
-   img {
-      width: 1rem;
+   .grid {
+      display: block;
    }
 
    .flex {
-      img {
-         width: 0.5rem;
+      padding: 1rem;
+   }
+   
+   nav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: white;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding: 0;
+
+      a {
+         padding: 0.75em 0.75em 0.75em 2em;
+         text-decoration: none;
+         font-size: 1.5em;
+         color: black;
+         display: block;
+         transition: 0.3s;
       }
+
+      .closebutton {
+         position: absolute;
+         top: 0;
+         right: 1em;
+         font-size: 2em;
+         margin-left: 3em;
+         display: grid;
+      }
+
+      .flex {
+         display: block;
+      }
+
+      .grid {
+         display: block;
+      }
+
+      #logo h1 {
+         display: none;
+      }
+   }
+
+   #openbutton {
+      display: block;
+      padding: 1rem;
+   }
+
+   body {
+      width: 100%;
+   }
+
+   #home-banner {
+      grid-template-columns: repeat(1, 100%);
+   }
+
+   button {
+      text-align: center;
+      align-self: center;
+   }
+
+   #home-getting-started {
+      grid-template-columns: repeat(1, 100%);
+
+      .box {
+         display: block;
+         img {
+            width: 10rem;
+         }
+         .flex {
+            justify-content: center;
+         }
+      }
+   }
+
+   .recipetile {
+      width: 96%;
+      margin: 2%;
+   }
+
+   footer {
+      width: 100%;
    }
 }

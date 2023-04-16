@@ -2103,3 +2103,15 @@ function myMeal() {
    console.log(jsonCustomMeal);
    console.log(jsonMealName);
 }
+
+document.getElementById("openbutton").addEventListener("click",
+   function openNav() {
+      document.getElementsByTagName("nav")[0].style.width = "100%";
+   }
+);
+
+document.getElementById("closebutton").addEventListener("click",
+   function closeNav() {
+      document.getElementsByTagName("nav")[0].style.width = "0";
+   }
+);
