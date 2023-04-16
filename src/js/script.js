@@ -1096,13 +1096,15 @@ function changeElement(element) {
       `;
       // Changing directions
       document.getElementById("directions").innerHTML = `
-      <h3>Directions</h3>
-      <ol>
-         <li>Measure out 1 and 1/2 cups of medium grain white rice.</li>
-         <li>Rinse the rice thouroughly until the water is clear.</li>
-         <li>Add 2 cups of water to the rice cooker.</li>
-         <li>Allow the rice to soak fo 15 minutes then press cook on the rice cooker.</li>
-      </ol>
+      <details>
+         <summary>Written Directions</summary>
+         <ol>
+            <li>Measure out 1 and 1/2 cups of medium grain white rice.</li>
+            <li>Rinse the rice thouroughly until the water is clear.</li>
+            <li>Add 2 cups of water to the rice cooker.</li>
+            <li>Allow the rice to soak fo 15 minutes then press cook on the rice cooker.</li>
+         </ol>
+      </details>
       `;
    }
    if (element == "soy-cured-egg") {
@@ -1170,8 +1172,9 @@ function changeElement(element) {
       `;
       // Changing directions
       document.getElementById("directions").innerHTML = `
-      <h3>Directions</h3>
-      <ol>
+      <details>
+         <summary>Written Directions</summary>
+         <ol>
             <li>Gather your ingredients.</li>
             <li>Peel ginger with a small spoon.</li>
             <li>Grate ginger into a small bowl with a microplane.</li>
@@ -1184,7 +1187,8 @@ function changeElement(element) {
             <li>Gently pour sauce over egg yolks.</li>
             <li>Cover yolks with a paper towel and fold the edges over the top. This will pull liquid over the top of the yolks since they float.</li>
             <li>Refrigerate for at least 1 hour.</li>
-      </ol>
+         </ol>
+      </details>
       `;
    }
    if (element == "shiitake-mushrooms") {
@@ -1252,21 +1256,23 @@ function changeElement(element) {
       `;
       // Changing directions
       document.getElementById("directions").innerHTML = `
-      <h3>Directions</h3>
-      <p>Prep</p>
-      <ol>
+      <details>
+         <summary>Written Directions</summary>
+         <p>Prep</p>
+         <ol>
             <li>Gather your ingredients.</li>
             <li>Remove the stems from your mushrooms.</li>
             <li>Slice your mushrooms into 1/4 inch slices.</li>
             <li>Finely chop your garlic.</li>
-      </ol>
-      <p>Cook</p>
-      <ol>
+         </ol>
+         <p>Cook</p>
+         <ol>
             <li>Put a nonstick pan on high heat and allow it to get hot. Once it is hot, add your mushrooms to the dry pan.</li>
             <li>Stir and move the mushrooms semi frequently. You should hear them squeaking against the pan. Allow them to shrink down about 10% and the edges will turn golden brown.</li>
             <li>Once the edges are browned, add in your butter and garlic.</li>
             <li>Cook the mushrooms, butter and garlic until the garlic is golden brown.</li>
-      </ol>
+         </ol>
+      </details>
       `;
    }
    if (element == "seared-sirloin") {
@@ -1349,27 +1355,29 @@ function changeElement(element) {
       `;
       // Changing directions
       document.getElementById("directions").innerHTML = `
-      <h3>Directions</h3>
-      <p>Prep</p>
-      <ol>
-            <li>Gather your ingredients - your steak should be at room temperature.</li>
-            <li>Prep your shallot by cutting off both ends, cutting in half, removing the peels, then cutting each half in half.</li>
-            <li>Generously season both sides of your steak with salt and pepper from about 10 inches away.</li>
-            <li>Prepare your garnish - pick cilantro off of stems & thinly slice your scallion.</li>
-      </ol>
-      <p>Cook</p>
-      <ol>
-            <li>Add a drizzle of olive oil to a carbon steel pan and turn the heat to high.</li>
-            <li>Once the pan is hot add in your steaks.</li>
-            <li>After about 90 seconds, flip your steaks.</li>
-            <li>After 30 seconds, add in your butter, garlic, and shallots and baste the steaks. Allow them to continue cooking while basting for an additional 90 seconds. <em>Timing will vary based on cook preference & thickness of steaks.</em></li>
-            <li>Remove steaks from the pan and allow to rest for 5 minutes.</li>
-            <li>Meanwhile put the pan with the garlic and shallots back on to medium - high heat and allow to cook until shallots are translucent and garlic is golden brown.</li>
-            <li>Place the cooked garlic and shallots on a cutting board, and pour the butter into the rice.</li>
-            <li>Add a drizzle of sesame oil to the rice and gently fluff the rice to combine.</li>
-            <li>Mince the cooked shallot and garlic and add to the rice gently folding to combine.</li>
-            <li>Slice your steak across the grain.</li>
-      </ol>
+      <details>
+         <summary>Written Directions</summary>
+         <p>Prep</p>
+         <ol>
+               <li>Gather your ingredients - your steak should be at room temperature.</li>
+               <li>Prep your shallot by cutting off both ends, cutting in half, removing the peels, then cutting each half in half.</li>
+               <li>Generously season both sides of your steak with salt and pepper from about 10 inches away.</li>
+               <li>Prepare your garnish - pick cilantro off of stems & thinly slice your scallion.</li>
+         </ol>
+         <p>Cook</p>
+         <ol>
+               <li>Add a drizzle of olive oil to a carbon steel pan and turn the heat to high.</li>
+               <li>Once the pan is hot add in your steaks.</li>
+               <li>After about 90 seconds, flip your steaks.</li>
+               <li>After 30 seconds, add in your butter, garlic, and shallots and baste the steaks. Allow them to continue cooking while basting for an additional 90 seconds. <em>Timing will vary based on cook preference & thickness of steaks.</em></li>
+               <li>Remove steaks from the pan and allow to rest for 5 minutes.</li>
+               <li>Meanwhile put the pan with the garlic and shallots back on to medium - high heat and allow to cook until shallots are translucent and garlic is golden brown.</li>
+               <li>Place the cooked garlic and shallots on a cutting board, and pour the butter into the rice.</li>
+               <li>Add a drizzle of sesame oil to the rice and gently fluff the rice to combine.</li>
+               <li>Mince the cooked shallot and garlic and add to the rice gently folding to combine.</li>
+               <li>Slice your steak across the grain.</li>
+         </ol>
+      </details>
       `;
    }
    if (element == "steakrecipe-plating") {
@@ -1443,22 +1451,24 @@ function changeElement(element) {
       </div>
       `;
       document.getElementById("directions").innerHTML = `
-      <h3>Directions</h3>
-      <p>Prep</p>
-      <ol>
-         <li>Gather your tools and ingredients.</li>
-         <li>Wash your cherries.</li>
-         <li>Use a metal straw to remove the pit from the cherries.</li>
-         <li>Julienne a shallot.</li>
-         <li>Add shallots, cherries, vinegars, water, and brown sugar to a sauce pan.</li>
-      </ol>
-      <p>Cook</p>
-      <ol>
-         <li>Put sauce pan on stove on medium high heat.</li>
-         <li>Bring to a simmer and stir to incorporate and gently break up the cherries.</li>
-         <li>Reduce heat to medium-low and allow to reduce until thickened to a syrup and cherries are broken down.</li>
-         <li>Add a pinch of salt and pepper and stir in about a tablespoon of duck fat (optional).</li>
-      </ol>
+      <details>
+         <summary>Written Directions</summary>
+         <p>Prep</p>
+         <ol>
+            <li>Gather your tools and ingredients.</li>
+            <li>Wash your cherries.</li>
+            <li>Use a metal straw to remove the pit from the cherries.</li>
+            <li>Julienne a shallot.</li>
+            <li>Add shallots, cherries, vinegars, water, and brown sugar to a sauce pan.</li>
+         </ol>
+         <p>Cook</p>
+         <ol>
+            <li>Put sauce pan on stove on medium high heat.</li>
+            <li>Bring to a simmer and stir to incorporate and gently break up the cherries.</li>
+            <li>Reduce heat to medium-low and allow to reduce until thickened to a syrup and cherries are broken down.</li>
+            <li>Add a pinch of salt and pepper and stir in about a tablespoon of duck fat (optional).</li>
+         </ol>
+      </details>
       `;
    }
    if (element == "crispy-duck") {
@@ -1499,22 +1509,24 @@ function changeElement(element) {
       </div>
       `;
       document.getElementById("directions").innerHTML = `
-      <h3>Directions</h3>
-      <p>Prep</p>
-      <ol>
-         <li>Gather tools and ingredients.</li>
-         <li>Pat duck breast dry.</li>
-         <li>Score skin with Chef's knife.</li>
-         <li>Season with salt on both sides and pepper on meat side.</li>
-      </ol>
-      <p>Cook</p>
-      <ol>
-         <li>Place skin side down in a cold pan on low-medium heat.</li>
-         <li>Allow skin to render until the fat has rendered and is crispy.</li>
-         <li>Flip over and baste with duck fat - allow to cook on meat side on medium heat for 90 seconds - adjust time for thicker duck breast.</li>
-         <li>Allow duck to rest for 5-8 minutes.</li>
-         <li>Cut duck into inch thick pieces.</li>
-      </ol>
+      <details>
+         <summary>Written Directions</summary>
+         <p>Prep</p>
+         <ol>
+            <li>Gather tools and ingredients.</li>
+            <li>Pat duck breast dry.</li>
+            <li>Score skin with Chef's knife.</li>
+            <li>Season with salt on both sides and pepper on meat side.</li>
+         </ol>
+         <p>Cook</p>
+         <ol>
+            <li>Place skin side down in a cold pan on low-medium heat.</li>
+            <li>Allow skin to render until the fat has rendered and is crispy.</li>
+            <li>Flip over and baste with duck fat - allow to cook on meat side on medium heat for 90 seconds - adjust time for thicker duck breast.</li>
+            <li>Allow duck to rest for 5-8 minutes.</li>
+            <li>Cut duck into inch thick pieces.</li>
+         </ol>
+      </details>
       `;
    }
    if (element == "acorn-squash") {
@@ -1585,25 +1597,27 @@ function changeElement(element) {
       </div>
       `;
       document.getElementById("directions").innerHTML = `
-      <h3>Directions</h3>
-      <p>Prep</p>
-      <ol>
-            <li>Gather your tools and ingredients, and preheat oven to 450 degrees Fahrenheit.</li>
-            <li>Prep your squash - cut off top, cut in half, and scoop out seeds into a small bowl.</li>
-            <li>Remove skin with a very sharp knife - a paring knife will help get smaller hard to reach places.</li>
-            <li>Cut the squash into 1/4 inch thick slices.</li>
-            <li>Drizzle with olive oil and season with 1/2 tsp paprika, cumin, salt, white pepper, a clove of minced garlic, and 1/2 inch minced ginger.</li>
-            <li>Stir until squash is evenly coated in seasoning.</li>
-            <li>Spread squash pieces out on a baking sheet.</li>
-            <li>Toss the seeds in olive oil in a small bowl.</li>
-            <li>Spread out on a baking sheet and sprinkle with salt and pepper from a foot away.</li>
-      </ol>
-      <p>Cook</p>
-      <ol>
-            <li>Put acorn squash in the oven and roast for 8 minutes at 450 degrees Fahrenheit.</li>
-            <li>After 8 minutes, add the squash seeds to the oven and roast both the squash and the seeds for an additional 5 minutes.</li>
-            <li>Remove from oven and allow seeds to cool completely so they become crisp.</li>
-      </ol>
+      <details>
+         <summary>Written Directions</summary>
+         <p>Prep</p>
+         <ol>
+               <li>Gather your tools and ingredients, and preheat oven to 450 degrees Fahrenheit.</li>
+               <li>Prep your squash - cut off top, cut in half, and scoop out seeds into a small bowl.</li>
+               <li>Remove skin with a very sharp knife - a paring knife will help get smaller hard to reach places.</li>
+               <li>Cut the squash into 1/4 inch thick slices.</li>
+               <li>Drizzle with olive oil and season with 1/2 tsp paprika, cumin, salt, white pepper, a clove of minced garlic, and 1/2 inch minced ginger.</li>
+               <li>Stir until squash is evenly coated in seasoning.</li>
+               <li>Spread squash pieces out on a baking sheet.</li>
+               <li>Toss the seeds in olive oil in a small bowl.</li>
+               <li>Spread out on a baking sheet and sprinkle with salt and pepper from a foot away.</li>
+         </ol>
+         <p>Cook</p>
+         <ol>
+               <li>Put acorn squash in the oven and roast for 8 minutes at 450 degrees Fahrenheit.</li>
+               <li>After 8 minutes, add the squash seeds to the oven and roast both the squash and the seeds for an additional 5 minutes.</li>
+               <li>Remove from oven and allow seeds to cool completely so they become crisp.</li>
+         </ol>
+      </details>
       `;
    }
    if (element == "duckrecipe-plating") {
@@ -1722,31 +1736,33 @@ function changeElement(element) {
       </div>
       `;
       document.getElementById("directions").innerHTML = `
-      <h3>Directions</h3>
-      <p>Prep</p>
-      <ol>
-         <li>Gather all of your equipment and ingredients.</li>
-         <li>Remove stems from shiitake mushrooms and save them to be used in stock, or add them to stock.</li>
-         <li>Finely chop 10 shiitake mushrooms and add to the mixing bowl.</li>
-         <li>Finely chop 1 cup cabbage and add to the mixing bowl.</li>
-         <li>Thinly slice 3 scallions and add to the mixing bowl.</li>
-         <li>Mince 3 cloves of garlic and 1 inch of ginger with a microplane and add to the mixing bowl.</li>
-         <li>Add 2 eggs, 2 tbsp soy sauce, 1 tbsp sesame oil, and 1/2 tbsp corn starch to the mixing bowl.</li>
-         <li>Stir until combined.</li>
-         <li><em>Optional</em> Cook a tablespoon of the mixture on a nonstick pan and taste then adjust seasoning with salt and pepper.</li>
-         <li>Open your pack of dumpling wraps and cover them with a wet paper towel.</li>
-         <li>Use your finger to wet the edge of the dumpling wrapper.</li>
-         <li>Add a teaspoon of the mixture to the center of the wrapper.</li>
-         <li>Fold the wrap in half then pinch the corners together.</li>
-         <li>Do this until you have used all of the filling.</li>
-      </ol>
-      <p>Cook</p>
-      <ol>
-         <li>Bring 6 cups of water to a boil.</li>
-         <li>Add in wontons and allow to cook for 4-6 minutes.</li>
-         <li>Serve in miso wonton soup, or with dumpling sauce.</li>
-         <li>Freeze any leftover uncooked dumplings.</li>
-      </ol>
+      <details>
+         <summary>Written Directions</summary>
+         <p>Prep</p>
+         <ol>
+            <li>Gather all of your equipment and ingredients.</li>
+            <li>Remove stems from shiitake mushrooms and save them to be used in stock, or add them to stock.</li>
+            <li>Finely chop 10 shiitake mushrooms and add to the mixing bowl.</li>
+            <li>Finely chop 1 cup cabbage and add to the mixing bowl.</li>
+            <li>Thinly slice 3 scallions and add to the mixing bowl.</li>
+            <li>Mince 3 cloves of garlic and 1 inch of ginger with a microplane and add to the mixing bowl.</li>
+            <li>Add 2 eggs, 2 tbsp soy sauce, 1 tbsp sesame oil, and 1/2 tbsp corn starch to the mixing bowl.</li>
+            <li>Stir until combined.</li>
+            <li><em>Optional</em> Cook a tablespoon of the mixture on a nonstick pan and taste then adjust seasoning with salt and pepper.</li>
+            <li>Open your pack of dumpling wraps and cover them with a wet paper towel.</li>
+            <li>Use your finger to wet the edge of the dumpling wrapper.</li>
+            <li>Add a teaspoon of the mixture to the center of the wrapper.</li>
+            <li>Fold the wrap in half then pinch the corners together.</li>
+            <li>Do this until you have used all of the filling.</li>
+         </ol>
+         <p>Cook</p>
+         <ol>
+            <li>Bring 6 cups of water to a boil.</li>
+            <li>Add in wontons and allow to cook for 4-6 minutes.</li>
+            <li>Serve in miso wonton soup, or with dumpling sauce.</li>
+            <li>Freeze any leftover uncooked dumplings.</li>
+         </ol>
+      </details>
       `;
    }
    if (element == "vegetable-stock") {
@@ -1827,27 +1843,29 @@ function changeElement(element) {
       </div>
       `;
       document.getElementById("directions").innerHTML = `
-      <h3>Directions</h3>
-      <p>Prep</p>
-      <ol>
-         <li>Gather all the ingredients and equipment.</li>
-         <li>Wash the carrots and celery.</li>
-         <li>Roughly chop 2 carrots and add to a large pot.</li>
-         <li>Roughly chop 1/2 bunch of celery and add to the pot.</li>
-         <li>Halve 1 white onion and add to the pot.</li>
-         <li>Peel 1 head of garlic and add to the pot.</li>
-         <li>Slice 1 inch of ginger and add to the pot.</li>
-         <li>Add 1 tbsp black peppercorns and 1 tbsp salt.</li>
-         <li><em>Optional</em> Add any left over vegetable scraps you have.</li>
-      </ol>
-      <p>Cook</p>
-      <ol>
-         <li>Add water to the large pot of ingredients until they are covered and there is still an inch of room from the top of the pot.</li>
-         <li>Bring the pot to a boil on high heat, then reduce to low heat.</li>
-         <li>Allow to gently simmer for at least an hour.</li>
-         <li>Carefully strain into a new container.</li>
-         <li>Taste and adjust seasoning with salt and pepper.</li>
-      </ol>
+      <details>
+         <summary>Written Directions</summary>
+         <p>Prep</p>
+         <ol>
+            <li>Gather all the ingredients and equipment.</li>
+            <li>Wash the carrots and celery.</li>
+            <li>Roughly chop 2 carrots and add to a large pot.</li>
+            <li>Roughly chop 1/2 bunch of celery and add to the pot.</li>
+            <li>Halve 1 white onion and add to the pot.</li>
+            <li>Peel 1 head of garlic and add to the pot.</li>
+            <li>Slice 1 inch of ginger and add to the pot.</li>
+            <li>Add 1 tbsp black peppercorns and 1 tbsp salt.</li>
+            <li><em>Optional</em> Add any left over vegetable scraps you have.</li>
+         </ol>
+         <p>Cook</p>
+         <ol>
+            <li>Add water to the large pot of ingredients until they are covered and there is still an inch of room from the top of the pot.</li>
+            <li>Bring the pot to a boil on high heat, then reduce to low heat.</li>
+            <li>Allow to gently simmer for at least an hour.</li>
+            <li>Carefully strain into a new container.</li>
+            <li>Taste and adjust seasoning with salt and pepper.</li>
+         </ol>
+      </details>
       `;
    }
    if (element == "chili-oil") {
@@ -1933,24 +1951,26 @@ function changeElement(element) {
       </div>
       `;
       document.getElementById("directions").innerHTML = `
-      <h3>Directions</h3>
-      <p>Prep</p>
-      <ol>
-         <li>Gather all of your equipment and ingredients.</li>
-         <li>Slice 1 inch ginger into large thin slices.</li>
-         <li>Mince 5 cloves of garlic.</li>
-         <li>Measure out 1/2 cup canola oil and 2 tbsp sesame oil into a small bowl.</li>
-         <li>Measure out 1 tbsp paprika, 1 tbsp chayenne pepper, 2 tbsp crushed red pepper flakes, 1/2 tbsp salt into a separate small bowl.</li>
-      </ol>
-      <p>Cook</p>
-      <ol>
-         <li>In a small saucepan combine the oil, garlic, and ginger over medium-low heat.</li>
-         <li>Allow mixture to heat up and when the garlic begins to sizzle, remove the ginger.</li>
-         <li>Add in spice mix and turn heat to lowest setting.</li>
-         <li>Stir gently and allow to infuse for 10 minutes.</li>
-         <li>Turn off heat and allow oil to cool then taste and adjust seasoning with salt.</li>
-         <li>Pour into a mason jar and keep refrigerated.</li>
-      </ol>
+      <details>
+         <summary>Written Directions</summary>
+         <p>Prep</p>
+         <ol>
+            <li>Gather all of your equipment and ingredients.</li>
+            <li>Slice 1 inch ginger into large thin slices.</li>
+            <li>Mince 5 cloves of garlic.</li>
+            <li>Measure out 1/2 cup canola oil and 2 tbsp sesame oil into a small bowl.</li>
+            <li>Measure out 1 tbsp paprika, 1 tbsp chayenne pepper, 2 tbsp crushed red pepper flakes, 1/2 tbsp salt into a separate small bowl.</li>
+         </ol>
+         <p>Cook</p>
+         <ol>
+            <li>In a small saucepan combine the oil, garlic, and ginger over medium-low heat.</li>
+            <li>Allow mixture to heat up and when the garlic begins to sizzle, remove the ginger.</li>
+            <li>Add in spice mix and turn heat to lowest setting.</li>
+            <li>Stir gently and allow to infuse for 10 minutes.</li>
+            <li>Turn off heat and allow oil to cool then taste and adjust seasoning with salt.</li>
+            <li>Pour into a mason jar and keep refrigerated.</li>
+         </ol>
+      </details>
       `;
    }
    if (element == "dumpling-sauce") {
@@ -1991,12 +2011,14 @@ function changeElement(element) {
       </div>
       `;
       document.getElementById("directions").innerHTML = `
-      <h3>Directions</h3>
       <p>There is no interactive video for this recipe</p>
-      <ol>
-         <li>n a mason jar combine 3 tbsp soy sauce, 1 tbsp black vinegar, and 1 tbsp chili oil.</li>
-         <li>Taste and adjust ingredients based on your preference - If you want it more salty add soy sauce, if you want it spicier add Chili oil, if you want it more acidic/pungent add black vinegar.</li>
-      </ol>
+      <details>
+         <summary>Written Directions</summary>
+         <ol>
+            <li>n a mason jar combine 3 tbsp soy sauce, 1 tbsp black vinegar, and 1 tbsp chili oil.</li>
+            <li>Taste and adjust ingredients based on your preference - If you want it more salty add soy sauce, if you want it spicier add Chili oil, if you want it more acidic/pungent add black vinegar.</li>
+         </ol>
+      </details>
       `;
    }
    if (element == "souprecipe-plating") {

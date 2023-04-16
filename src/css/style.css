@@ -150,6 +150,10 @@ footer .logo img {
   cursor: pointer;
 }
 
+details {
+  margin: 1%;
+}
+
 #index h2 {
   margin: 2%;
   color: #FF561B;
