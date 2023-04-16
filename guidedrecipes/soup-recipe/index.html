@@ -145,20 +145,22 @@
                     </div>
                 </div>
             </div>
-            <div class="tab" id="elements">
-                <!-- Toggle through the elements videos -->
-                <button onclick="changeElement('cabbage-mushroom-wontons')">Cabbage and Mushroom Wontons</button>
-                <button onclick="changeElement('vegetable-stock')">Homemade Vegetable Stock</button>
-                <button onclick="changeElement('chili-oil')">Homemade Chili Oil</button>
-                <button onclick="changeElement('dumpling-sauce')">Dumpling Sauce</button>
-                <button onclick="changeElement('souprecipe-plating')">Plating</button>
-            </div>
             <!-- Recipe Video -->
             <h2>Interactive Video</h2>
+            <div class="tab" id="elements">
+                <!-- Toggle through the elements videos -->
+                <button onclick="changeElement('cabbage-mushroom-wontons')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">Cabbage and Mushroom Wontons</button>
+                <button onclick="changeElement('vegetable-stock')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">Homemade Vegetable Stock</button>
+                <button onclick="changeElement('chili-oil')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">Homemade Chili Oil</button>
+                <button onclick="changeElement('dumpling-sauce')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">Dumpling Sauce</button>
+                <button onclick="changeElement('souprecipe-plating')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">Plating</button>
+            </div>
             <div class="recipe-video">
+                <button onlick="previousStep()"><</button>
                 <button onclick="previousStep()">Previous Step</button>
                 <div id="ytplayer"></div>
                 <button onclick="nextStep()">Next Step</button>
+                <button onclick="nextStep()">></button>
             </div>
             <!-- Captions -->
             <div class="flex" id="video-captions">

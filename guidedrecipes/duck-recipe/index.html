@@ -78,19 +78,21 @@
                     </div>
                 </div>
             </div>
-            <div class="tab" id="elements">
-                <!-- Toggle through the elements videos -->
-                <button onclick="changeElement('crispy-duck')">Crispy Skin Duck</button>
-                <button onclick="changeElement('braised-cherries')">Braised Cherries</button>
-                <button onclick="changeElement('acorn-squash')">Roasted Acorn Squash</button>
-                <button onclick="changeElement('duckrecipe-plating')">Plating</button>
-            </div>
             <!-- Recipe Video -->
             <h2>Interactive Video</h2>
+            <div class="tab" id="elements">
+                <!-- Toggle through the elements videos -->
+                <button onclick="changeElement('crispy-duck')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">Crispy Skin Duck</button>
+                <button onclick="changeElement('braised-cherries')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">Braised Cherries</button>
+                <button onclick="changeElement('acorn-squash')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">Roasted Acorn Squash</button>
+                <button onclick="changeElement('duckrecipe-plating')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">Plating</button>
+            </div>
             <div class="recipe-video">
+                <button onlick="previousStep()"><</button>
                 <button onclick="previousStep()">Previous Step</button>
                 <div id="ytplayer"></div>
                 <button onclick="nextStep()">Next Step</button>
+                <button onclick="nextStep()">></button>
             </div>
             <!-- Captions -->
             <div class="flex" id="video-captions">

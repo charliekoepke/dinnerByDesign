@@ -2096,7 +2096,7 @@ function myMeal() {
    // Adding element change buttons
    for (let j = 0; j < parseCustomMeal.length; j++) {
       document.getElementById("elements").innerHTML += `
-      <button onclick="changeElement('` + parseCustomMeal[j] + `')">` + parseMealName[j + 1] + `</button>
+      <button onclick="changeElement('` + parseCustomMeal[j] + `')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">` + parseMealName[j + 1] + `</button>
       `;
    }
    localStorage.clear();

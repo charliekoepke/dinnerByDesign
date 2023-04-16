@@ -253,7 +253,8 @@ footer .logo img {
 }
 
 #equipment {
-  text-align: right;
+  text-align: left;
+  margin-left: 50%;
 }
 
 main h2 {
@@ -392,7 +393,7 @@ footer .flex {
 #equipment .checkmark {
   position: absolute;
   top: 0;
-  right: 50%;
+  left: 0;
   height: 25px;
   width: 25px;
   background-color: #c6c6c6;
