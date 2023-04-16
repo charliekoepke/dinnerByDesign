@@ -497,7 +497,7 @@ footer .flex {
 
 @media only screen and (max-width: 720px) {
   .grid {
-    display: block;
+    display: grid;
   }
   .flex {
     padding: 1rem;
@@ -543,8 +543,11 @@ footer .flex {
   body {
     width: 100%;
   }
-  #home-banner {
-    grid-template-columns: repeat(1, 100%);
+  #home-banner,
+  #home-getting-started,
+  #home-suggested-meals,
+  #about-header {
+    display: block;
   }
   button {
     text-align: center;
@@ -562,9 +565,24 @@ footer .flex {
   #home-getting-started .box .flex {
     justify-content: center;
   }
-  .recipetile {
-    width: 96%;
-    margin: 2%;
+  #guidedrecipes-grid {
+    grid-template-columns: repeat(1, 100%);
+  }
+  #guidedrecipes-grid .recipetile {
+    height: 100%;
+  }
+  #guidedrecipes-grid .recipetile img {
+    height: 50%;
+  }
+  #guidedrecipes-recipes {
+    display: block;
+  }
+  #guidedrecipes-recipes .recipetile {
+    width: 20rem;
+    height: 100%;
+  }
+  #guidedrecipes-recipes .recipetile img {
+    height: 50%;
   }
   footer {
     width: 100%;
