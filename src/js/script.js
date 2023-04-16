@@ -2100,8 +2100,6 @@ function myMeal() {
       `;
    }
    localStorage.clear();
-   console.log(jsonCustomMeal);
-   console.log(jsonMealName);
 }
 
 document.getElementById("openbutton").addEventListener("click",

@@ -91,7 +91,7 @@ p {
 nav {
   color: white;
   font-size: 18pt;
-  background-color: grey;
+  background-color: lightgrey;
   padding: 2%;
   width: 96%;
 }
@@ -510,9 +510,6 @@ footer .flex {
   }
   nav .grid {
     display: block;
-  }
-  nav #logo h1 {
-    display: none;
   }
   #openbutton {
     display: block;
