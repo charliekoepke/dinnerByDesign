@@ -563,8 +563,8 @@ footer {
 
 @media only screen and (max-width: 720px) {
    .grid {
-      display: grid;
-      grid-template-rows: 5rem;
+      display: block;
+      width: 100%;
    }
 
    .flex {
