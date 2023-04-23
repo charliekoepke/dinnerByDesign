@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 body {
   font-size: 24pt;
-  font-family: "Rajdhani", sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: "regular";
   width: 100%;
   margin: 0;
   padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
 }
 
 #openbutton {
@@ -53,6 +59,7 @@ button {
 
 h2 {
   font-size: 40pt;
+  font-family: "Rajdhani", sans-serif;
 }
 
 a {
@@ -497,99 +504,4 @@ footer .flex {
   list-style-type: "X";
   list-style-position: outside;
   cursor: pointer;
-}
-
-@media only screen and (max-width: 720px) {
-  .grid {
-    display: block;
-    width: 100%;
-  }
-  .flex {
-    padding: 1rem;
-  }
-  nav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: white;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding: 0;
-  }
-  nav a {
-    padding: 0.75em 0.75em 0.75em 2em;
-    text-decoration: none;
-    font-size: 1.5em;
-    color: black;
-    display: block;
-    transition: 0.3s;
-  }
-  nav .closebutton {
-    position: absolute;
-    top: 0;
-    right: 1em;
-    font-size: 2em;
-    margin-left: 3em;
-    display: grid;
-  }
-  nav .flex {
-    display: block;
-  }
-  nav .grid {
-    display: block;
-  }
-  #openbutton {
-    display: block;
-    padding: 1rem;
-  }
-  body {
-    width: 100%;
-  }
-  #home-banner,
-  #home-getting-started,
-  #home-suggested-meals,
-  #about-header {
-    display: block;
-  }
-  button {
-    text-align: center;
-    align-self: center;
-  }
-  #home-getting-started {
-    grid-template-columns: repeat(1, 100%);
-  }
-  #home-getting-started .box {
-    display: block;
-  }
-  #home-getting-started .box img {
-    width: 10rem;
-  }
-  #home-getting-started .box .flex {
-    justify-content: center;
-  }
-  #guidedrecipes-grid {
-    display: block;
-  }
-  #guidedrecipes-grid .recipetile {
-    height: 100%;
-  }
-  #guidedrecipes-grid .recipetile img {
-    height: 50%;
-  }
-  #guidedrecipes-recipes {
-    display: block;
-  }
-  #guidedrecipes-recipes .recipetile {
-    width: 20rem;
-    height: 100%;
-  }
-  #guidedrecipes-recipes .recipetile img {
-    height: 50%;
-  }
-  footer {
-    width: 100%;
-  }
 }/*# sourceMappingURL=style.css.map */
