@@ -14,23 +14,19 @@
                     <a href="../../index.html"><img src="../../src/img/DBDLOGO.png"></a>
                 </div>
                 <div id="nav-menu" class="flex">
-                    <a id="closebutton" class="closebutton">X</a>
                     <a href="../index.html"><strong>Guided Recipes</strong></a>
                     <a href="../../about.html">About</a>
                 </div>
             </div>
         </nav>
-        <a id="openbutton">Menu</a>
         <main id="seared-sirloin">
             <p><a href="../index.html">Guided Recipes</a>/ Seared Sirloin with Aromatic Rice</p>
             <div class="grid" id="recipe-header">
-            <div class="flex" id="recipe-description">
-                <h2>Seared Sirloin</h2>
-                <p>This seared sirloin recipe should leave you with a beautiful medium rare steak and a deliciously satisfying rice that utilizes the aromatics you basted the steak with.</p>
-            </div>
-            <div class="flex" id="recipe-picture">
+                <div class="flex" id="recipe-description">
+                    <h2>Seared Sirloin</h2>
+                    <p>This seared sirloin recipe should leave you with a beautiful medium rare steak and a deliciously satisfying rice that utilizes the aromatics you basted the steak with.</p>
+                </div>
                 <img src="../../src/img/seared-sirloin.jpg" alt="Seared sirloin">
-            </div>
             </div>
             <!-- Toggle between ingredients and equipment -->
             <div class="tab">
@@ -114,19 +110,19 @@
                     </div>
                 </div>
             </div>
+            <!-- Steak Prep -->
+            <h2>Interactive Video</h2>
             <div class="tab" id="elements">
                 <!-- Toggle through the elements videos -->
                 <button onclick="changeElement('aromatic-rice')">Aromatic Rice</button>
                 <button onclick="changeElement('seared-sirloin')">Seared Sirloin</button>
             </div>
-            <!-- Steak Prep -->
-            <h2>Interactive Video</h2>
             <div class="recipe-video" id="recipe-video">
-                <button onlick="previousStep()"><</button>
                 <button onclick="previousStep()">Previous Step</button>
+                <button onlick="previousStep()"><</button>
                 <div id="ytplayer"></div>
-                <button onclick="nextStep()">Next Step</button>
                 <button onclick="nextStep()">></button>
+                <button onclick="nextStep()">Next Step</button>
             </div>
             <!-- Captions -->
             <div class="flex" id="video-captions">

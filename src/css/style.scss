@@ -14,15 +14,7 @@ body {
 
 img {
    display: block;
-   width: 100%;
-}
-
-#openbutton {
-   display: none;
-}
-
-.closebutton {
-   display: none;
+   width: 98%;
 }
 
 button {
@@ -37,10 +29,6 @@ button {
          color: white;
       }
    }
-}
-
-details > summary {
-   color: #FF561B;
 }
 
 // Guided Recipes Page
@@ -202,7 +190,7 @@ details {
 #home-getting-started {
    padding: 2%;
    margin: 2%;
-   grid-template-columns: repeat(2, 50%);
+   grid-template-columns: repeat(2, 48%);
    grid-template-rows: repeat(2, 300px);
    
    .flex {
@@ -270,7 +258,7 @@ details {
 
 // About Page
 #about-header {
-   grid-template-columns: repeat(2, 50%);
+   grid-template-columns: repeat(2, 49%);
    padding: 2%;
    background-color: black;
    color: white;
@@ -283,8 +271,8 @@ details {
 
 // Individual Recipe Page
 #recipe-header {
-   grid-template-columns: repeat(2, 50%);
-   padding: 2%;
+   grid-template-columns: repeat(2, 48%);
+   width: 100%;
 
    h2 {
       margin: 2%;
@@ -293,9 +281,6 @@ details {
    }
    p {
       margin: 2%;
-   }
-   #recipe-picture {
-      align-content: center;
    }
 }
 
@@ -368,6 +353,7 @@ main {
    display: flex;
    flex-direction: row;
    justify-content: center;
+   width: 100%;
 
    button {
       background-color: white;
