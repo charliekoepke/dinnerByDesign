@@ -54,6 +54,7 @@ button {
    border: none;
    padding: 1%;
    font-family: 'Roboto', sans-serif;
+   border-radius: 12px;
 }
 
 h2 {
@@ -99,6 +100,7 @@ nav {
    background-color: lightgrey;
    padding: 2%;
    width: 96%;
+   font-family: 'Rajdhani', sans-serif;
 
    h1 {
       cursor: pointer;
@@ -131,6 +133,10 @@ nav {
          }
       }
    }
+}
+
+#interactive-design {
+   grid-template-columns: 10% 90%;
 }
 
 footer {
@@ -271,8 +277,9 @@ details {
 
 // Individual Recipe Page
 #recipe-header {
-   grid-template-columns: repeat(2, 48%);
+   grid-template-columns: repeat(2, 46%);
    width: 100%;
+   padding: 2%;
 
    h2 {
       margin: 2%;
@@ -330,7 +337,7 @@ main {
 }
 
 #video-buttons {
-   grid-template-columns: repeat(2, 49%);
+   justify-items: center;
 
    button {
       font-size: 20pt;

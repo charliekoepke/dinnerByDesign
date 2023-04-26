@@ -48,6 +48,7 @@ button {
   border: none;
   padding: 1%;
   font-family: "Roboto", sans-serif;
+  border-radius: 12px;
 }
 
 h2 {
@@ -93,6 +94,7 @@ nav {
   background-color: lightgrey;
   padding: 2%;
   width: 96%;
+  font-family: "Rajdhani", sans-serif;
 }
 nav h1 {
   cursor: pointer;
@@ -122,6 +124,10 @@ nav .grid #logo h1 {
 }
 nav .grid #logo img {
   width: 3rem;
+}
+
+#interactive-design {
+  grid-template-columns: 10% 90%;
 }
 
 footer .flex {
@@ -245,8 +251,9 @@ details {
 }
 
 #recipe-header {
-  grid-template-columns: repeat(2, 48%);
+  grid-template-columns: repeat(2, 46%);
   width: 100%;
+  padding: 2%;
 }
 #recipe-header h2 {
   margin: 2%;
@@ -301,7 +308,7 @@ main p {
 }
 
 #video-buttons {
-  grid-template-columns: repeat(2, 49%);
+  justify-items: center;
 }
 #video-buttons button {
   font-size: 20pt;
