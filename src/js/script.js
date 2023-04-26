@@ -2039,44 +2039,55 @@ let mealName = new Array();
 // Adds element into my meal menu
 function addElement(element) {
    // Adding element to array
-   customMeal[customMeal.length] = element;
+   let inArray = false;
+   for (let x = 0; x < customMeal.length; x++) {
+      if (customMeal[x].toString() == element.toString()) {
+         inArray = true;
+         console.log(inArray);
+      }
+   }
+   
+   if (!inArray) {
+      customMeal[customMeal.length] = element;
+   
 
-   // Adding official name into new array
-   if (element == "seared-sirloin") {
-      mealName[customMeal.length] = "Seared Sirloin with Aromatic Rice";
-   }
-   if (element == "shiitake-mushrooms") {
-      mealName[customMeal.length] = "Sauteed Shiitake Mushrooms";
-   }
-   if (element == "braised-cherries") {
-      mealName[customMeal.length] = "Braised Cherries";
-   }
-   if (element == "acorn-squash") {
-      mealName[customMeal.length] = "Roasted Acorn Squash"
-   }
-   if (element == "soy-cured-egg") {
-      mealName[customMeal.length] = "Soy Cured Egg Yolk";
-   }
-   if (element == "crispy-duck") {
-      mealName[customMeal.length] = "Crispy Skin Duck Breast";
-   }
-   if (element == "cabbage-mushroom-wontons") {
-      mealName[customMeal.length] = "Cabbage and Mushroom Wontons";
-   }
-   if (element  == "vegetable-stock") {
-      mealName[customMeal.length] = "Homemade Vegetable Stock";
-   }
-   if (element == "chili-oil") {
-      mealName[customMeal.length] = "Homemade Chili Oil";
-   }
-   if (element == "dumpling-sauce") {
-      mealName[customMeal.length] = "Dumpling Sauce";
-   }
+      // Adding official name into new array
+      if (element == "seared-sirloin") {
+         mealName[customMeal.length] = "Seared Sirloin with Aromatic Rice";
+      }
+      if (element == "shiitake-mushrooms") {
+         mealName[customMeal.length] = "Sauteed Shiitake Mushrooms";
+      }
+      if (element == "braised-cherries") {
+         mealName[customMeal.length] = "Braised Cherries";
+      }
+      if (element == "acorn-squash") {
+         mealName[customMeal.length] = "Roasted Acorn Squash"
+      }
+      if (element == "soy-cured-egg") {
+         mealName[customMeal.length] = "Soy Cured Egg Yolk";
+      }
+      if (element == "crispy-duck") {
+         mealName[customMeal.length] = "Crispy Skin Duck Breast";
+      }
+      if (element == "cabbage-mushroom-wontons") {
+         mealName[customMeal.length] = "Cabbage and Mushroom Wontons";
+      }
+      if (element  == "vegetable-stock") {
+         mealName[customMeal.length] = "Homemade Vegetable Stock";
+      }
+      if (element == "chili-oil") {
+         mealName[customMeal.length] = "Homemade Chili Oil";
+      }
+      if (element == "dumpling-sauce") {
+         mealName[customMeal.length] = "Dumpling Sauce";
+      }
 
-   // Putting elements into view
-   let listItem = document.createElement("li");
-   listItem.innerHTML = `<a id="` + element + `" onclick="removeElement('` + element + `')">` + mealName[customMeal.length].toString() + `</a>`;
-   document.getElementById("my-meal").appendChild(listItem);
+      // Putting elements into view
+      let listItem = document.createElement("li");
+      listItem.innerHTML = `<a id="` + element + `" onclick="removeElement('` + element + `')">` + mealName[customMeal.length].toString() + `</a>`;
+      document.getElementById("my-meal").appendChild(listItem);
+   }
 }
 
 // Removes element from my meal menu
@@ -2118,23 +2129,11 @@ function myMeal() {
    // Adding element change buttons
    for (let j = 0; j < parseCustomMeal.length; j++) {
       document.getElementById("elements").innerHTML += `
-      <button onclick="changeElement('` + parseCustomMeal[j] + `')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">` + parseMealName[j + 1] + `</button>
+      <button onclick="changeElement('` + parseCustomMeal[j] + `')" onmouseover="this.style.textDecoration='underline';" onmouseleave="this.style.textDecoration='none';">` + parseMealName[j + 1] + `</button>
       `;
    }
    localStorage.clear();
 }
-
-document.getElementById("openbutton").addEventListener("click",
-   function openNav() {
-      document.getElementsByTagName("nav")[0].style.width = "100%";
-   }
-);
-
-document.getElementById("closebutton").addEventListener("click",
-   function closeNav() {
-      document.getElementsByTagName("nav")[0].style.width = "0";
-   }
-);
 
 function previousSlide() {
    if (document.getElementById("slide1").style.display != "none") {

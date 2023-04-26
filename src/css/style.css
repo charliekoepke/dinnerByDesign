@@ -127,7 +127,7 @@ nav .grid #logo img {
 }
 
 #interactive-design {
-  grid-template-columns: 10% 90%;
+  grid-template-columns: 25% 75%;
 }
 
 footer .flex {
@@ -308,7 +308,7 @@ main p {
 }
 
 #video-buttons {
-  justify-items: center;
+  justify-content: center;
 }
 #video-buttons button {
   font-size: 20pt;
@@ -317,7 +317,7 @@ main p {
 }
 #video-buttons button:hover {
   cursor: pointer;
-  color: #FF561B;
+  font-weight: underline;
 }
 
 #video-captions {
