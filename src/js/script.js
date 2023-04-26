@@ -1097,7 +1097,7 @@ function changeElement(element) {
       // Changing directions
       document.getElementById("directions").innerHTML = `
       <details>
-         <summary>Written Directions</summary>
+         <summary id="summary"><a href="#summary">Written Directions</a></summary>
          <ol>
             <li>Measure out 1 and 1/2 cups of medium grain white rice.</li>
             <li>Rinse the rice thouroughly until the water is clear.</li>
@@ -1173,7 +1173,7 @@ function changeElement(element) {
       // Changing directions
       document.getElementById("directions").innerHTML = `
       <details>
-         <summary>Written Directions</summary>
+         <summary id="summary"><a href="#summary">Written Directions</a></summary>
          <ol>
             <li>Gather your ingredients.</li>
             <li>Peel ginger with a small spoon.</li>
@@ -1257,7 +1257,7 @@ function changeElement(element) {
       // Changing directions
       document.getElementById("directions").innerHTML = `
       <details>
-         <summary>Written Directions</summary>
+         <summary id="summary"><a href="#summary">Written Directions</a></summary>
          <p>Prep</p>
          <ol>
             <li>Gather your ingredients.</li>
@@ -1356,7 +1356,7 @@ function changeElement(element) {
       // Changing directions
       document.getElementById("directions").innerHTML = `
       <details>
-         <summary>Written Directions</summary>
+         <summary id="summary"><a href="#summary">Written Directions</a></summary>
          <p>Prep</p>
          <ol>
                <li>Gather your ingredients - your steak should be at room temperature.</li>
@@ -1452,7 +1452,7 @@ function changeElement(element) {
       `;
       document.getElementById("directions").innerHTML = `
       <details>
-         <summary>Written Directions</summary>
+         <summary id="summary"><a href="#summary">Written Directions</a></summary>
          <p>Prep</p>
          <ol>
             <li>Gather your tools and ingredients.</li>
@@ -1510,7 +1510,7 @@ function changeElement(element) {
       `;
       document.getElementById("directions").innerHTML = `
       <details>
-         <summary>Written Directions</summary>
+         <summary id="summary"><a href="#summary">Written Directions</a></summary>
          <p>Prep</p>
          <ol>
             <li>Gather tools and ingredients.</li>
@@ -1598,7 +1598,7 @@ function changeElement(element) {
       `;
       document.getElementById("directions").innerHTML = `
       <details>
-         <summary>Written Directions</summary>
+         <summary id="summary"><a href="#summary">Written Directions</a></summary>
          <p>Prep</p>
          <ol>
                <li>Gather your tools and ingredients, and preheat oven to 450 degrees Fahrenheit.</li>
@@ -1737,7 +1737,7 @@ function changeElement(element) {
       `;
       document.getElementById("directions").innerHTML = `
       <details>
-         <summary>Written Directions</summary>
+         <summary id="summary"><a href="#summary">Written Directions</a></summary>
          <p>Prep</p>
          <ol>
             <li>Gather all of your equipment and ingredients.</li>
@@ -1844,7 +1844,7 @@ function changeElement(element) {
       `;
       document.getElementById("directions").innerHTML = `
       <details>
-         <summary>Written Directions</summary>
+         <summary id="summary"><a href="#summary">Written Directions</a></summary>
          <p>Prep</p>
          <ol>
             <li>Gather all the ingredients and equipment.</li>
@@ -1952,7 +1952,7 @@ function changeElement(element) {
       `;
       document.getElementById("directions").innerHTML = `
       <details>
-         <summary>Written Directions</summary>
+         <summary id="summary"><a href="#summary">Written Directions</a></summary>
          <p>Prep</p>
          <ol>
             <li>Gather all of your equipment and ingredients.</li>
@@ -2013,7 +2013,7 @@ function changeElement(element) {
       document.getElementById("directions").innerHTML = `
       <p>There is no interactive video for this recipe</p>
       <details>
-         <summary>Written Directions</summary>
+      <summary id="summary"><a href="#summary">Written Directions</a></summary>
          <ol>
             <li>n a mason jar combine 3 tbsp soy sauce, 1 tbsp black vinegar, and 1 tbsp chili oil.</li>
             <li>Taste and adjust ingredients based on your preference - If you want it more salty add soy sauce, if you want it spicier add Chili oil, if you want it more acidic/pungent add black vinegar.</li>

@@ -26,6 +26,7 @@ img {
 }
 
 button {
+   display: block;
    cursor: pointer;
 
    a {
@@ -36,6 +37,10 @@ button {
          color: white;
       }
    }
+}
+
+details > summary {
+   color: #FF561B;
 }
 
 // Guided Recipes Page
