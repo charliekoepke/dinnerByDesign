@@ -322,6 +322,7 @@ main p {
   flex-direction: row;
   justify-content: center;
   color: #FF561B;
+  width: 100%;
 }
 
 .recipe-video {
@@ -502,4 +503,59 @@ footer .flex {
   list-style-type: "X";
   list-style-position: outside;
   cursor: pointer;
+}
+
+.rad-label {
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  padding: 14px 16px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: lightgrey;
+}
+
+.rad-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design {
+  border-radius: 100px;
+  background: #FF561B;
+  position: relative;
+}
+
+.rad-design::before {
+  content: "";
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.rad-input:checked + .rad-design::before {
+  transform: scale(0);
+}
+
+.rad-text {
+  margin-left: 14px;
+  font-size: 20pt;
+}
+
+.rad-input:checked ~ .rad-text {
+  color: #FF561B;
 }/*# sourceMappingURL=style.css.map */
