@@ -1,4 +1,4 @@
-// VIDEO ID: xlnvkOemQI4
+// VIDEO ID: XsYm-zF3HTY
 const steakprep = JSON.parse(`{
    "recipe": [
       {"line": "Gather your ingredients - your steak should be at room temperature.", "time": 0},
@@ -8,7 +8,7 @@ const steakprep = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID: R_QLdbfLGZ0
+// VIDEO ID: HErjHiKW3-4
 const steakcook = JSON.parse(`{
    "recipe": [
       {"line": "Add a drizzle of olive oil to a carbon steel pan and turn the heat to high.", "time": 0},
@@ -23,7 +23,7 @@ const steakcook = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID: Gqay2XoYqcY
+// VIDEO ID: 2fpiktAS8m0
 const soycuredegg = JSON.parse(`{
    "recipe": [
       {"line": "Gather your ingredients.", "time": 0},
@@ -41,7 +41,7 @@ const soycuredegg = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID: XeRD00WTsQ8
+// VIDEO ID: WI7mBnOaVz8
 const mushroomprep = JSON.parse(`{
    "recipe": [
       {"line": "Gather your ingredients.", "time": 0},
@@ -51,7 +51,7 @@ const mushroomprep = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID: bNdiE0umUZc
+// VIDEO ID: l1mg9kxj57Y
 const mushroomcook = JSON.parse(`{
    "recipe": [
       {"line": "Put a nonstick pan on high heat and allow it to get hot. Once it is hot, add your mushrooms to the dry pan.", "time": 0},
@@ -61,7 +61,7 @@ const mushroomcook = JSON.parse(`{
    ]
 }`);
 
-// VIDEO ID: aJjLTsN2ftQ
+// VIDEO ID: aJjLTsN2ftQs
 const aromaticrice = JSON.parse(`{
    "recipe":
    [
@@ -229,7 +229,7 @@ function onYouTubePlayerAPIReady() {
       player = new YT.Player('ytplayer', {
          height: '500',
          width: '980',
-         videoId: 'Gqay2XoYqcY',
+         videoId: '2fpiktAS8m0',
          playerVars: {
             'controls': 0,
             'showinfo': 0,
@@ -246,7 +246,7 @@ function onYouTubePlayerAPIReady() {
       player = new YT.Player('ytplayer', {
          height: '500',
          width: '980',
-         videoId: 'xlnvkOemQI4',
+         videoId: 'XsYm-zF3HTY',
          playerVars: {
             'controls': 0,
             'showinfo': 0,
@@ -667,13 +667,13 @@ let timer;
 function onStateChange(event) {
    if (event.data == YT.PlayerState.PLAYING) {
       timer = window.setInterval(interactiveCaptions, 100);
-      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=Gqay2XoYqcY") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=2fpiktAS8m0") {
          recipeVideo = "soycuredegg";
       }
-      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=xlnvkOemQI4") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=XsYm-zF3HTY") {
          recipeVideo = "steakprep";
       }
-      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=R_QLdbfLGZ0") {
+      if (player.getVideoUrl() == "https://www.youtube.com/watch?v=R_HErjHiKW3-4") {
          recipeVideo = "steakcook";
       }
       if (player.getVideoUrl() == "https://www.youtube.com/watch?v=XeRD00WTsQ8") {
@@ -980,11 +980,11 @@ function previousStep() {
 function changeVideo(prepOrCook) {
    if (recipeVideo == "steakprep" || recipeVideo == "steakcook") {
       if (prepOrCook == "Prep") {
-         player.loadVideoById("xlnvkOemQI4");
+         player.loadVideoById("XsYm-zF3HTY");
          i = 0;
       }
       else if (prepOrCook == "Cook"){
-         player.loadVideoById("R_QLdbfLGZ0");
+         player.loadVideoById("HErjHiKW3-4");
          i = 0;
       }
    }
@@ -1000,31 +1000,31 @@ function changeVideo(prepOrCook) {
    }
    if (recipeVideo == "cherriesprep" || recipeVideo == "cherriescook") {
       if (prepOrCook == "Prep") {
-         player.loadVideoById("RTyUtGZ0hoU");
+         player.loadVideoById("nvyQ75ucKOg");
          i = 0;
       }
       else if (prepOrCook == "Cook") {
-         player.loadVideoById("KvFJ4gFjhr8");
+         player.loadVideoById("POOC7Ck-alk");
          i = 0;
       }
    }
    if (recipeVideo == "duckprep" || recipeVideo == "duckcook") {
       if (prepOrCook == "Prep") {
-         player.loadVideoById("bpwku80duOg");
+         player.loadVideoById("8v-CRgyB-WQ");
          i = 0;
       }
       else if (prepOrCook == "Cook") {
-         player.loadVideoById("TTW_0HnqnO0");
+         player.loadVideoById("qCYkp693A0g");
          i = 0;
       }
    }
    if (recipeVideo == "squashprep" || recipeVideo == "squashcook") {
       if (prepOrCook == "Prep") {
-         player.loadVideoById("JldQ77rO4yE");
+         player.loadVideoById("6h7rXTb1L6c");
          i = 0;
       }
       else if (prepOrCook == "Cook") {
-         player.loadVideoById("gvho9vOGOTw");
+         player.loadVideoById("kY8y2Zw_cBY");
          i = 0;
       }
    }
@@ -1279,7 +1279,7 @@ function changeElement(element) {
       `;
    }
    if (element == "seared-sirloin") {
-      player.loadVideoById("xlnvkOemQI4");
+      player.loadVideoById("XsYm-zF3HTY");
       i = 0;
       document.getElementById("interactive-design").style.display = "grid";
       document.getElementById("video-buttons").style.display = "flex";
