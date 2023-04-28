@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
+* {
+   overflow-x: hidden;
+}
+
 body {
    font-size: 24pt;
    font-family: 'Nunito', sans-serif;
@@ -38,6 +42,8 @@ button {
    grid-template-rows: auto;
    margin: 2%;
    padding: 2%;
+   margin-bottom: 20rem;
+   overflow-x: visible;
 
    .recipetile {
       display: block;
@@ -76,8 +82,9 @@ p {
 
 .flex {
    display: flex;
-   flex: 1;
+   flex: 0 1 auto;
    flex-direction: column;
+   flex-wrap: wrap;
 
    img {
       padding: 2%;
@@ -137,7 +144,12 @@ nav {
 
 #interactive-design {
    grid-template-columns: 25% 75%;
-   width: 100%;
+   margin-right: 5rem;
+   overflow-x: visible;
+}
+
+#directions {
+   margin-left: 1rem;
 }
 
 footer {
@@ -186,6 +198,7 @@ footer {
    margin: 2%;
    grid-template-columns: repeat(2, 48%);
    grid-template-rows: repeat(2, 300px);
+   overflow-x: visible;
    
    .flex {
       flex-direction: row;
@@ -360,6 +373,10 @@ main {
    }
 }
 
+#about-video {
+   justify-content: center;
+}
+
 iframe {
    width: 980px;
    margin: 2%;
@@ -367,9 +384,9 @@ iframe {
 }
 
 footer {
+   display: block;
    background-color: grey;
    width: 96%;
-   vertical-align: middle;
    text-align: center;
    padding: 2%;
 
