@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-* {
-  overflow-x: hidden;
-}
-
 body {
   font-size: 24pt;
   font-family: "Nunito", sans-serif;
@@ -38,7 +34,6 @@ button a :hover {
   margin: 2%;
   padding: 2%;
   margin-bottom: 20rem;
-  overflow-x: visible;
 }
 #guidedrecipes-recipes .recipetile {
   display: block;
@@ -98,7 +93,7 @@ p {
 nav {
   color: white;
   font-size: 18pt;
-  background-color: lightgrey;
+  background-color: grey;
   padding: 2%;
   width: 96%;
   font-family: "Rajdhani", sans-serif;
@@ -136,7 +131,6 @@ nav .grid #logo img {
 #interactive-design {
   grid-template-columns: 25% 75%;
   margin-right: 5rem;
-  overflow-x: visible;
 }
 
 #directions {
@@ -183,7 +177,6 @@ footer .logo img {
   margin: 2%;
   grid-template-columns: repeat(2, 48%);
   grid-template-rows: repeat(2, 300px);
-  overflow-x: visible;
 }
 #home-getting-started .flex {
   flex-direction: row;

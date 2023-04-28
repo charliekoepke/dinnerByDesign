@@ -2,10 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
-* {
-   overflow-x: hidden;
-}
-
 body {
    font-size: 24pt;
    font-family: 'Nunito', sans-serif;
@@ -43,7 +39,6 @@ button {
    margin: 2%;
    padding: 2%;
    margin-bottom: 20rem;
-   overflow-x: visible;
 
    .recipetile {
       display: block;
@@ -104,7 +99,7 @@ p {
 nav {
    color: white;
    font-size: 18pt;
-   background-color: lightgrey;
+   background-color: grey;
    padding: 2%;
    width: 96%;
    font-family: 'Rajdhani', sans-serif;
@@ -145,7 +140,6 @@ nav {
 #interactive-design {
    grid-template-columns: 25% 75%;
    margin-right: 5rem;
-   overflow-x: visible;
 }
 
 #directions {
@@ -198,7 +192,6 @@ footer {
    margin: 2%;
    grid-template-columns: repeat(2, 48%);
    grid-template-rows: repeat(2, 300px);
-   overflow-x: visible;
    
    .flex {
       flex-direction: row;
