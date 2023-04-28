@@ -113,9 +113,20 @@
             <!-- Steak Prep -->
             <h2>Interactive Video</h2>
             <div class="tab" id="elements">
-                <!-- Toggle through the elements videos -->
-                <button onclick="changeElement('aromatic-rice')">Aromatic Rice</button>
-                <button onclick="changeElement('seared-sirloin')">Seared Sirloin</button>
+                <label class="rad-label">
+                    <input type="radio" class="rad-input" name="rad">
+                    <div class="rad-design"></div>
+                    <div class="rad-text" onclick="changeElement('aromatic-rice')">
+                        Aromatic Rice
+                    </div>
+                </label>
+                <label class="rad-label">
+                    <input type="radio" class="rad-input" name="rad" checked>
+                    <div class="rad-design"></div>
+                    <div class="rad-text" onclick="changeElement('seared-sirloin')">
+                        Seared Sirloin
+                    </div>
+                </label>
             </div>
             <div class="grid" id="interactive-design">
                 <div id="video-buttons" class="flex">

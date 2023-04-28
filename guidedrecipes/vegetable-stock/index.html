@@ -113,23 +113,34 @@
             </div>
             <!-- Recipe Video -->
             <h2>Interactive Video</h2>
-            <div class="recipe-video">
-                <button onclick="previousStep()">Previous Step</button>
-                <button onlick="previousStep()"><</button>
-                <div id="ytplayer"></div>
-                <button onclick="nextStep()">></button>
-                <button onclick="nextStep()">Next Step</button>
+            <div class="grid" id="interactive-design">
+                <div id="video-buttons" class="flex">
+                    <label class="rad-label">
+                        <input type="radio" class="rad-input" name="rad" checked>
+                        <div class="rad-design"></div>
+                        <div class="rad-text" onclick="changeVideo('Prep')" id="prep-button">
+                            1. Prepare Your Ingredients
+                        </div>
+                    </label>
+                    <label class="rad-label">
+                        <input type="radio" class="rad-input" name="rad">
+                        <div class="rad-design"></div>
+                        <div class="rad-text" onclick="changeVideo('Cook')" id="cook-button">
+                            2. Cook Your Food
+                        </div>
+                    </label>
+                </div>
+                <div class="recipe-video" id="recipe-video">
+                    <button onclick="previousStep()">Previous Step</button>
+                    <button onlick="previousStep()"><</button>
+                    <div id="ytplayer"></div>
+                    <button onclick="nextStep()">></button>
+                    <button onclick="nextStep()">Next Step</button>
+                </div>
             </div>
             <!-- Captions -->
             <div class="flex" id="video-captions">
                 <p id="captions"></p>
-            </div>
-            <div class="grid" id="video-buttons">
-                <!-- Button to get to previous step -->
-                <button onclick="changeVideo('Prep')">Prepare Your Ingredients</button>
-                <!-- Button to get to next step -->
-                <button onclick="changeVideo('Cook')">Cook Your Food</button>
-                <!-- Directions written out -->
             </div>
             <div id="directions">
                 <details>

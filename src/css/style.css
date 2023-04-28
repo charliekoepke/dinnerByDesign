@@ -148,12 +148,6 @@ footer .logo img {
   width: 50px;
 }
 
-.tab button {
-  background-color: white;
-  color: black;
-  cursor: pointer;
-}
-
 #index h2 {
   margin: 2%;
   color: #FF561B;
@@ -273,7 +267,6 @@ footer .logo img {
   flex-direction: row;
   justify-content: space-around;
   overflow: hidden;
-  color: black;
   background-color: white;
   width: 100%;
 }
@@ -558,4 +551,17 @@ footer .flex {
 
 .rad-input:checked ~ .rad-text {
   color: #FF561B;
+}
+
+#elements .rad-label {
+  border-radius: 0;
+  width: 100%;
+  justify-content: center;
+  border-bottom: 3px solid grey;
+}
+#elements .rad-label:hover {
+  border-bottom-color: #FF561B;
+}
+#elements .rad-design {
+  border-radius: 0;
 }/*# sourceMappingURL=style.css.map */

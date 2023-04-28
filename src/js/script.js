@@ -1064,6 +1064,7 @@ function changeElement(element) {
    if (element == "aromatic-rice") {
       player.loadVideoById("aJjLTsN2ftQ");
       i = 0;
+      document.getElementById("interactive-design").style.display = "flex";
       document.getElementById("video-buttons").style.display = "none";
       // Changing equipment and ingredients
       document.getElementById("ingredients").innerHTML = `
@@ -1110,6 +1111,7 @@ function changeElement(element) {
    if (element == "soy-cured-egg") {
       player.loadVideoById("Gqay2XoYqcY");
       i = 0;
+      document.getElementById("interactive-design").style.display = "flex";
       document.getElementById("video-buttons").style.display = "none";
       // Changing equipment and ingredients
       document.getElementById("ingredients").innerHTML = `
@@ -1194,7 +1196,8 @@ function changeElement(element) {
    if (element == "shiitake-mushrooms") {
       player.loadVideoById("XeRD00WTsQ8");
       i = 0;
-      document.getElementById("video-buttons").style.display = "grid";
+      document.getElementById("interactive-design").style.display = "grid";
+      document.getElementById("video-buttons").style.display = "flex";
       // Changing equipment and ingredients
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
@@ -1278,7 +1281,8 @@ function changeElement(element) {
    if (element == "seared-sirloin") {
       player.loadVideoById("xlnvkOemQI4");
       i = 0;
-      document.getElementById("video-buttons").style.display = "grid";
+      document.getElementById("interactive-design").style.display = "grid";
+      document.getElementById("video-buttons").style.display = "flex";
       // Changing equipment and ingredients
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
@@ -1383,6 +1387,7 @@ function changeElement(element) {
    if (element == "steakrecipe-plating") {
       player.loadVideoById("YHxybjUXSRc");
       i = 0;
+      document.getElementById("interactive-design").style.display = "flex";
       document.getElementById("video-buttons").style.display = "none";
       document.getElementById("ingredients").innerHTML = "";
       document.getElementById("equipment").innerHTML = "";
@@ -1391,7 +1396,8 @@ function changeElement(element) {
    if (element == "braised-cherries") {
       player.loadVideoById("nvyQ75ucKOg");
       i = 0;
-      document.getElementById("video-buttons").style.display = "grid";
+      document.getElementById("interactive-design").style.display = "grid";
+      document.getElementById("video-buttons").style.display = "flex";
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
          <label class="container">
@@ -1474,7 +1480,8 @@ function changeElement(element) {
    if (element == "crispy-duck") {
       player.loadVideoById("8v-CRgyB-WQ");
       i = 0;
-      document.getElementById("video-buttons").style.display = "grid";
+      document.getElementById("interactive-design").style.display = "grid";
+      document.getElementById("video-buttons").style.display = "flex";
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
          <label class="container">
@@ -1532,7 +1539,8 @@ function changeElement(element) {
    if (element == "acorn-squash") {
       player.loadVideoById("6h7rXTb1L6c");
       i = 0;
-      document.getElementById("video-buttons").style.display = "grid";
+      document.getElementById("interactive-design").style.display = "grid";
+      document.getElementById("video-buttons").style.display = "flex";
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
          <label class="container">
@@ -1623,6 +1631,7 @@ function changeElement(element) {
    if (element == "duckrecipe-plating") {
       player.loadVideoById("rFjwlm_2hmA");
       i = 0;
+      document.getElementById("interactive-design").style.display = "flex";
       document.getElementById("video-buttons").style.display = "none";
       document.getElementById("ingredients").innerHTML = "";
       document.getElementById("equipment").innerHTML = "";
@@ -1631,7 +1640,8 @@ function changeElement(element) {
    if (element == "cabbage-mushroom-wontons") {
       player.loadVideoById("RveAV5lcdoc");
       i = 0;
-      document.getElementById("video-buttons").style.display = "grid";
+      document.getElementById("interactive-design").style.display = "grid";
+      document.getElementById("video-buttons").style.display = "flex";
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
          <label class="container">
@@ -1768,7 +1778,8 @@ function changeElement(element) {
    if (element == "vegetable-stock") {
       player.loadVideoById("tcmbDJjo1UA");
       i = 0;
-      document.getElementById("video-buttons").style.display = "grid";
+      document.getElementById("interactive-design").style.display = "grid";
+      document.getElementById("video-buttons").style.display = "flex";
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
          <label class="container">
@@ -1871,7 +1882,8 @@ function changeElement(element) {
    if (element == "chili-oil") {
       player.loadVideoById("pwT2zUbGWmA");
       i = 0;
-      document.getElementById("video-buttons").style.display = "grid";
+      document.getElementById("interactive-design").style.display = "grid";
+      document.getElementById("video-buttons").style.display = "flex";
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
          <label class="container">
@@ -1976,6 +1988,7 @@ function changeElement(element) {
    if (element == "dumpling-sauce") {
       player.loadVideoById("");
       i = 0;
+      document.getElementById("interactive-design").style.display = "flex";
       document.getElementById("video-buttons").style.display = "none";
       document.getElementById("ingredients").innerHTML = `
       <div class="flex">
@@ -2024,6 +2037,7 @@ function changeElement(element) {
    if (element == "souprecipe-plating") {
       player.loadVideoById("NvOrGDBkzUQ");
       i = 0;
+      document.getElementById("interactive-design").style.display = "flex";
       document.getElementById("video-buttons").style.display = "none";
       document.getElementById("ingredients").innerHTML = "";
       document.getElementById("equipment").innerHTML = "";

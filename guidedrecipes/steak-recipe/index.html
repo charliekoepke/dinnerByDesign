@@ -70,29 +70,70 @@
             <h2>Interactive Video</h2>
             <div class="tab" id="elements">
                 <!-- Toggle through the elements videos -->
-                <button onclick="changeElement('aromatic-rice')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">Aromatic Rice Prep</button>
-                <button onclick="changeElement('soy-cured-egg')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">Soy Cured Egg</button>
-                <button onclick="changeElement('shiitake-mushrooms')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">Sauteed Shiitake Mushrooms</button>
-                <button onclick="changeElement('seared-sirloin')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">Seared Sirloin with Aromatic Rice</button>
-                <button onclick="changeElement('steakrecipe-plating')" onmouseover="this.style.color='#FF561B';" onmouseleave="this.style.color='black';">Plating</button>
+                <label class="rad-label">
+                    <input type="radio" class="rad-input" name="rad">
+                    <div class="rad-design"></div>
+                    <div class="rad-text" onclick="changeElement('aromatic-rice')">
+                        Aromatic Rice Prep
+                    </div>
+                </label>
+                <label class="rad-label">
+                    <input type="radio" class="rad-input" name="rad">
+                    <div class="rad-design"></div>
+                    <div class="rad-text" onclick="changeElement('soy-cured-egg')">
+                        Soy Cured Egg
+                    </div>
+                </label>
+                <label class="rad-label">
+                    <input type="radio" class="rad-input" name="rad">
+                    <div class="rad-design"></div>
+                    <div class="rad-text" onclick="changeElement('shiitake-mushrooms')">
+                        Sauteed Shiitake Mushrooms
+                    </div>
+                </label>
+                <label class="rad-label">
+                    <input type="radio" class="rad-input" name="rad">
+                    <div class="rad-design"></div>
+                    <div class="rad-text" onclick="changeElement('seared-sirloin')">
+                        Seared Sirloin with Aromatic Rice
+                    </div>
+                </label>
+                <label class="rad-label">
+                    <input type="radio" class="rad-input" name="rad">
+                    <div class="rad-design"></div>
+                    <div class="rad-text" onclick="changeElement('steakrecipe-plating')">
+                        Plating
+                    </div>
+                </label>
             </div>
-            <div class="recipe-video">
-                <button onlick="previousStep()"><</button>
-                <button onclick="previousStep()">Previous Step</button>
-                <div id="ytplayer"></div>
-                <button onclick="nextStep()">Next Step</button>
-                <button onclick="nextStep()">></button>
+            <div class="grid" id="interactive-design">
+                <div id="video-buttons" class="flex">
+                    <label class="rad-label">
+                        <input type="radio" class="rad-input" name="rad" checked>
+                        <div class="rad-design"></div>
+                        <div class="rad-text" onclick="changeVideo('Prep')" id="prep-button">
+                            1. Prepare Your Ingredients
+                        </div>
+                    </label>
+                    <label class="rad-label">
+                        <input type="radio" class="rad-input" name="rad">
+                        <div class="rad-design"></div>
+                        <div class="rad-text" onclick="changeVideo('Cook')" id="cook-button">
+                            2. Cook Your Food
+                        </div>
+                    </label>
+                </div>
+                <div class="recipe-video" id="recipe-video">
+                    <button onclick="previousStep()">Previous Step</button>
+                    <button onlick="previousStep()"><</button>
+                    <div id="ytplayer"></div>
+                    <button onclick="nextStep()">></button>
+                    <button onclick="nextStep()">Next Step</button>
+                </div>
             </div>
             <!-- Captions -->
             <div class="flex" id="video-captions">
                 <p id="captions"></p>
-            </div>
-            <div class="grid" id="video-buttons" style="display: none">
-                <!-- Button to get to previous step -->
-                <button onclick="changeVideo('Prep')">Prepare Your Ingredients</button>
-                <!-- Button to get to next step -->
-                <button onclick="changeVideo('Cook')">Cook Your Food</button>
-                <!-- Directions written out -->
             </div>
             <div id="directions">
                 <details>

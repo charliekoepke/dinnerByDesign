@@ -138,3 +138,11 @@ if (element == "") {
     document.getElementById("equipment").innerHTML = ``;
     document.getElementById("directions").innerHTML = ``;
 }
+
+<label class="rad-label">
+    <input type="radio" class="rad-input" name="rad">
+    <div class="rad-design"></div>
+    <div class="rad-text">
+        
+    </div>
+</label>
