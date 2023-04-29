@@ -12,7 +12,7 @@ body {
 
 img {
   display: block;
-  width: 98%;
+  width: 100%;
 }
 
 button {
@@ -29,16 +29,18 @@ button a :hover {
 
 #guidedrecipes-recipes {
   grid-column-start: 2;
-  grid-template-columns: repeat(2, 49%);
-  grid-template-rows: auto;
+  grid-template-columns: repeat(2, 50%);
   margin: 2%;
   padding: 2%;
   margin-bottom: 20rem;
 }
 #guidedrecipes-recipes .recipetile {
-  display: block;
+  display: flex;
   width: 95%;
   height: 30rem;
+}
+#guidedrecipes-recipes .recipetile p {
+  font-size: 18pt;
 }
 
 button {
@@ -72,7 +74,7 @@ p {
 
 .flex {
   display: flex;
-  flex: 0 1 auto;
+  flex-shrink: 1;
   flex-direction: column;
   flex-wrap: wrap;
 }
@@ -83,6 +85,7 @@ p {
 .grid {
   display: grid;
   grid-gap: 2%;
+  padding: 2%;
 }
 
 .box {
@@ -95,7 +98,7 @@ nav {
   font-size: 18pt;
   background-color: grey;
   padding: 2%;
-  width: 96%;
+  width: 100%;
   font-family: "Rajdhani", sans-serif;
 }
 nav h1 {
@@ -175,7 +178,7 @@ footer .logo img {
 #home-getting-started {
   padding: 2%;
   margin: 2%;
-  grid-template-columns: repeat(2, 48%);
+  grid-template-columns: repeat(2, 50%);
   grid-template-rows: repeat(2, 300px);
 }
 #home-getting-started .flex {
@@ -237,10 +240,17 @@ footer .logo img {
 }
 
 #about-header {
-  grid-template-columns: repeat(2, 46%);
+  grid-template-columns: repeat(2, 50%);
+  width: 100%;
   padding: 2%;
   background-color: black;
   color: white;
+}
+#about-header .flex {
+  align-content: center;
+}
+#about-header .flex img {
+  width: 95%;
 }
 
 .gallery {
@@ -248,7 +258,7 @@ footer .logo img {
 }
 
 #recipe-header {
-  grid-template-columns: repeat(2, 46%);
+  grid-template-columns: repeat(2, 50%);
   width: 100%;
   padding: 2%;
 }
@@ -263,7 +273,7 @@ footer .logo img {
 
 .tabcontent {
   display: grid;
-  grid-template-columns: repeat(2, 46%);
+  grid-template-columns: repeat(2, 50%);
   width: 100%;
   padding: 2%;
 }
@@ -351,7 +361,7 @@ iframe {
 footer {
   display: block;
   background-color: grey;
-  width: 96%;
+  width: 100%;
   text-align: center;
   padding: 2%;
 }
