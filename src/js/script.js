@@ -2124,8 +2124,15 @@ function storeMeal() {
    const jsonArrayMeal = JSON.stringify(customMeal);
    const jsonArrayName = JSON.stringify(mealName);
 
-   localStorage.setItem('customMeal', jsonArrayMeal);
-   localStorage.setItem('mealName', jsonArrayName);
+   if (customMeal.length != 0) {
+      localStorage.setItem('customMeal', jsonArrayMeal);
+      localStorage.setItem('mealName', jsonArrayName);
+
+      window.location.replace("my-meal/index.html");
+   }
+   else {
+      alert("Please add elements to My Meal.");
+   }
 }
 
 // Creates custom meal
@@ -2141,15 +2148,20 @@ function myMeal() {
    changeElement(parseCustomMeal[0]);
 
    // Adding element change buttons
+   // for (let j = 0; j < parseCustomMeal.length; j++) {
+   //    document.getElementById("elements").innerHTML += `
+   //    <label class="rad-label">
+   //       <input type="radio" class="rad-input" name="rad">
+   //       <div class="rad-design"></div>
+   //       <div class="rad-text" onclick="changeElement('` + parseCustomMeal[j] + `')">` +
+   //          parseMealName[j + 1] + `
+   //       </div>
+   //    </label>
+   //    `;
+   // }
    for (let j = 0; j < parseCustomMeal.length; j++) {
       document.getElementById("elements").innerHTML += `
-      <label class="rad-label">
-         <input type="radio" class="rad-input" name="rad">
-         <div class="rad-design"></div>
-         <div class="rad-text" onclick="changeElement('` + parseCustomMeal[j] + `')">` +
-            parseMealName[j + 1] + `
-         </div>
-      </label>
+      <button onclick="changeElement('` + parseCustomMeal[j] + `')" onmouseover="this.style.textDecoration='underline';" onmouseleave="this.style.textDecoration='none';">` + parseMealName[j + 1] + `</button>
       `;
    }
    localStorage.clear();
