@@ -2147,18 +2147,6 @@ function myMeal() {
    // Loading first recipe information
    changeElement(parseCustomMeal[0]);
 
-   // Adding element change buttons
-   // for (let j = 0; j < parseCustomMeal.length; j++) {
-   //    document.getElementById("elements").innerHTML += `
-   //    <label class="rad-label">
-   //       <input type="radio" class="rad-input" name="rad">
-   //       <div class="rad-design"></div>
-   //       <div class="rad-text" onclick="changeElement('` + parseCustomMeal[j] + `')">` +
-   //          parseMealName[j + 1] + `
-   //       </div>
-   //    </label>
-   //    `;
-   // }
    for (let j = 0; j < parseCustomMeal.length; j++) {
       document.getElementById("elements").innerHTML += `
       <button onclick="changeElement('` + parseCustomMeal[j] + `')" onmouseover="this.style.textDecoration='underline';" onmouseleave="this.style.textDecoration='none';">` + parseMealName[j + 1] + `</button>
