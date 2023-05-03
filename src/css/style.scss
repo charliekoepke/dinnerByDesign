@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap');
 
 body {
    font-size: 24pt;
@@ -29,6 +29,10 @@ button {
          color: white;
       }
    }
+}
+
+strong {
+   font-weight: 800;
 }
 
 // Guided Recipes Page
